@@ -80,24 +80,35 @@
 
 -(BOOL)listDevicesHasThisDeviceName:(NSString *)name {
     
-    for (NSString *element in self.devices ) {
-        if ([element isEqualToString:name]) {
+    for ( GCKDevice *device in self.devices ) {
+        
+        if ( [device.friendlyName isEqualToString:name] ) {
             return YES;
         }
+        
     }
     
     return NO;
     
 }
 
+-(void)removeDeviceFromList:(GCKDevice *)device {
+    
+    [self.devices removeObject:device];
+    
+}
+
 #pragma mark - Public Methods - 
 
 - (void)showActionSheetOnView:(UIView *)view {
-    for( GCKDevice *device in self.deviceScanner.devices ){
+    
+    for ( GCKDevice *device in self.deviceScanner.devices ) {
 
-        if ( ![self listDevicesHasThisDeviceName:device.friendlyName] ) {
-            [self.devices addObject:device.friendlyName];
+        if ( ! [self listDevicesHasThisDeviceName:device.friendlyName] ) {
+            
+            [self.devices     addObject:device];
             [self.actionSheet addButtonWithTitle:device.friendlyName];
+            
         }
 
     }
@@ -108,6 +119,7 @@
 #pragma mark - UIActionSheetDelegate Methods -
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
     GCKDevice *selectedDevice = [self.deviceScanner.devices objectAtIndex:buttonIndex - 1];
     
     NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
@@ -116,6 +128,7 @@
     
     self.deviceManager.delegate = self;
     [self.deviceManager connect];
+    
 }
 
 #pragma mark - GCKDeviceScannerListener Methods -
@@ -127,8 +140,9 @@
 - (void)deviceDidGoOffline:(GCKDevice *)device {
     NSLog(@"device disappeared!!!");
     
-    // TODO:
     // Retirar o device da lista
+    [self removeDeviceFromList:device];
+    
 }
 
 #pragma mark - GCKDeviceManagerDelegate Methods -
