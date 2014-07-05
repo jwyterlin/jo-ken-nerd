@@ -22,6 +22,8 @@
 
 @implementation ChromeCast
 
+@synthesize delegate = _delegate;
+
 #pragma mark - Lifecycle
 
 -(id)init {
@@ -39,46 +41,65 @@
 
 #pragma mark - Getter Methods -
 
-- (GCKDeviceScanner *)deviceScanner {
-    if (!_deviceScanner) {
+-(GCKDeviceScanner *)deviceScanner {
+    
+    if ( ! _deviceScanner ) {
         _deviceScanner = [[GCKDeviceScanner alloc] init];
     }
+    
     return _deviceScanner;
+    
 }
 
-- (GCKDeviceManager *)deviceManager {
-    if (!_deviceManager) {
+-(GCKDeviceManager *)deviceManager {
+    
+    if ( ! _deviceManager ) {
         _deviceManager = [[GCKDeviceManager alloc] init];
     }
+    
     return _deviceManager;
+    
 }
 
-- (TextChannel *)textChannel {
-    if (!_textChannel) {
+-(TextChannel *)textChannel {
+    
+    if ( ! _textChannel ) {
+        
         _textChannel = [[TextChannel alloc] initWithNamespace:@"urn:x-cast:com.fbvictorhugo.simpledicecast.cast"];
         [self.deviceManager addChannel:_textChannel];
+        
     }
+    
     return _textChannel;
+    
 }
 
-- (UIActionSheet *)actionSheet {
-    if (!_actionSheet) {
+-(UIActionSheet *)actionSheet {
+    
+    if ( ! _actionSheet ) {
+        
         _actionSheet = [[UIActionSheet alloc] initWithTitle:nil
-                                                       delegate:self
-                                              cancelButtonTitle:nil
-                                         destructiveButtonTitle:@"Cancelar"
-                                              otherButtonTitles:nil, nil];
+                                                   delegate:self
+                                          cancelButtonTitle:nil
+                                     destructiveButtonTitle:@"Cancelar"
+                                          otherButtonTitles:nil, nil];
     }
+    
     return _actionSheet;
+    
 }
 
 #pragma Mark - Private Methods -
 
-- (void)startScanner {
+-(void)startScanner {
+    
     [self.deviceScanner addListener:self];
     [self.deviceScanner startScan];
     
-    // DELEGATE
+    if ( [_delegate respondsToSelector:@selector(didStartScanner)] ) {
+        [_delegate didStartScanner];  // Chama o método que o controller do usuário implementou
+    }
+    
 }
 
 -(BOOL)listDevicesHasThisDeviceName:(NSString *)name {
@@ -103,7 +124,7 @@
 
 #pragma mark - Public Methods - 
 
-- (void)showActionSheetOnView:(UIView *)view {
+-(void)showActionSheetOnView:(UIView *)view {
     
     for ( GCKDevice *device in self.deviceScanner.devices ) {
 
@@ -121,7 +142,7 @@
 
 #pragma mark - UIActionSheetDelegate Methods -
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     
     GCKDevice *selectedDevice = [self.deviceScanner.devices objectAtIndex:buttonIndex - 1];
     
@@ -136,12 +157,17 @@
 
 #pragma mark - GCKDeviceScannerListener Methods -
 
-- (void)deviceDidComeOnline:(GCKDevice *)device {
-    NSLog(@"device found!!!");
+-(void)deviceDidComeOnline:(GCKDevice *)device {
+    
+    NSLog( @"device found!!!" );
+    
+    [self.devices addObject:device];
+    
 }
 
-- (void)deviceDidGoOffline:(GCKDevice *)device {
-    NSLog(@"device disappeared!!!");
+-(void)deviceDidGoOffline:(GCKDevice *)device {
+    
+    NSLog( @"device disappeared!!!" );
     
     // Retirar o device da lista
     [self removeDeviceFromList:device];
@@ -150,20 +176,30 @@
 
 #pragma mark - GCKDeviceManagerDelegate Methods -
 
-- (void)deviceManagerDidConnect:(GCKDeviceManager *)deviceManager {
+-(void)deviceManagerDidConnect:(GCKDeviceManager *)deviceManager {
+    
     [self.deviceManager launchApplication:APPID];
-    // MUDAR ICONE
-    // DELEGATE
+    
+    if ( [_delegate respondsToSelector:@selector(didConnect:)] ) {
+        [_delegate didConnect:deviceManager];  // Chama o método que o controller do usuário implementou
+    }
+    
 }
 
-- (void)deviceManager:(GCKDeviceManager *)deviceManager
-didFailToConnectWithError:(NSError *)error {
-    // DELEGATE
+-(void)deviceManager:(GCKDeviceManager *)deviceManager didFailToConnectWithError:(NSError *)error {
+    
+    if ( [_delegate respondsToSelector:@selector(didFailWithError:deviceManager:)] ) {
+        [_delegate didFailWithError:error deviceManager:deviceManager];  // Chama o método que o controller do usuário implementou
+    }
+    
 }
 
-- (void)deviceManager:(GCKDeviceManager *)deviceManager
-didDisconnectWithError:(NSError *)error {
-    // DELEGATE
+-(void)deviceManager:(GCKDeviceManager *)deviceManager didDisconnectWithError:(NSError *)error {
+
+    if ( [_delegate respondsToSelector:@selector(didFailWithError:deviceManager:)] ) {
+        [_delegate didFailWithError:error deviceManager:deviceManager];  // Chama o método que o controller do usuário implementou
+    }
+    
 }
 
 #pragma mark - GCKDeviceManagerDelegate Methods -

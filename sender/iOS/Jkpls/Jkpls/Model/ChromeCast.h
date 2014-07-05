@@ -16,16 +16,19 @@
 @interface ChromeCast : NSObject <GCKDeviceScannerListener, GCKDeviceManagerDelegate, GCKMediaControlChannelDelegate, UIActionSheetDelegate>
 
 @property (nonatomic, strong) TextChannel *textChannel;
+@property(strong,nonatomic) id<ChromeCastDelegate> delegate;
 
 -(void)startScanner;
 -(void)showActionSheetOnView:(UIView *)view;
 
 @end
 
-//@protocol ChromeCastDelegate <NSObject>
-//
-//@optional
-//
-//-(void)
-//
-//@end
+@protocol ChromeCastDelegate <NSObject>
+
+@optional
+
+-(void)didStartScanner;
+-(void)didConnect:(GCKDeviceManager *)device;
+-(void)didFailWithError:(NSError *)error deviceManager:(GCKDeviceManager *)device;
+
+@end
