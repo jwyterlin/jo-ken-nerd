@@ -16,10 +16,25 @@
 @property(nonatomic, strong) GCKDeviceManager *deviceManager;
 
 @property (nonatomic, strong) UIActionSheet *actionSheet;
+@property(nonatomic,strong) NSMutableArray *devices;
 
 @end
 
 @implementation ChromeCast
+
+#pragma mark - Lifecycle
+
+-(id)init {
+    
+    self = [super init];
+    
+    if ( self ) {
+        self.devices = [NSMutableArray new];
+    }
+    
+    return self;
+    
+}
 
 #pragma mark - Getter Methods -
 
@@ -55,22 +70,37 @@
     [self.deviceScanner startScan];
 }
 
+-(BOOL)listDevicesHasThisDeviceName:(NSString *)name {
+    
+    for (NSString *element in self.devices ) {
+        if ([element isEqualToString:name]) {
+            return YES;
+        }
+    }
+    
+    return NO;
+    
+}
+
 #pragma mark - Public Methods - 
 
 - (void)showActionSheetOnView:(UIView *)view {
 
-    NSMutableArray *devices = [NSMutableArray array];
+    int numberOfDevices = self.devices.count;
     
     for( GCKDevice *device in self.deviceScanner.devices ){
 
-        if (device.friendlyName) {
-            [devices addObject:device.friendlyName];
+        if ( [self listDevicesHasThisDeviceName:device.friendlyName] ) {
+            [self.devices addObject:device.friendlyName];
+            [self.actionSheet addButtonWithTitle:device.friendlyName];
         }
-        
-        [self.actionSheet addButtonWithTitle:device.friendlyName];
+
     }
     
-    [self.actionSheet showInView:view];
+    if ( numberOfDevices != self.devices.count ) {
+        [self.actionSheet showInView:view];
+    }
+    
 }
 
 #pragma mark - UIActionSheetDelegate Methods -
@@ -94,6 +124,10 @@
 
 - (void)deviceDidGoOffline:(GCKDevice *)device {
     NSLog(@"device disappeared!!!");
+    
+    // TODO:
+    // Retirar o device da lista
+    
 }
 
 #pragma mark - GCKDeviceManagerDelegate Methods -
