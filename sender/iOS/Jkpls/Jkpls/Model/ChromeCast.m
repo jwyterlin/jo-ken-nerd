@@ -30,6 +30,7 @@
     
     if ( self ) {
         self.devices = [NSMutableArray new];
+        [self startScanner];
     }
     
     return self;
@@ -76,6 +77,8 @@
 - (void)startScanner {
     [self.deviceScanner addListener:self];
     [self.deviceScanner startScan];
+    
+    // DELEGATE
 }
 
 -(BOOL)listDevicesHasThisDeviceName:(NSString *)name {

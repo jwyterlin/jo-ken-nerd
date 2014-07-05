@@ -12,7 +12,7 @@
 
 @interface ViewController ()
 
-@property (nonatomic, strong) ChromeCast *chromeCast;
+
 
 @end
 
@@ -20,21 +20,13 @@
 
 #pragma mark - Getter Methods -
 
--(ChromeCast *)chromeCast {
-    
-    if (!_chromeCast) {
-        _chromeCast = [[ChromeCast alloc] init];
-    }
-    
-    return _chromeCast;
-    
-}
-
 #pragma mark - View Lifecycle
 
 -(void)viewDidLoad {
+    
     [super viewDidLoad];
-    [self.chromeCast startScanner];
+    
+    self.chromeCast = [ChromeCast new];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateListDevices:) name:kUpdatedListDevices object:nil];
     

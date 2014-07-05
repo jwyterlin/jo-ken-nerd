@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ChromeCast.h"
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, strong) ChromeCast *chromeCast;
 @property (weak, nonatomic) IBOutlet UIButton *chromeCastTouched;
 
 @end
