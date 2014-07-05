@@ -10,7 +10,7 @@
 
 #import "GoogleCast.h"
 
-@interface ChromeCast : NSObject <GCKDeviceScannerListener, GCKDeviceManagerDelegate, UIActionSheetDelegate>
+@interface ChromeCast : NSObject <GCKDeviceScannerListener, GCKDeviceManagerDelegate, GCKMediaControlChannelDelegate, UIActionSheetDelegate>
 
 - (void)startScanner;
 - (void)showActionSheetOnView:(UIView *)view;

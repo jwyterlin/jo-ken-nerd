@@ -13,7 +13,8 @@
 @interface ChromeCast ()
 
 @property (nonatomic, strong) GCKDeviceScanner *deviceScanner;
-@property(nonatomic, strong) GCKDeviceManager *deviceManager;
+@property (nonatomic, strong) GCKDeviceManager *deviceManager;
+@property (nonatomic, strong) GCKMediaControlChannel *mediaControlChannel;
 
 @property (nonatomic, strong) UIActionSheet *actionSheet;
 @property(nonatomic,strong) NSMutableArray *devices;
@@ -85,28 +86,22 @@
 #pragma mark - Public Methods - 
 
 - (void)showActionSheetOnView:(UIView *)view {
-
-    int numberOfDevices = self.devices.count;
-    
     for( GCKDevice *device in self.deviceScanner.devices ){
 
-        if ( [self listDevicesHasThisDeviceName:device.friendlyName] ) {
+        if ( ![self listDevicesHasThisDeviceName:device.friendlyName] ) {
             [self.devices addObject:device.friendlyName];
             [self.actionSheet addButtonWithTitle:device.friendlyName];
         }
 
     }
     
-    if ( numberOfDevices != self.devices.count ) {
-        [self.actionSheet showInView:view];
-    }
-    
+    [self.actionSheet showInView:view];
 }
 
 #pragma mark - UIActionSheetDelegate Methods -
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    GCKDevice *selectedDevice = [self.deviceScanner.devices objectAtIndex:buttonIndex];
+    GCKDevice *selectedDevice = [self.deviceScanner.devices objectAtIndex:buttonIndex - 1];
     
     NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
     self.deviceManager = [[GCKDeviceManager alloc]  initWithDevice:selectedDevice
@@ -127,13 +122,37 @@
     
     // TODO:
     // Retirar o device da lista
-    
 }
 
 #pragma mark - GCKDeviceManagerDelegate Methods -
 
 - (void)deviceManagerDidConnect:(GCKDeviceManager *)deviceManager {
     [self.deviceManager launchApplication:APPID];
+    // MUDAR ICONE
+    // DELEGATE
 }
+
+- (void)deviceManager:(GCKDeviceManager *)deviceManager
+didFailToConnectWithError:(NSError *)error {
+    
+}
+
+- (void)deviceManager:(GCKDeviceManager *)deviceManager
+didDisconnectWithError:(NSError *)error {
+    
+}
+
+#pragma mark - GCKDeviceManagerDelegate Methods -
+
+- (void)deviceManager:(GCKDeviceManager *)deviceManager
+didConnectToCastApplication:(GCKApplicationMetadata *)applicationMetadata
+            sessionID:(NSString *)sessionID
+  launchedApplication:(BOOL)launchedApplication {
+    
+    self.mediaControlChannel = [[GCKMediaControlChannel alloc] init];
+    self.mediaControlChannel.delegate = self;
+    [self.deviceManager addChannel:self.mediaControlChannel];
+}
+
 
 @end
