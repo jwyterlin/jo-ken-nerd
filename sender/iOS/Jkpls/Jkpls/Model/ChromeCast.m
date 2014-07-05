@@ -47,9 +47,10 @@
 #pragma mark - Public Methods - 
 
 - (void)showActionSheetOnView:(UIView *)view {
+    [self _scanCasts];
     UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Devices"
                                                        delegate:self
-                                              cancelButtonTitle:@"Cancelar"
+                                              cancelButtonTitle:nil
                                          destructiveButtonTitle:nil
                                               otherButtonTitles:nil, nil];
     
