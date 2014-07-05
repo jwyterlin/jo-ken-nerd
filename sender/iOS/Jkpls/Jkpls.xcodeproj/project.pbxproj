@@ -10,6 +10,7 @@
 		71D79C69196875F600F18801 /* ChromeCastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D79C68196875F600F18801 /* ChromeCastViewController.m */; };
 		71D79C6D196876A300F18801 /* TutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D79C6C196876A300F18801 /* TutorialViewController.xib */; };
 		71D79C6F196876AB00F18801 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D79C6E196876AB00F18801 /* ViewController.m */; };
+		7B36EBD4196894CD00B88FF3 /* ChromeCastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B36EBD3196894CD00B88FF3 /* ChromeCastViewController.xib */; };
 		7B5B34E519686D4600406276 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E419686D4600406276 /* Foundation.framework */; };
 		7B5B34E719686D4600406276 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E619686D4600406276 /* CoreGraphics.framework */; };
 		7B5B34E919686D4600406276 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E819686D4600406276 /* UIKit.framework */; };
@@ -43,6 +44,7 @@
 		71D79C6C196876A300F18801 /* TutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialViewController.xib; sourceTree = "<group>"; };
 		71D79C6E196876AB00F18801 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		71D79C70196876B000F18801 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7B36EBD3196894CD00B88FF3 /* ChromeCastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChromeCastViewController.xib; sourceTree = "<group>"; };
 		7B5B34E119686D4600406276 /* Jkpls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jkpls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5B34E419686D4600406276 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7B5B34E619686D4600406276 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -109,6 +111,7 @@
 			children = (
 				7B5B34F619686D4600406276 /* Main.storyboard */,
 				71D79C6C196876A300F18801 /* TutorialViewController.xib */,
+				7B36EBD3196894CD00B88FF3 /* ChromeCastViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B36EBD4196894CD00B88FF3 /* ChromeCastViewController.xib in Resources */,
 				7B5B34FD19686D4600406276 /* Images.xcassets in Resources */,
 				71D79C6D196876A300F18801 /* TutorialViewController.xib in Resources */,
 				7B5B34EF19686D4600406276 /* InfoPlist.strings in Resources */,
