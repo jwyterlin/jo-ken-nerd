@@ -1,5 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <string name="app_name">jkpls</string>
+
+    <!-- Configurations -->
+<!--     <string name="cast_app_id">209A5252</string> -->
+<!--     <string name="cast_namespace">urn:x-cast:com.littleredgroup.jkpls</string> -->
+    <string name="cast_app_id">9EE9C969</string>
+    <string name="cast_namespace">urn:x-cast:com.fbvictorhugo.simpledicecast.cast</string>
 
 </resources>
