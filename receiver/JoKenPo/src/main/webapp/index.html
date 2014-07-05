@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <link id="favIcon" rel="icon" type="image/png" href="tictactoe.png"/>
   <title>Tic-Tac-Toe</title>
   <script src="https://www.gstatic.com/cast/js/receiver/09/cast_receiver.js"></script>
   <script src="jokenpo.js"></script>
@@ -14,13 +13,13 @@
      */
     function onLoad() {
       var div = document.getElementById('mensagem');
-      div.innerHTML = div.innerHTML + "teste";
-      var chromecastApp = new cast.receiver.Receiver("TicTacToe",
+      
+      var chromecastApp = new cast.receiver.Receiver(209A5252,
           [ cast.JoKenPo.PROTOCOL ], "", 5);
 
-      var gameEngine = new cast.TicTacToe(mBoard);
+      var gameEngine = new cast.JoKenPo(div);
       gameEngine.mChannelHandler.addChannelFactory(
-          chromecastApp.createChannelFactory(cast.TicTacToe.PROTOCOL));
+          chromecastApp.createChannelFactory(cast.JoKenPo.PROTOCOL));
       chromecastApp.start();
     }
 
