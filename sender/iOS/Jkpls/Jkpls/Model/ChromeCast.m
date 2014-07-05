@@ -149,6 +149,8 @@
 
 - (void)deviceManagerDidConnect:(GCKDeviceManager *)deviceManager {
     [self.deviceManager launchApplication:APPID];
+    [self.deviceManager joinApplication:APPID];
+    
     // MUDAR ICONE
     // DELEGATE
 }
