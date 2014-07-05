@@ -11,8 +11,8 @@ var cast = window.cast || {};
         X: 'X'
     };
 
-    function JoKenPo(opt_div) {
-        this.div = opt_div;
+    function JoKenPo(opt_gameData) {
+        this.gameData = opt_gameData;
         this.mPlayer1 = -1;
         this.mPlayer2 = -1;
         this.mCurrentPlayer;
@@ -104,10 +104,12 @@ var cast = window.cast || {};
                 this.mPlayer1 = new Object();
                 this.mPlayer1.name = message.name;
                 this.mPlayer1.channel = channel;
+                this.gameData.updatePlayerName(1, this.mPlayer1.name)
             } else if (this.mPlayer2 == -1) {
                 this.mPlayer2 = new Object();
                 this.mPlayer2.name = message.name;
                 this.mPlayer2.channel = channel;
+                this.gameData.updatePlayerName(2, this.mPlayer2.name)
             } else {
                 console.log('Unable to join a full game.');
                 this.sendError(channel, 'Game is full.');
@@ -119,7 +121,7 @@ var cast = window.cast || {};
 
             if (this.mPlayer1 != -1 && this.mPlayer2 != -1) {
                 //this.startGame_();
-                this.div.innerHTML = div.innerHTML + this.mPlayer1 + " vs " + this.mPlayer2;
+                
             }
         },
         /**
