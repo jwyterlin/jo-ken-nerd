@@ -33,8 +33,8 @@
 #pragma mark - View Lifecycle
 
 -(void)viewDidLoad {
-    
     [super viewDidLoad];
+    [self.chromeCast startScanner];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateListDevices:) name:kUpdatedListDevices object:nil];
     

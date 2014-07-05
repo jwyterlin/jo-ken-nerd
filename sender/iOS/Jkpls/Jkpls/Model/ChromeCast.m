@@ -15,7 +15,7 @@
 @property (nonatomic, strong) GCKDeviceScanner *deviceScanner;
 @property(nonatomic, strong) GCKDeviceManager *deviceManager;
 
-- (void)_scanCasts;
+@property (nonatomic, strong) UIActionSheet *actionSheet;
 
 @end
 
@@ -37,9 +37,20 @@
     return _deviceManager;
 }
 
+- (UIActionSheet *)actionSheet {
+    if (!_actionSheet) {
+        _actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                       delegate:self
+                                              cancelButtonTitle:nil
+                                         destructiveButtonTitle:@"Cancelar"
+                                              otherButtonTitles:nil, nil];
+    }
+    return _actionSheet;
+}
+
 #pragma Mark - Private Methods -
 
-- (void)_scanCasts {
+- (void)startScanner {
     [self.deviceScanner addListener:self];
     [self.deviceScanner startScan];
 }
@@ -47,18 +58,19 @@
 #pragma mark - Public Methods - 
 
 - (void)showActionSheetOnView:(UIView *)view {
-    [self _scanCasts];
-    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Devices"
-                                                       delegate:self
-                                              cancelButtonTitle:nil
-                                         destructiveButtonTitle:nil
-                                              otherButtonTitles:nil, nil];
+
+    NSMutableArray *devices = [NSMutableArray array];
     
     for( GCKDevice *device in self.deviceScanner.devices ){
-        [sheet addButtonWithTitle:device.friendlyName];
+
+        if (device.friendlyName) {
+            [devices addObject:device.friendlyName];
+        }
+        
+        [self.actionSheet addButtonWithTitle:device.friendlyName];
     }
     
-    [sheet showInView:view];
+    [self.actionSheet showInView:view];
 }
 
 #pragma mark - UIActionSheetDelegate Methods -

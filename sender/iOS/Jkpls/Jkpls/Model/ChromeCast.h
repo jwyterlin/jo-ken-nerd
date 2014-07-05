@@ -12,6 +12,7 @@
 
 @interface ChromeCast : NSObject <GCKDeviceScannerListener, GCKDeviceManagerDelegate, UIActionSheetDelegate>
 
+- (void)startScanner;
 - (void)showActionSheetOnView:(UIView *)view;
 
 @end
