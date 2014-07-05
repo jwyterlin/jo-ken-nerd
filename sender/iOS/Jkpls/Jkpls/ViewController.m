@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TutorialViewController.h"
 
 @interface ViewController ()
 
@@ -14,16 +15,32 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+#pragma mark - View Lifecycle
+
+- (void)viewDidLoad {
+    
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    
+    
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
+    
     [super didReceiveMemoryWarning];
+    
     // Dispose of any resources that can be recreated.
+    
+}
+
+#pragma mark - IBAction Methods
+
+-(IBAction)showTutorial:(id)sender {
+    
+    TutorialViewController *tutorialVC = [[TutorialViewController alloc] initWithNibName:@"TutorialViewController" bundle:nil];
+    
+    [self.navigationController pushViewController:tutorialVC animated:YES];
+    
 }
 
 @end

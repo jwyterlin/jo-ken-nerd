@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TutorialViewController.h
 //  Jkpls
 //
 //  Created by Jhonathan Wyterlin on 05/07/14.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface TutorialViewController : UIViewController
 
--(IBAction)showTutorial:(id)sender;
+@property(nonatomic,strong) IBOutlet UIImageView *tutorialImage;
 
 @end
