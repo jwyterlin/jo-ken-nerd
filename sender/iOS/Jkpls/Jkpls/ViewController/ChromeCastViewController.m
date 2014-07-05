@@ -42,5 +42,4 @@
     [self.deviceScanner startScan];
 }
 
-
 @end
