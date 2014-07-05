@@ -43,7 +43,6 @@
 #pragma mark - IBAction Methods
 
 -(IBAction)showTutorial:(id)sender {
-    
     TutorialViewController *tutorialVC = [[TutorialViewController alloc] initWithNibName:kTutorialViewController bundle:nil];
     
     [self.navigationController pushViewController:tutorialVC animated:YES];

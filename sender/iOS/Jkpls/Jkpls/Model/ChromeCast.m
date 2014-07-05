@@ -8,13 +8,12 @@
 
 #import "ChromeCast.h"
 
-#define APPID @"YOUR_APP_ID_HERE"
+#define APPID @"9EE9C969"
 
 @interface ChromeCast ()
 
 @property (nonatomic, strong) GCKDeviceScanner *deviceScanner;
 @property (nonatomic, strong) GCKDeviceManager *deviceManager;
-@property (nonatomic, strong) GCKMediaControlChannel *mediaControlChannel;
 
 @property (nonatomic, strong) UIActionSheet *actionSheet;
 @property(nonatomic,strong) NSMutableArray *devices;
@@ -51,6 +50,14 @@
         _deviceManager = [[GCKDeviceManager alloc] init];
     }
     return _deviceManager;
+}
+
+- (TextChannel *)textChannel {
+    if (!_textChannel) {
+        _textChannel = [[TextChannel alloc] initWithNamespace:@"urn:x-cast:com.fbvictorhugo.simpledicecast.cast"];
+        [self.deviceManager addChannel:_textChannel];
+    }
+    return _textChannel;
 }
 
 - (UIActionSheet *)actionSheet {
@@ -134,12 +141,12 @@
 
 - (void)deviceManager:(GCKDeviceManager *)deviceManager
 didFailToConnectWithError:(NSError *)error {
-    
+    // DELEGATE
 }
 
 - (void)deviceManager:(GCKDeviceManager *)deviceManager
 didDisconnectWithError:(NSError *)error {
-    
+    // DELEGATE
 }
 
 #pragma mark - GCKDeviceManagerDelegate Methods -
@@ -149,10 +156,7 @@ didConnectToCastApplication:(GCKApplicationMetadata *)applicationMetadata
             sessionID:(NSString *)sessionID
   launchedApplication:(BOOL)launchedApplication {
     
-    self.mediaControlChannel = [[GCKMediaControlChannel alloc] init];
-    self.mediaControlChannel.delegate = self;
-    [self.deviceManager addChannel:self.mediaControlChannel];
-}
 
+}
 
 @end
