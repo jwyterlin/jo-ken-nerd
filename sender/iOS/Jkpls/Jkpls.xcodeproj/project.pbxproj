@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71D79C69196875F600F18801 /* ChromeCastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D79C68196875F600F18801 /* ChromeCastViewController.m */; };
+		71D79C6D196876A300F18801 /* TutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D79C6C196876A300F18801 /* TutorialViewController.xib */; };
+		71D79C6F196876AB00F18801 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D79C6E196876AB00F18801 /* ViewController.m */; };
 		7B5B34E519686D4600406276 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E419686D4600406276 /* Foundation.framework */; };
 		7B5B34E719686D4600406276 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E619686D4600406276 /* CoreGraphics.framework */; };
 		7B5B34E919686D4600406276 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E819686D4600406276 /* UIKit.framework */; };
@@ -14,7 +17,6 @@
 		7B5B34F119686D4600406276 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B34F019686D4600406276 /* main.m */; };
 		7B5B34F519686D4600406276 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B34F419686D4600406276 /* AppDelegate.m */; };
 		7B5B34F819686D4600406276 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B5B34F619686D4600406276 /* Main.storyboard */; };
-		7B5B34FB19686D4600406276 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B34FA19686D4600406276 /* ViewController.m */; };
 		7B5B34FD19686D4600406276 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B5B34FC19686D4600406276 /* Images.xcassets */; };
 		7B5B350419686D4600406276 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B350319686D4600406276 /* XCTest.framework */; };
 		7B5B350519686D4600406276 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E419686D4600406276 /* Foundation.framework */; };
@@ -22,7 +24,6 @@
 		7B5B350E19686D4700406276 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B5B350C19686D4700406276 /* InfoPlist.strings */; };
 		7B5B351019686D4700406276 /* JkplsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B350F19686D4700406276 /* JkplsTests.m */; };
 		7B5B351C196870E400406276 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B351A196870E400406276 /* TutorialViewController.m */; };
-		7B5B351D196870E400406276 /* TutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B5B351B196870E400406276 /* TutorialViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		71D79C67196875F600F18801 /* ChromeCastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChromeCastViewController.h; sourceTree = "<group>"; };
+		71D79C68196875F600F18801 /* ChromeCastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromeCastViewController.m; sourceTree = "<group>"; };
+		71D79C6C196876A300F18801 /* TutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialViewController.xib; sourceTree = "<group>"; };
+		71D79C6E196876AB00F18801 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		71D79C70196876B000F18801 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7B5B34E119686D4600406276 /* Jkpls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jkpls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5B34E419686D4600406276 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7B5B34E619686D4600406276 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -47,17 +53,14 @@
 		7B5B34F319686D4600406276 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7B5B34F419686D4600406276 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7B5B34F719686D4600406276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7B5B34F919686D4600406276 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7B5B34FA19686D4600406276 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7B5B34FC19686D4600406276 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7B5B350219686D4600406276 /* JkplsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JkplsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5B350319686D4600406276 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7B5B350B19686D4700406276 /* JkplsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JkplsTests-Info.plist"; sourceTree = "<group>"; };
 		7B5B350D19686D4700406276 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B5B350F19686D4700406276 /* JkplsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JkplsTests.m; sourceTree = "<group>"; };
-		7B5B3519196870E400406276 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TutorialViewController.h; path = ViewController/TutorialViewController.h; sourceTree = "<group>"; };
-		7B5B351A196870E400406276 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TutorialViewController.m; path = ViewController/TutorialViewController.m; sourceTree = "<group>"; };
-		7B5B351B196870E400406276 /* TutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TutorialViewController.xib; path = ViewController/TutorialViewController.xib; sourceTree = "<group>"; };
+		7B5B3519196870E400406276 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
+		7B5B351A196870E400406276 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71D79C6A1968760200F18801 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				71D79C70196876B000F18801 /* ViewController.h */,
+				71D79C6E196876AB00F18801 /* ViewController.m */,
+				71D79C67196875F600F18801 /* ChromeCastViewController.h */,
+				71D79C68196875F600F18801 /* ChromeCastViewController.m */,
+				7B5B3519196870E400406276 /* TutorialViewController.h */,
+				7B5B351A196870E400406276 /* TutorialViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		71D79C6B1968769700F18801 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				71D79C6C196876A300F18801 /* TutorialViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7B5B34D819686D4600406276 = {
 			isa = PBXGroup;
 			children = (
@@ -117,16 +141,13 @@
 		7B5B34EA19686D4600406276 /* Jkpls */ = {
 			isa = PBXGroup;
 			children = (
+				71D79C6B1968769700F18801 /* View */,
+				71D79C6A1968760200F18801 /* ViewController */,
 				7B5B34F319686D4600406276 /* AppDelegate.h */,
 				7B5B34F419686D4600406276 /* AppDelegate.m */,
 				7B5B34F619686D4600406276 /* Main.storyboard */,
-				7B5B34F919686D4600406276 /* ViewController.h */,
-				7B5B34FA19686D4600406276 /* ViewController.m */,
 				7B5B34FC19686D4600406276 /* Images.xcassets */,
 				7B5B34EB19686D4600406276 /* Supporting Files */,
-				7B5B3519196870E400406276 /* TutorialViewController.h */,
-				7B5B351A196870E400406276 /* TutorialViewController.m */,
-				7B5B351B196870E400406276 /* TutorialViewController.xib */,
 			);
 			path = Jkpls;
 			sourceTree = "<group>";
@@ -237,8 +258,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B5B34FD19686D4600406276 /* Images.xcassets in Resources */,
+				71D79C6D196876A300F18801 /* TutorialViewController.xib in Resources */,
 				7B5B34EF19686D4600406276 /* InfoPlist.strings in Resources */,
-				7B5B351D196870E400406276 /* TutorialViewController.xib in Resources */,
 				7B5B34F819686D4600406276 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,10 +279,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B5B34FB19686D4600406276 /* ViewController.m in Sources */,
 				7B5B34F519686D4600406276 /* AppDelegate.m in Sources */,
 				7B5B351C196870E400406276 /* TutorialViewController.m in Sources */,
+				71D79C69196875F600F18801 /* ChromeCastViewController.m in Sources */,
 				7B5B34F119686D4600406276 /* main.m in Sources */,
+				71D79C6F196876AB00F18801 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +488,7 @@
 				7B5B351519686D4700406276 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B5B351619686D4700406276 /* Build configuration list for PBXNativeTarget "JkplsTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +497,7 @@
 				7B5B351819686D4700406276 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
