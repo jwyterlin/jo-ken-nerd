@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <link id="favIcon" rel="icon" type="image/png" href="tictactoe.png"/>
+  <title>Tic-Tac-Toe</title>
+  <script src="https://www.gstatic.com/cast/js/receiver/09/cast_receiver.js"></script>
+  <script src="jokenpo.js"></script>
+  <script type="text/javascript">
+
+    window.onload = onLoad;
+
+    /**
+     * Initializes the receiver application and game objects, and starts the
+     * receiver.
+     */
+    function onLoad() {
+      var div = document.getElementById('mensagem');
+      div.innerHTML = div.innerHTML + "teste";
+      var chromecastApp = new cast.receiver.Receiver("TicTacToe",
+          [ cast.JoKenPo.PROTOCOL ], "", 5);
+
+      var gameEngine = new cast.TicTacToe(mBoard);
+      gameEngine.mChannelHandler.addChannelFactory(
+          chromecastApp.createChannelFactory(cast.TicTacToe.PROTOCOL));
+      chromecastApp.start();
+    }
+
+  </script>
+  <div id="mensagem"></div>
+</html>
