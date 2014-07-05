@@ -8,24 +8,12 @@
 
 #import "ViewController.h"
 #import "TutorialViewController.h"
-#import "ChromeCastViewController.h"
 
 @interface ViewController ()
-
-@property (nonatomic, strong) ChromeCastViewController *chromeCastViewController;
 
 @end
 
 @implementation ViewController
-
-#pragma mark - Getter Methods -
-
-- (ChromeCastViewController *)chromeCastViewController {
-    if (!_chromeCastViewController) {
-        _chromeCastViewController = [[ChromeCastViewController alloc] init];
-    }
-    return _chromeCastViewController;
-}
 
 #pragma mark - View Lifecycle
 
@@ -41,11 +29,6 @@
     
     [self.navigationController pushViewController:tutorialVC animated:YES];
     
-}
-
-- (IBAction)chromeCastTouched:(id)sender {
-    [self presentViewController:self.chromeCastViewController
-                       animated:YES completion:nil];
 }
 
 @end

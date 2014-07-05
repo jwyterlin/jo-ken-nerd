@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		71D79C69196875F600F18801 /* ChromeCastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D79C68196875F600F18801 /* ChromeCastViewController.m */; };
+		7143ED5519689991001D4735 /* ChromeCast.m in Sources */ = {isa = PBXBuildFile; fileRef = 7143ED5419689991001D4735 /* ChromeCast.m */; };
 		71D79C6D196876A300F18801 /* TutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D79C6C196876A300F18801 /* TutorialViewController.xib */; };
 		71D79C6F196876AB00F18801 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D79C6E196876AB00F18801 /* ViewController.m */; };
 		7B5B34E519686D4600406276 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E419686D4600406276 /* Foundation.framework */; };
@@ -38,8 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		71D79C67196875F600F18801 /* ChromeCastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChromeCastViewController.h; sourceTree = "<group>"; };
-		71D79C68196875F600F18801 /* ChromeCastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromeCastViewController.m; sourceTree = "<group>"; };
+		7143ED5319689991001D4735 /* ChromeCast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChromeCast.h; sourceTree = "<group>"; };
+		7143ED5419689991001D4735 /* ChromeCast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromeCast.m; sourceTree = "<group>"; };
 		71D79C6C196876A300F18801 /* TutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialViewController.xib; sourceTree = "<group>"; };
 		71D79C6E196876AB00F18801 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		71D79C70196876B000F18801 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -91,13 +91,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7143ED5219689969001D4735 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7143ED5319689991001D4735 /* ChromeCast.h */,
+				7143ED5419689991001D4735 /* ChromeCast.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		71D79C6A1968760200F18801 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				71D79C70196876B000F18801 /* ViewController.h */,
 				71D79C6E196876AB00F18801 /* ViewController.m */,
-				71D79C67196875F600F18801 /* ChromeCastViewController.h */,
-				71D79C68196875F600F18801 /* ChromeCastViewController.m */,
 				7B5B3519196870E400406276 /* TutorialViewController.h */,
 				7B5B351A196870E400406276 /* TutorialViewController.m */,
 			);
@@ -148,6 +155,7 @@
 		7B5B34EA19686D4600406276 /* Jkpls */ = {
 			isa = PBXGroup;
 			children = (
+				7143ED5219689969001D4735 /* Model */,
 				71D79C6B1968769700F18801 /* View */,
 				71D79C6A1968760200F18801 /* ViewController */,
 				7B5B34F319686D4600406276 /* AppDelegate.h */,
@@ -322,7 +330,7 @@
 			files = (
 				7B5B34F519686D4600406276 /* AppDelegate.m in Sources */,
 				7B5B351C196870E400406276 /* TutorialViewController.m in Sources */,
-				71D79C69196875F600F18801 /* ChromeCastViewController.m in Sources */,
+				7143ED5519689991001D4735 /* ChromeCast.m in Sources */,
 				7B5B34F119686D4600406276 /* main.m in Sources */,
 				71D79C6F196876AB00F18801 /* ViewController.m in Sources */,
 			);
