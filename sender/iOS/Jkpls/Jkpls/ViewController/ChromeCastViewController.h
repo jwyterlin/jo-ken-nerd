@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChromeCastViewController : UIViewController
+#import "GoogleCast.h"
+
+@interface ChromeCastViewController : UIViewController <GCKDeviceScannerListener, UIActionSheetDelegate>
 
 @end

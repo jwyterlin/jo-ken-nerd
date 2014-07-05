@@ -10,6 +10,6 @@
 
 @interface ViewController : UIViewController
 
--(IBAction)showTutorial:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *chromeCastTouched;
 
 @end

@@ -107,6 +107,7 @@
 		71D79C6B1968769700F18801 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7B5B34F619686D4600406276 /* Main.storyboard */,
 				71D79C6C196876A300F18801 /* TutorialViewController.xib */,
 			);
 			path = View;
@@ -151,7 +152,6 @@
 				71D79C6A1968760200F18801 /* ViewController */,
 				7B5B34F319686D4600406276 /* AppDelegate.h */,
 				7B5B34F419686D4600406276 /* AppDelegate.m */,
-				7B5B34F619686D4600406276 /* Main.storyboard */,
 				7B5B34FC19686D4600406276 /* Images.xcassets */,
 				7B5B34EB19686D4600406276 /* Supporting Files */,
 			);
@@ -361,6 +361,7 @@
 				7B5B34F719686D4600406276 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		7B5B350C19686D4700406276 /* InfoPlist.strings */ = {

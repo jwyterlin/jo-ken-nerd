@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Jhonathan Wyterlin. All rights reserved.
 //
 
-#import "GoogleCast.h"
 #import "ChromeCastViewController.h"
 
 @interface ChromeCastViewController ()
@@ -32,6 +31,18 @@
 {
     [super viewDidLoad];
     [self _scanCasts];
+    
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Chrome Cast"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancelar"
+                                         destructiveButtonTitle:nil
+                                              otherButtonTitles:nil, nil];
+    
+    for( GCKDevice *device in self.deviceScanner.devices ){
+        [sheet addButtonWithTitle:device.friendlyName];
+    }
+    
+    [sheet showInView:self.view];
 }
 
 #pragma Mark - Private Methods -
@@ -40,6 +51,16 @@
     //Initialize device scanner
     [self.deviceScanner addListener:self];
     [self.deviceScanner startScan];
+}
+
+#pragma mark - GCKDeviceScannerListener -
+
+- (void)deviceDidComeOnline:(GCKDevice *)device {
+    [self dismissViewControllerAnimated:YES  completion:nil];
+}
+
+- (void)deviceDidGoOffline:(GCKDevice *)device {
+    NSLog(@"device disappeared!!!");
 }
 
 @end
