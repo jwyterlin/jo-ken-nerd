@@ -11,6 +11,7 @@
 @interface ChromeCastViewController ()
 
 @property (nonatomic, strong) GCKDeviceScanner *deviceScanner;
+@property (nonatomic, strong) NSMutableArray *devices;
 
 - (void)_scanCasts;
 
@@ -18,18 +19,24 @@
 
 @implementation ChromeCastViewController
 
+@synthesize tableView = _tableView;
+
 #pragma mark - Getter Methods -
 
-- (GCKDeviceScanner *)deviceScanner {
-    if (!_deviceScanner) {
+-(GCKDeviceScanner *)deviceScanner {
+
+    if ( ! _deviceScanner ) {
         _deviceScanner = [[GCKDeviceScanner alloc] init];
     }
+    
     return _deviceScanner;
+    
 }
 
-- (void)viewDidLoad
-{
+-(void)viewDidLoad {
+    
     [super viewDidLoad];
+    
     [self _scanCasts];
     
     UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Chrome Cast"
@@ -38,19 +45,21 @@
                                          destructiveButtonTitle:nil
                                               otherButtonTitles:nil, nil];
     
-    for( GCKDevice *device in self.deviceScanner.devices ){
+    for ( GCKDevice *device in self.deviceScanner.devices ) {
         [sheet addButtonWithTitle:device.friendlyName];
+        //[self.devices addObject:device];
     }
     
-    [sheet showInView:self.view];
 }
 
 #pragma Mark - Private Methods -
 
 - (void)_scanCasts {
+    
     //Initialize device scanner
     [self.deviceScanner addListener:self];
     [self.deviceScanner startScan];
+    
 }
 
 #pragma mark - GCKDeviceScannerListener -

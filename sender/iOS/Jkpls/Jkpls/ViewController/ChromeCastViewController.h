@@ -12,4 +12,6 @@
 
 @interface ChromeCastViewController : UIViewController <GCKDeviceScannerListener, UIActionSheetDelegate>
 
+@property(nonatomic,strong) IBOutlet UITableView *tableView;
+
 @end
