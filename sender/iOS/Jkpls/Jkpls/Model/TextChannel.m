@@ -7,11 +7,18 @@
 //
 
 #import "TextChannel.h"
+#import "GCKJSONUtils.h"
 
 @implementation TextChannel
 
 - (void)didReceiveTextMessage:(NSString*)message {
+    
     NSLog(@"received message: %@", message);
+    
+    NSDictionary *json = [GCKJSONUtils parseJSON:message];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kGameResultWasReceived object:json];
+    
 }
 
 @end

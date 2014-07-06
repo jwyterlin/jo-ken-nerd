@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Jo Ken Po Lizard Spock-->
+        <!--View Controller - Jo Ken Nerd-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -80,10 +80,21 @@
                                     <action selector="changedName:" destination="vXZ-lx-hvc" eventType="editingChanged" id="GZW-4G-Adq"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojd-jZ-SuF">
+                                <rect key="frame" x="20" y="480" width="280" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="afV-Ol-K2N">
+                                <rect key="frame" x="150" y="527" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Jo Ken Po Lizard Spock" id="d2i-lF-YTw">
+                    <navigationItem key="navigationItem" title="Jo Ken Nerd" id="d2i-lF-YTw">
                         <barButtonItem key="leftBarButtonItem" id="YEm-87-FPK">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="16z-q4-I3M">
                                 <rect key="frame" x="16" y="11" width="29" height="22"/>
@@ -99,18 +110,45 @@
                         <barButtonItem key="rightBarButtonItem" image="help_icon.png" id="rgN-jj-OBS">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="showTutorial:" destination="vXZ-lx-hvc" id="jVI-iT-kOp"/>
+                                <segue destination="3lw-RP-dtK" kind="push" id="Wgx-j1-pME"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="afV-Ol-K2N" id="WZV-0P-XpV"/>
                         <outlet property="chromeCastTouched" destination="16z-q4-I3M" id="qbh-2K-Pa9"/>
+                        <outlet property="lbResultGame" destination="ojd-jZ-SuF" id="Twa-hY-BEW"/>
                         <outlet property="tfNamePlayer" destination="oAG-x2-f6X" id="KG4-lX-CGO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-435" y="-326"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="J0b-Gf-yPw">
+            <objects>
+                <viewController id="3lw-RP-dtK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cMZ-Kt-5A9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ov2-fJ-fML"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wVB-Sn-xJX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="help_instruction.png" translatesAutoresizingMaskIntoConstraints="NO" id="BYR-sw-16E">
+                                <rect key="frame" x="0.0" y="63" width="320" height="505"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="50V-Lp-ucF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o5w-8R-xJI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="-318"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cbI-l5-c3b">
@@ -135,12 +173,14 @@
     <resources>
         <image name="cast_off.png" width="29" height="23"/>
         <image name="help_icon.png" width="30" height="29"/>
+        <image name="help_instruction.png" width="320" height="568"/>
         <image name="largato.png" width="57" height="57"/>
         <image name="papel.png" width="57" height="57"/>
         <image name="pedra.png" width="57" height="57"/>
         <image name="spock.png" width="57" height="57"/>
         <image name="tesoura.png" width="57" height="57"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
