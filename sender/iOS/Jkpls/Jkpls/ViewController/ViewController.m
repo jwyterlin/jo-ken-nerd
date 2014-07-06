@@ -100,7 +100,7 @@
     
     [self showMessage:@"Conexão concluída com sucesso!"];
     
-    [self sendNamePlayerToChromeCast];
+    [self sendNamePlayerToChromeCastWithAction:@"connect"];
 
 }
 
@@ -173,7 +173,7 @@
     
 }
 
--(void)sendNamePlayerToChromeCast {
+-(void)sendNamePlayerToChromeCastWithAction:(NSString *)action {
     
     if ( [self.chromeCast isConnected] ) {
         
@@ -193,7 +193,6 @@
             
         }
         
-        NSString *action = @"connect";
         NSDictionary *jsonDict = @{ @"action": action, @"name": namePlayer};
         
         NSString *jsonString = [GCKJSONUtils writeJSON:jsonDict];
@@ -208,13 +207,13 @@
 
 -(void)chromeCastIsConnected:(NSNotification *)notification {
     
-    [self sendNamePlayerToChromeCast];
+    [self sendNamePlayerToChromeCastWithAction:@"connect"];
     
 }
 
 -(void)changeName:(NSTimer *)__timer {
     NSLog(@"changeName");
-    [self sendNamePlayerToChromeCast];
+    [self sendNamePlayerToChromeCastWithAction:@"update"];
     
 }
 
