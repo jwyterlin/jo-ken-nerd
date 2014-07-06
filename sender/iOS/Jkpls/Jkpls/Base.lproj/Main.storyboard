@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Jo Ken Po Lizard Spock-->
+        <!--View Controller - Jo Ken Nerd-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -94,7 +94,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Jo Ken Po Lizard Spock" id="d2i-lF-YTw">
+                    <navigationItem key="navigationItem" title="Jo Ken Nerd" id="d2i-lF-YTw">
                         <barButtonItem key="leftBarButtonItem" id="YEm-87-FPK">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="16z-q4-I3M">
                                 <rect key="frame" x="16" y="11" width="29" height="22"/>
