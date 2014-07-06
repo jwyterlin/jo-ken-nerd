@@ -14,4 +14,6 @@
 @property (nonatomic, strong) ChromeCast *chromeCast;
 @property (weak, nonatomic) IBOutlet UIButton *chromeCastTouched;
 
+-(IBAction)choseOption:(UIButton *)sender;
+
 @end

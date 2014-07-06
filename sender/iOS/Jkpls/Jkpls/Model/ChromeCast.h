@@ -18,8 +18,8 @@
 @property (nonatomic, strong) TextChannel *textChannel;
 @property(strong,nonatomic) id<ChromeCastDelegate> delegate;
 
--(void)startScanner;
 -(void)showActionSheetOnView:(UIView *)view;
+-(BOOL)sendTextMessage:(NSString *)message;
 
 @end
 

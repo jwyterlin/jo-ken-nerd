@@ -140,6 +140,12 @@
     [self.actionSheet showInView:view];
 }
 
+-(BOOL)sendTextMessage:(NSString *)message {
+    
+    return [self.textChannel sendTextMessage:message];
+    
+}
+
 #pragma mark - UIActionSheetDelegate Methods -
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -164,7 +170,12 @@
     
     NSLog( @"device found!!!" );
     
-    [self.devices addObject:device];
+    if ( ! [self listDevicesHasThisDeviceName:device.friendlyName] ) {
+        
+        [self.devices     addObject:device];
+        [self.actionSheet addButtonWithTitle:device.friendlyName];
+        
+    }
     
 }
 
@@ -180,9 +191,14 @@
 #pragma mark - GCKDeviceManagerDelegate Methods -
 
 -(void)deviceManagerDidConnect:(GCKDeviceManager *)deviceManager {
+
+//    if ( ! [self.deviceManager isConnectedToApp] ) {
     
-    [self.deviceManager launchApplication:APPID];
-    [self.deviceManager joinApplication:APPID];
+        [self.deviceManager launchApplication:APPID];
+        
+//    }
+    
+//    [self.deviceManager joinApplication:APPID];
     
     if ( [_delegate respondsToSelector:@selector(didConnect:)] ) {
         [_delegate didConnect:deviceManager];  // Chama o método que o controller do usuário implementou

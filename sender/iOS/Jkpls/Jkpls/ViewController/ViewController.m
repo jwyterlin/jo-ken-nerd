@@ -49,6 +49,16 @@
     [self.chromeCast showActionSheetOnView:self.view];
 }
 
+-(IBAction)choseOption:(UIButton *)sender {
+    
+    NSString *message = [NSString stringWithFormat:@"%i",sender.tag];
+    
+    if ( ! [self.chromeCast sendTextMessage:message] ) {
+        [self showMessage:@"Falha na comunicação. Por favor tente novamente."];
+    }
+    
+}
+
 #pragma mark - Helper Methods
 
 -(void)updateListDevices:(NSNotification *)notification {
