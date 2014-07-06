@@ -14,6 +14,7 @@
 
     NSTimer *timer;
     int counter;
+    NSTimer *timerChangeName;
     
 }
 
@@ -33,8 +34,6 @@
     
     self.chromeCast = [ChromeCast new];
     self.chromeCast.delegate = self;
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(chromeCastIsConnected:) name:kChromeCastIsConnected object:nil];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toucheOnView)];
     tap.numberOfTapsRequired = 1;
@@ -70,7 +69,14 @@
     
     NSLog( @"%@", textfield.text );
     
-    [self sendNamePlayerToChromeCast];
+    if ( timerChangeName != nil ) {
+        
+        [timerChangeName invalidate];
+        timerChangeName = nil;
+        
+    }
+
+    timerChangeName = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(changeName:) userInfo:nil repeats:NO];
 
 }
 
@@ -78,7 +84,7 @@
 
 -(void)didStartScanner {
     
-    timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(loading:) userInfo:nil repeats:NO];
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(loading:) userInfo:nil repeats:YES];
     
 }
 
@@ -92,8 +98,6 @@
     [self showMessage:@"Conexão concluída com sucesso!"];
     
     [self sendNamePlayerToChromeCast];
-    
-    //[[NSNotificationCenter defaultCenter] postNotificationName:kChromeCastIsConnected object:nil userInfo:nil];
 
 }
 
@@ -151,8 +155,6 @@
     
     if ( [self.chromeCast isConnected] ) {
         
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:kChromeCastIsConnected object:nil];
-        
         NSString *namePlayer;
         
         if ( self.tfNamePlayer.text == nil ) {
@@ -172,7 +174,7 @@
         NSString *action = @"connect";
         NSDictionary *jsonDict = @{ @"action": action, @"name": namePlayer};
         
-        NSString * jsonString = [GCKJSONUtils writeJSON:jsonDict];
+        NSString *jsonString = [GCKJSONUtils writeJSON:jsonDict];
         
         if ( ! [self.chromeCast sendTextMessage:jsonString] ) {
             [self showMessage:@"Falha na comunicação. Por favor tente novamente."];
@@ -184,6 +186,12 @@
 
 -(void)chromeCastIsConnected:(NSNotification *)notification {
     
+    [self sendNamePlayerToChromeCast];
+    
+}
+
+-(void)changeName:(NSTimer *)__timer {
+    NSLog(@"changeName");
     [self sendNamePlayerToChromeCast];
     
 }
