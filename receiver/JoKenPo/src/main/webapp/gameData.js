@@ -27,8 +27,8 @@ function move(oponente, escolha) {
 }
 
 function updateChoices(c1, c2) {
-    document.getElementById('escolha1').innerHTML = c1;
-    document.getElementById('escolha2').innerHTML = c2;
+    document.getElementById('escolha1').innerHTML = '<img src='c1'.png"/'>;
+    document.getElementById('escolha2').innerHTML = '<img src='c2'.png"/'>;
 }
 
 function getResult(c1, c2) {

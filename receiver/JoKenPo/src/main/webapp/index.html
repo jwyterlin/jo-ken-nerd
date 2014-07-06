@@ -41,12 +41,16 @@ Reference: https://github.com/googlecast/CastHelloText-android
                         mPlayer1 = -1;
                         var player1Name = document.getElementById('player1name');
                         player1Name.innerHTML = 'Aguardando jogador...';
+                        document.getElementById('escolha1').innerHTML = '';
+                        document.getElementById('score1').innerHTML = '';
                         $("#load1").fadeIn("slow");
                     }
                     if (event.senderId == mPlayer2.senderId) {
                         mPlayer2 = -1;
                         var player2Name = document.getElementById('player2name');
                         player2Name.innerHTML = 'Aguardando jogador...';
+                        document.getElementById('escolha2').innerHTML = '';
+                        document.getElementById('score2').innerHTML = '';
                         $("#load2").fadeIn("slow");
                     }
                     if (window.castReceiverManager.getSenders().length == 0) {
@@ -105,15 +109,23 @@ Reference: https://github.com/googlecast/CastHelloText-android
                 if (mPlayer1.senderId == senderId) {
                     console.log('player 1 choice: ' + value);
                     mPlayer1.choice = value;
+                    $("#load2").fadeOut("slow");
                     if (mPlayer2.choice == -1) {
                         document.getElementById('escolha1').innerHTML = 'Aguardando oponente';
+                        document.getElementById('escolha2').innerHTML = '';
+                        $("#load1").fadeIn("slow");
+                        document.getElementById('result').innerHTML = '';
                     }
                 }
                 if (mPlayer2.senderId == senderId) {
                     console.log('player 2 choice: ' + value);
                     mPlayer2.choice = value;
+                    $("#load1").fadeOut("slow");
                     if (mPlayer1.choice == -1) {
                         document.getElementById('escolha2').innerHTML = 'Aguardando oponente';
+                        document.getElementById('escolha1').innerHTML = '';
+                        $("#load2").fadeIn("slow");
+                        document.getElementById('result').innerHTML = '';
                     }
                 }
                 console.log('mPlayer1: ' + mPlayer1.name);
@@ -129,11 +141,15 @@ Reference: https://github.com/googlecast/CastHelloText-android
                             setResultMsg(mPlayer1.name);
                             window.messageBus.send(mPlayer1.senderId, '{ "result":"win" }');
                             window.messageBus.send(mPlayer2.senderId, '{ "result":"loses" }');
+                            mPlayer1.score++;
+                            document.getElementById('score1').innerHTML = mPlayer1.score;
                         }
                         if (result == mPlayer2.choice) {
                             setResultMsg(mPlayer2.name);
                             window.messageBus.send(mPlayer2.senderId, '{ "result":"win" }');
                             window.messageBus.send(mPlayer1.senderId, '{ "result":"loses" }');
+                            mPlayer2.score++;
+                            document.getElementById('score2').innerHTML = mPlayer2.score;
                         }
                         if (result == 'draw') {
                             setResultMsg('draw');
@@ -161,6 +177,7 @@ Reference: https://github.com/googlecast/CastHelloText-android
                     mPlayer1.name = nome;
                     mPlayer1.senderId = senderId;
                     mPlayer1.choice = -1;
+                    mPlayer1.score = 0;
                     updatePlayerName(1, nome);
                     console.log('Jogador 1 entrou ' + mPlayer1.name);
                 } else if (mPlayer2 == -1) {
@@ -168,6 +185,7 @@ Reference: https://github.com/googlecast/CastHelloText-android
                     mPlayer2.name = nome;
                     mPlayer2.senderId = senderId;
                     mPlayer2.choice = -1;
+                    mPlayer2.score = 0;
                     updatePlayerName(2, nome);
                     console.log('Jogador 2 entrou ' + mPlayer2.name);
                 } else {
