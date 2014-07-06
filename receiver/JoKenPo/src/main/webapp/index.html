@@ -1,58 +1,232 @@
+<!--
+Reference: https://github.com/googlecast/CastHelloText-android
+-->
 <!DOCTYPE html>
 <html>
-  <title>JKPLS</title>
-  <script src="gameData.js" type="text/javascript"></script>
-  <script src="https://www.gstatic.com/cast/js/receiver/09/cast_receiver.js"></script>
-  <script src="jokenpo.js"></script>
-  <link href="bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
-  <link href="bootstrap.min.css" rel="stylesheet" type="text/css"/>
-  <script type="text/javascript">
+    <head>
+        <title>JKPLS</title>
+    </head>
+    <body>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+        <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
+        <link href="bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <script src="gameData.js" type="text/javascript" charset="UTF-8"></script>
+        <script type="text/javascript">
+            var mPlayer1 = -1;
+            var mPlayer2 = -1;
 
-    window.onload = onLoad;
-    var gameData = new gameData();
+            window.onload = function() {
+                cast.receiver.logger.setLevelValue(0);
+                window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
+                console.log('Starting Receiver Manager JKPLS');
 
-    /**
-     * Initializes the receiver application and game objects, and starts the
-     * receiver.
-     */
-    function onLoad() {
-      var div = document.getElementById('mensagem');
-      
-      var chromecastApp = new cast.receiver.Receiver(209A5252,
-          [ cast.JoKenPo.PROTOCOL ], "", 5);
+                // handler for the 'ready' event
+                castReceiverManager.onReady = function(event) {
+                    console.log('Received Ready event: ' + JSON.stringify(event.data));
+                    window.castReceiverManager.setApplicationState("Application status is ready...");
+                };
 
-      var gameEngine = new cast.JoKenPo(gameData);
-      gameEngine.mChannelHandler.addChannelFactory(
-          chromecastApp.createChannelFactory(cast.JoKenPo.PROTOCOL));
-      chromecastApp.start();
-    }
+                // handler for 'senderconnected' event
+                castReceiverManager.onSenderConnected = function(event) {
+                    console.log('Received Sender Connected event: ' + event.data);
+                    console.log(window.castReceiverManager.getSender(event.data).userAgent);
+                };
 
-  </script>
-  <div id="mensagem"></div>
-  <div class="row" style="margin-top: 5%">
-      <div class="col-md-6">
-          <div class="row">
-              <div class="col-md-12">
-                  <h2 class="text-center" id="player1name">Aguardando jogador...</h2>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-md-12">
-                  <p class="text-center" id="escolha1">Opcao escolhida</p>
-              </div>
-          </div>
-      </div>
-      <div class="col-md-6">
-          <div class="row">
-              <div class="col-md-12">
-                  <h2 class="text-center" id="player2name">Aguardando jogador...</h2>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-md-12">
-                  <p class="text-center" id="escolha2">Opcao escolhida</p>
-              </div>
-          </div>
-      </div>
-  </div>
+                // handler for 'senderdisconnected' event
+                castReceiverManager.onSenderDisconnected = function(event) {
+                    console.log('Received Sender Disconnected event: ' + event.data);
+                    if (event.senderId == mPlayer1.senderId) {
+                        mPlayer1 = -1;
+                        var player1Name = document.getElementById('player1name');
+                        player1Name.innerHTML = 'Aguardando jogador...';
+                        $("#load1").fadeIn("slow");
+                    }
+                    if (event.senderId == mPlayer2.senderId) {
+                        mPlayer2 = -1;
+                        var player2Name = document.getElementById('player2name');
+                        player2Name.innerHTML = 'Aguardando jogador...';
+                        $("#load2").fadeIn("slow");
+                    }
+                    if (window.castReceiverManager.getSenders().length == 0) {
+                        window.close();
+                    }
+                };
+
+                // handler for 'systemvolumechanged' event
+                castReceiverManager.onSystemVolumeChanged = function(event) {
+                    console.log('Received System Volume Changed event: ' + event.data['level'] + ' ' +
+                            event.data['muted']);
+                };
+
+                // create a CastMessageBus to handle messages for a custom namespace
+                window.messageBus =
+                        window.castReceiverManager.getCastMessageBus(
+                                'urn:x-cast:com.littleredgroup.jkpls');
+
+                // handler for the CastMessageBus message event
+                window.messageBus.onMessage = function(event) {
+                    var json = JSON.parse(event.data);
+                    console.log('>>>>>>>SenderId: ' + event.senderId);
+                    console.log('>>>>>>>name: ' + json.name);
+                    console.log('>>>>>>>action ' + json.action);
+                    console.log('>>>>>>>choice: ' + json.value);
+
+                    actions(json.action, json, event.senderId);
+
+                    //json.error = 'passando mensagem de erro' + event.senderId;
+                    //event.data = JSON.stringify(json);
+                    //window.messageBus.broadcast(event.senderId + ' --- ' + event.data);
+                    //window.messageBus.send(event.senderId, event.data);
+                    //console.log('>>>>>>>sended')
+
+                    // inform all senders on the CastMessageBus of the incoming message event
+                    // sender message listener will be invoked
+                    //window.messageBus.send(event.senderId, event.data);
+                }
+
+                // initialize the CastReceiverManager with an application status message
+                window.castReceiverManager.start({statusText: "Application is starting"});
+                console.log('Receiver Manager started');
+            };
+
+            function actions(action, data, senderId) {
+                if (action == 'connect') {
+                    connect(data.name, senderId);
+                }
+                if (action == 'choice') {
+                    choice(data.value, senderId);
+                }
+            }
+
+            function choice(value, senderId) {
+                console.log('choice: ' + value);
+                if (mPlayer1.senderId == senderId) {
+                    console.log('player 1 choice: ' + value);
+                    mPlayer1.choice = value;
+                    if (mPlayer2.choice == -1) {
+                        document.getElementById('escolha1').innerHTML = 'Aguardando oponente';
+                    }
+                }
+                if (mPlayer2.senderId == senderId) {
+                    console.log('player 2 choice: ' + value);
+                    mPlayer2.choice = value;
+                    if (mPlayer1.choice == -1) {
+                        document.getElementById('escolha2').innerHTML = 'Aguardando oponente';
+                    }
+                }
+                console.log('mPlayer1: ' + mPlayer1.name);
+                console.log('mPlayer2: ' + mPlayer2.name);
+                console.log('mPlayer1 choice: ' + mPlayer1.choice);
+                console.log('mPlayer1 choice: ' + mPlayer2.choice);
+                if (mPlayer1 != -1 && mPlayer2 != -1) {
+                    if (mPlayer1.choice != -1 && mPlayer2.choice != -1) {
+                        console.log('p1c: ' + mPlayer1.choice + ' - p2c: ' + mPlayer2.choice)
+                        var result = getResult(mPlayer1.choice, mPlayer2.choice);
+                        console.log('result: ' + result);
+                        if (result == mPlayer1.choice) {
+                            setResultMsg(mPlayer1.name);
+                            window.messageBus.send(mPlayer1.senderId, '{ "result":"win" }');
+                            window.messageBus.send(mPlayer2.senderId, '{ "result":"loses" }');
+                        }
+                        if (result == mPlayer2.choice) {
+                            setResultMsg(mPlayer2.name);
+                            window.messageBus.send(mPlayer2.senderId, '{ "result":"win" }');
+                            window.messageBus.send(mPlayer1.senderId, '{ "result":"loses" }');
+                        }
+                        if (result == 'draw') {
+                            setResultMsg('draw');
+                            window.messageBus.broadcast('{ "result":"empate" }');
+                        }
+                        mPlayer1.choice = -1;
+                        mPlayer2.choice = -1;
+                    }
+                }
+            }
+
+            function connect(nome, senderId) {
+
+                if ((mPlayer1 != -1) && (mPlayer1.senderId == senderId)) {
+                    window.messageBus.send(mPlayer1.senderId, '{ "error":"Voce ja esta conectado" }');
+                    return;
+                }
+                if ((mPlayer2 != -1) && (mPlayer2.senderId == senderId)) {
+                    window.messageBus.send(mPlayer2.senderId, '{ "error":"Voce ja esta conectado" }');
+                    return;
+                }
+
+                if (mPlayer1 == -1) {
+                    mPlayer1 = new Object();
+                    mPlayer1.name = nome;
+                    mPlayer1.senderId = senderId;
+                    mPlayer1.choice = -1;
+                    updatePlayerName(1, nome);
+                    console.log('Jogador 1 entrou ' + mPlayer1.name);
+                } else if (mPlayer2 == -1) {
+                    mPlayer2 = new Object();
+                    mPlayer2.name = nome;
+                    mPlayer2.senderId = senderId;
+                    mPlayer2.choice = -1;
+                    updatePlayerName(2, nome);
+                    console.log('Jogador 2 entrou ' + mPlayer2.name);
+                } else {
+                    console.log('Unable to join a full game.');
+                    window.messageBus.send(senderId, '{ "error":"A sala está cheia"}');
+                    return;
+                }
+
+                //console.log('mPlayer1: ' + JSON.stringify(JSON.create(mPlayer1)));
+                //console.log('mPlayer2: ' + JSON.stringify(JSON.create(mPlayer2)));
+
+                if (mPlayer1 != -1 && mPlayer2 != -1) {
+                    //var json = JSON.parse('{ "sucess":"conectados com sucesso" }');
+                    window.messageBus.broadcast('{ "sucess":"conectados com sucesso" }');
+                }
+            }
+            ;
+
+        </script>
+
+        <div class="row" style="margin-top: 5%">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-center" id="player1name">Aguardando jogador...</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="text-center" id="load1">
+                        <img src="loader.GIF" alt=""/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-center" id="escolha1"></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-center" id="player2name">Aguardando jogador...</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="text-center" id="load2">
+                        <img src="loader.GIF" alt=""/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-center" id="escolha2"></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-center" id="result"></h4>
+            </div>
+        </div>
+    </body>
 </html>
