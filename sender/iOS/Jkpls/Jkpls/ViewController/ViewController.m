@@ -116,6 +116,17 @@
     
 }
 
+-(void)didDisconnectWithError:(NSError *)error deviceManager:(GCKDeviceManager *)device {
+    
+    [timer invalidate];
+    timer = nil;
+    
+    [self setImage:[UIImage imageNamed:@"cast_off.png"] onButton:self.chromeCastTouched];
+    
+    [self showMessage:@"Desconectado"];
+    
+}
+
 #pragma mark - Helper Methods
 
 -(void)loading:(NSTimer *)timer {

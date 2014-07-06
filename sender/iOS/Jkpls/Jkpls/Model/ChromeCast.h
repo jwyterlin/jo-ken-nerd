@@ -32,5 +32,6 @@
 -(void)didStartScanner;
 -(void)didConnect:(GCKDeviceManager *)device;
 -(void)didFailWithError:(NSError *)error deviceManager:(GCKDeviceManager *)device;
+-(void)didDisconnectWithError:(NSError *)error deviceManager:(GCKDeviceManager *)device;
 
 @end
