@@ -151,23 +151,27 @@
         
         [[NSNotificationCenter defaultCenter] removeObserver:self name:kChromeCastIsConnected object:nil];
         
-        NSString *message;
+        NSString *namePlayer;
         
         if ( self.tfNamePlayer.text == nil ) {
             
-            message = @"Jogador";
+            namePlayer = @"Jogador";
             
         } else {
             
             if ( self.tfNamePlayer.text ) {
-                message = @"Jogador";
+                namePlayer = @"Jogador";
             } else {
-                message = self.tfNamePlayer.text;
+                namePlayer = self.tfNamePlayer.text;
             }
             
         }
         
-        if ( ! [self.chromeCast sendTextMessage:message] ) {
+        NSString *action = @"connect";
+        // {"action:"connect","name":"victor"}
+        NSString *stringJson = [NSString stringWithFormat:@"{\"action\":\"%@\",\"name\":\"%@\"}",action,namePlayer];
+        
+        if ( ! [self.chromeCast sendTextMessage:stringJson] ) {
             [self showMessage:@"Falha na comunicação. Por favor tente novamente."];
         }
         

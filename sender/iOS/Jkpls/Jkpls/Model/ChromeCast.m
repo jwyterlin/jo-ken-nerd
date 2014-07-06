@@ -8,7 +8,10 @@
 
 #import "ChromeCast.h"
 
-#define APPID @"9EE9C969"
+//#define APPID @"9EE9C969"
+//#define NAMESPACE @"urn:x-cast:com.fbvictorhugo.simpledicecast.cast"
+#define APPID @"209A5252"
+#define NAMESPACE @"urn:x-cast:com.littleredgroup.jkpls"
 
 @interface ChromeCast ()
 
@@ -65,7 +68,7 @@
     
     if ( ! _textChannel ) {
         
-        _textChannel = [[TextChannel alloc] initWithNamespace:@"urn:x-cast:com.fbvictorhugo.simpledicecast.cast"];
+        _textChannel = [[TextChannel alloc] initWithNamespace:NAMESPACE];
         [self.deviceManager addChannel:_textChannel];
         
     }
@@ -148,7 +151,14 @@
 
 -(BOOL)isConnected {
     
-    return self.deviceManager.isConnected;
+    NSLog( @"self.deviceManager: %@", _deviceManager );
+    
+    if ( _deviceManager == nil ) {
+        [self deviceManager];
+        NSLog( @"self.deviceManager - 2: %@", self.deviceManager );
+    }
+    
+    return [self.deviceManager isConnected];
 
 }
 
