@@ -1,6 +1,11 @@
 package com.littleredgroup.jkpls;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
@@ -18,7 +23,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.google.android.gms.cast.Cast;
 import com.google.android.gms.cast.Cast.ApplicationConnectionResult;
@@ -29,6 +34,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
+import com.google.android.gms.internal.et;
 
 public class MainActivity extends ActionBarActivity implements OnClickListener {
 	private final String CLASS_TAG = MainActivity.class.getSimpleName();
@@ -43,12 +49,14 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 	private boolean mWaitingForReconnect;
 	// private String mSessionId;
 	private MyMessageReceivedCallback mMyMessageReceivedCallbacks;
-	EditText etName = null;
+	private EditText etName;
 	private ImageView ivRock;
 	private ImageView ivPaper;
 	private ImageView ivScissor;
 	private ImageView ivLizard;
 	private ImageView ivSpock;
+
+	private TextView tvResult;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +66,8 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		initializeMediaRouter();
 		setComponentsView();
 		setViewListerns();
+
+		etName.setText(getNameUserRandom());
 	}
 
 	private void setComponentsView() {
@@ -68,6 +78,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		ivSpock = (ImageView) findViewById(R.id.game_iv_spock);
 
 		etName = (EditText) findViewById(R.id.editText1);
+		tvResult = (TextView) findViewById(R.id.game_tv_result);
 	}
 
 	private void setViewListerns() {
@@ -207,11 +218,21 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		@Override
 		public void onMessageReceived(CastDevice castDevice, String namespace,
 				String message) {
-			Toast.makeText(getApplicationContext(),
-					castDevice.getFriendlyName() + ":" + message,
-					Toast.LENGTH_LONG).show();
+			JSONObject jResult = null;
+			try {
+				jResult = new JSONObject(message);
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+			String msgResult = "";
+			try {
+				msgResult = getMessageStatus(jResult);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			setMessaegStatus(msgResult);
 
-			Log.d(">>> onMessageReceived ", message);
+			Log.d("onMessageReceived ", message);
 		}
 
 	}
@@ -285,7 +306,8 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 					Log.e(CLASS_TAG, "Exception while creating channel", e);
 				}
 
-				sendMessage(CastMessages.messageSetupUser("Victor"));
+				sendMessage(CastMessages.messageSetupUser(etName.getText()
+						.toString()));
 
 			} else {
 				Log.e(CLASS_TAG, "application could not launch");
@@ -327,7 +349,6 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		}
 		mSelectedDevice = null;
 		mWaitingForReconnect = false;
-		// mSessionId = null;
 	}
 
 	@Override
@@ -356,5 +377,53 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		default:
 			break;
 		}
+	}
+
+	private String getMessageStatus(JSONObject json) throws Exception {
+		if (json == null) {
+			return "";
+		}
+
+		if (json.has(Constants.KEY_SUCESS)) {
+			if (json.getString(Constants.KEY_SUCESS) != null
+					&& json.getString(Constants.KEY_SUCESS).equals(
+							Constants.RESULT_SUCCES_CONECTED)) {
+				return getString(R.string.msg_sucess);
+
+			}
+		} else if (json.has(Constants.KEY_ERROR)) {
+			if (json.getString(Constants.KEY_ERROR) != null
+					&& json.getString(Constants.KEY_ERROR).equals(
+							Constants.RESULT_ROOM_IS_FULL)) {
+				return getString(R.string.msg_room_full);
+
+			}
+
+		} else if (json.has(Constants.KEY_RESULT)) {
+			if (json.getString(Constants.KEY_RESULT) != null
+					&& json.getString(Constants.KEY_RESULT).equals(
+							Constants.RESULT_WIN)) {
+				return getString(R.string.msg_win);
+			} else if (json.getString(Constants.KEY_RESULT) != null
+					&& json.getString(Constants.KEY_RESULT).equals(
+							Constants.RESULT_LOSE)) {
+				return getString(R.string.msg_loses);
+			} else if (json.getString(Constants.KEY_RESULT) != null
+					&& json.getString(Constants.KEY_RESULT).equals(
+							Constants.RESULT_DRAW)) {
+				return getString(R.string.msg_draw);
+			}
+		}
+
+		return "";
+	}
+
+	private void setMessaegStatus(String msg) {
+		tvResult.setText(msg);
+	}
+
+	private String getNameUserRandom() {
+		return getString(R.string.lbl_user)
+				+ new SimpleDateFormat("SSS").format(new Date());
 	}
 }

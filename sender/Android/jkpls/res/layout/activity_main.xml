@@ -5,33 +5,27 @@
     android:orientation="vertical"
     android:padding="25dp" >
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/editText1"
+        style="@style/EditTextAppTheme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <EditText
-            android:id="@+id/editText1"
-            style="@style/EditTextAppTheme"
-            android:hint="Nome"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:inputType="text" >
-        </EditText>
-    </LinearLayout>
+        android:hint="@string/hint_name"
+        android:inputType="text" >
+    </EditText>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:gravity="center" >
 
         <ImageView
             android:id="@+id/game_iv_rock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_margin="50dp"
+            android:layout_margin="30dp"
+            android:contentDescription="@string/cd_image_rock"
             android:src="@drawable/rock" />
 
         <ImageView
@@ -39,23 +33,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_centerInParent="true"
+            android:layout_below="@+id/game_iv_rock"
+            android:layout_margin="30dp"
+            android:contentDescription="@string/cd_image_paper"
             android:src="@drawable/paper" />
 
         <ImageView
             android:id="@+id/game_iv_scissor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
+            android:layout_below="@+id/game_iv_paper"
+            android:layout_margin="30dp"
+            android:contentDescription="@string/cd_image_scissor"
             android:src="@drawable/scissor" />
 
         <ImageView
             android:id="@+id/game_iv_lizard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
+            android:layout_below="@+id/game_iv_spock"
+            android:layout_margin="30dp"
+            android:layout_marginRight="60dp"
+            android:contentDescription="@string/cd_image_lizard"
             android:src="@drawable/lizard" />
 
         <ImageView
@@ -63,8 +64,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_centerInParent="true"
+            android:layout_below="@+id/game_iv_rock"
+            android:layout_margin="30dp"
+            android:contentDescription="@string/cd_image_spock"
             android:src="@drawable/spock" />
+
+        <TextView
+            android:id="@+id/game_tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textStyle="bold" />
     </RelativeLayout>
 
 </LinearLayout>
