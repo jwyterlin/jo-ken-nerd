@@ -1,19 +1,20 @@
 body {
-  font: 44px Helvetica-Light, Arial, Verdana, sans-serif;
-  background-color: white;
-  color: black;
-  -webkit-font-smoothing: antialiased;
+    font: 44px Helvetica-Light, Arial, Verdana, sans-serif;
+    background-color: white;
+    color: black;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1 {
-  display: block;
-  font-size: 2em;
-  font-weight: bold;
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 
 #titulo {
-  background-color: #F04C41;
+    background-color: #F04C41;
+    color: white;
 }
 
 p {
@@ -22,4 +23,10 @@ p {
 
 p:first-letter {
     text-transform: uppercase;
+}
+
+#rodape {
+    position:absolute;
+    bottom:5%;
+    width:102%;
 }

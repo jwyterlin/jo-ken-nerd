@@ -5,6 +5,7 @@ Reference: https://github.com/googlecast/CastHelloText-android
 <html>
     <head>
         <title>JKPLS</title>
+        <meta charset="UTF-8">
     </head>
     <body>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
@@ -51,6 +52,8 @@ Reference: https://github.com/googlecast/CastHelloText-android
                         //document.getElementById('score2').innerHTML = '';
                         $("#load2").fadeIn("slow");
                     }
+                    setScore(1, 0);
+                    setScore(2, 0);
                     document.getElementById('result').innerHTML = '';
                     document.getElementById('escolha1').innerHTML = '';
                     document.getElementById('escolha2').innerHTML = '';
@@ -167,6 +170,7 @@ Reference: https://github.com/googlecast/CastHelloText-android
                             window.messageBus.send(mPlayer1.senderId, '{ "result":"win" }');
                             window.messageBus.send(mPlayer2.senderId, '{ "result":"loses" }');
                             mPlayer1.score++;
+                            setScore(1, mPlayer1.score);
                             //document.getElementById('score1').innerHTML = mPlayer1.score;
                         }
                         if (result == mPlayer2.choice) {
@@ -174,6 +178,7 @@ Reference: https://github.com/googlecast/CastHelloText-android
                             window.messageBus.send(mPlayer2.senderId, '{ "result":"win" }');
                             window.messageBus.send(mPlayer1.senderId, '{ "result":"loses" }');
                             mPlayer2.score++;
+                            setScore(2, mPlayer2.score);
                             //document.getElementById('score2').innerHTML = mPlayer2.score;
                         }
                         if (result == 'draw') {
@@ -236,7 +241,7 @@ Reference: https://github.com/googlecast/CastHelloText-android
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-12" id="titulo">
-                        <p class="text-center" id="player1name" style="color: white">Aguardando jogador...</p>
+                        <p class="text-center" id="player1name">Aguardando jogador...</p>
                     </div>
                 </div>
                 </br></br>
@@ -257,7 +262,7 @@ Reference: https://github.com/googlecast/CastHelloText-android
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-12" id="titulo">
-                        <p class="text-center" id="player2name"  style="color: white">Aguardando jogador...</p>
+                        <p class="text-center" id="player2name">Aguardando jogador...</p>
                     </div>
                 </div>
                 </br></br>
@@ -279,6 +284,14 @@ Reference: https://github.com/googlecast/CastHelloText-android
         <div class="row">
             <div class="col-md-12">
                 <h2 class="text-center" id="result"></h2>
+            </div>
+        </div>
+        <div class="row" id="rodape">
+            <div class="col-md-6" id="titulo">
+                <div class="text-center" id="score1">Pontuação: 0</div>
+            </div>
+            <div class="col-md-6" id="titulo">
+                <div class="text-center" id="score2">Pontuação: 0</div>
             </div>
         </div>
     </body>
