@@ -10,54 +10,181 @@
 #import "TutorialViewController.h"
 #import "ChromeCast.h"
 
-@interface ViewController ()
+@interface ViewController () {
 
-@property (nonatomic, strong) ChromeCast *chromeCast;
+    NSTimer *timer;
+    int counter;
+    
+}
 
 @end
 
 @implementation ViewController
 
-#pragma mark - Getter Methods -
+@synthesize tfNamePlayer = _tfNamePlayer;
 
--(ChromeCast *)chromeCast {
-    
-    if (!_chromeCast) {
-        _chromeCast = [[ChromeCast alloc] init];
-    }
-    
-    return _chromeCast;
-    
-}
+#pragma mark - Getter Methods -
 
 #pragma mark - View Lifecycle
 
 -(void)viewDidLoad {
-    [super viewDidLoad];
-    [self.chromeCast startScanner];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateListDevices:) name:kUpdatedListDevices object:nil];
+    [super viewDidLoad];
+    
+    self.chromeCast = [ChromeCast new];
+    self.chromeCast.delegate = self;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(chromeCastIsConnected:) name:kChromeCastIsConnected object:nil];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toucheOnView)];
+    tap.numberOfTapsRequired = 1;
+    
+    [self.view addGestureRecognizer:tap];
     
 }
 
 #pragma mark - IBAction Methods
 
 -(IBAction)showTutorial:(id)sender {
+    
     TutorialViewController *tutorialVC = [[TutorialViewController alloc] initWithNibName:kTutorialViewController bundle:nil];
     
     [self.navigationController pushViewController:tutorialVC animated:YES];
-    
 }
 
 -(IBAction)chromeCastTouched:(id)sender {
     [self.chromeCast showActionSheetOnView:self.view];
 }
 
+-(IBAction)choseOption:(UIButton *)sender {
+    
+    NSString *message = [NSString stringWithFormat:@"%i",sender.tag];
+    
+    if ( ! [self.chromeCast sendTextMessage:message] ) {
+        [self showMessage:@"Falha na comunicação. Por favor tente novamente."];
+    }
+    
+}
+
+-(IBAction)changedName:(UITextField *)textfield {
+    
+    NSLog( @"%@", textfield.text );
+    
+    [self sendNamePlayerToChromeCast];
+
+}
+
+#pragma mark - ChromeCastDelegate Methods
+
+-(void)didStartScanner {
+    
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(loading:) userInfo:nil repeats:NO];
+    
+}
+
+-(void)didConnect:(GCKDeviceManager *)device {
+
+    [timer invalidate];
+    timer = nil;
+    
+    [self setImage:[UIImage imageNamed:@"cast_on.png"] onButton:self.chromeCastTouched];
+    
+    [self showMessage:@"Conexão concluída com sucesso!"];
+    
+    [self sendNamePlayerToChromeCast];
+    
+    //[[NSNotificationCenter defaultCenter] postNotificationName:kChromeCastIsConnected object:nil userInfo:nil];
+
+}
+
+-(void)didFailWithError:(NSError *)error deviceManager:(GCKDeviceManager *)device {
+    
+    [timer invalidate];
+    timer = nil;
+    
+    [self setImage:[UIImage imageNamed:@"cast_off.png"] onButton:self.chromeCastTouched];
+    
+    [self showMessage:@"Falha na conexão"];
+    
+}
+
 #pragma mark - Helper Methods
 
--(void)updateListDevices:(NSNotification *)notification {
+-(void)loading:(NSTimer *)timer {
     
-//    [ChromeCast showActionSheetOnView:self.view];
+    counter++;
+    
+    if ( counter == 1 ) {
+        [self setImage:[UIImage imageNamed:@"cast_on0.png"] onButton:self.chromeCastTouched];
+    } else if ( counter == 2 ) {
+        [self setImage:[UIImage imageNamed:@"cast_on1.png"] onButton:self.chromeCastTouched];
+    } else if ( counter == 3 ) {
+        [self setImage:[UIImage imageNamed:@"cast_on2.png"] onButton:self.chromeCastTouched];
+        counter = 0;
+    }
+    
+}
+
+-(void)setImage:(UIImage *)image onButton:(UIButton *)button {
+    
+    [button setImage:image forState:UIControlStateNormal];
+    [button setImage:image forState:UIControlStateSelected];
+    [button setImage:image forState:UIControlStateHighlighted];
+    
+}
+
+-(void)showMessage:(NSString *)message {
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:message message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    
+    [alert show];
+    
+}
+
+-(void)toucheOnView {
+    
+    [self.tfNamePlayer resignFirstResponder];
+    
+}
+
+-(void)sendNamePlayerToChromeCast {
+    
+    if ( [self.chromeCast isConnected] ) {
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:kChromeCastIsConnected object:nil];
+        
+        NSString *namePlayer;
+        
+        if ( self.tfNamePlayer.text == nil ) {
+            
+            namePlayer = @"Jogador";
+            
+        } else {
+            
+            if ( [self.tfNamePlayer.text isEqualToString:@""] ) {
+                namePlayer = @"Jogador";
+            } else {
+                namePlayer = self.tfNamePlayer.text;
+            }
+            
+        }
+        
+        NSString *action = @"connect";
+        NSDictionary *jsonDict = @{ @"action": action, @"name": namePlayer};
+        
+        NSString * jsonString = [GCKJSONUtils writeJSON:jsonDict];
+        
+        if ( ! [self.chromeCast sendTextMessage:jsonString] ) {
+            [self showMessage:@"Falha na comunicação. Por favor tente novamente."];
+        }
+        
+    }
+    
+}
+
+-(void)chromeCastIsConnected:(NSNotification *)notification {
+    
+    [self sendNamePlayerToChromeCast];
     
 }
 

@@ -12,5 +12,6 @@
 
 NSString *const kUpdatedListDevices = @"UpdatedListDevices";
 NSString *const kTutorialViewController = @"TutorialViewController";
+NSString *const kChromeCastIsConnected = @"ChromeCastIsConnected";
 
 @end
