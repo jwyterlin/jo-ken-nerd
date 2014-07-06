@@ -60,13 +60,14 @@
 }
 
 -(IBAction)choseOption:(UIButton *)sender {
-    
+    NSString *action = @"choice";
     NSString *message = [NSString stringWithFormat:@"%i",sender.tag];
+    NSDictionary *jsonDict = @{ @"action": action, @"value": message};
+    NSString *jsonString = [GCKJSONUtils writeJSON:jsonDict];
     
-    if ( ! [self.chromeCast sendTextMessage:message] ) {
+    if ( ! [self.chromeCast sendTextMessage:jsonString] ) {
         [self showMessage:@"Falha na comunicação. Por favor tente novamente."];
     }
-    
 }
 
 -(IBAction)changedName:(UITextField *)textfield {
