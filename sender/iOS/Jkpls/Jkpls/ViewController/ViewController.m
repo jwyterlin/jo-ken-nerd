@@ -268,6 +268,16 @@
         // Sala gerada com sucesso
         self.lbResultGame.text = @"Bem-vindo ao Jogo.";
         
+    } else if ( dictionary[@"error"] ) {
+        
+        NSString *stringError = dictionary[@"error"];
+        
+        if ( [stringError isEqualToString:@"room_full"] ) {
+            self.lbResultGame.text = @"Sala cheia.";
+        } else {
+            self.lbResultGame.text = @"";
+        }
+
     } else {
         self.lbResultGame.text = @"";
     }
