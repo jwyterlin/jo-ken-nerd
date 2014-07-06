@@ -1,0 +1,25 @@
+body {
+  font: 44px Helvetica-Light, Arial, Verdana, sans-serif;
+  background-color: transparent;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+
+.col-md-12 {
+  background-color: #F04C41;
+}
+
+p {
+    text-transform: lowercase;
+}
+
+p:first-letter {
+    text-transform: uppercase;
+}
