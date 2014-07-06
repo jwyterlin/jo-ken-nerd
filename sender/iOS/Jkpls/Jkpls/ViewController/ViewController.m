@@ -32,8 +32,7 @@
     
     [super viewDidLoad];
     
-    self.chromeCast = [ChromeCast new];
-    self.chromeCast.delegate = self;
+    [self initChromeCast];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toucheOnView)];
     tap.numberOfTapsRequired = 1;
@@ -112,7 +111,11 @@
     
     [self setImage:[UIImage imageNamed:@"cast_off.png"] onButton:self.chromeCastTouched];
     
-    [self showMessage:@"Falha na conexão"];
+    self.chromeCast = nil;
+    
+    [self initChromeCast];
+    
+    [self showMessage:[NSString stringWithFormat:@"Falha na conexão: %@", error.localizedDescription ]];
     
 }
 
@@ -122,6 +125,10 @@
     timer = nil;
     
     [self setImage:[UIImage imageNamed:@"cast_off.png"] onButton:self.chromeCastTouched];
+    
+    self.chromeCast = nil;
+    
+    [self initChromeCast];
     
     [self showMessage:@"Desconectado"];
     
@@ -208,6 +215,13 @@
 -(void)changeName:(NSTimer *)__timer {
     NSLog(@"changeName");
     [self sendNamePlayerToChromeCast];
+    
+}
+
+-(void)initChromeCast {
+    
+    self.chromeCast = [ChromeCast new];
+    self.chromeCast.delegate = self;
     
 }
 
