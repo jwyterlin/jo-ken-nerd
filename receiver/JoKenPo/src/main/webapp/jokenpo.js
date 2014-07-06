@@ -4,7 +4,7 @@ var cast = window.cast || {};
 (function() {
     'use strict';
 
-    JoKenPo.PROTOCOL = 'com.littleredgroup.jkpls';
+    JoKenPo.PROTOCOL = 'urn:x-cast:com.littleredgroup.jkpls';
 
     JoKenPo.PLAYER = {
         O: 'O',
