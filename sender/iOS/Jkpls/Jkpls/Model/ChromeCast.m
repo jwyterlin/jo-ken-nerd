@@ -146,6 +146,12 @@
     
 }
 
+-(BOOL)isConnected {
+    
+    return self.deviceManager.isConnected;
+
+}
+
 #pragma mark - UIActionSheetDelegate Methods -
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {

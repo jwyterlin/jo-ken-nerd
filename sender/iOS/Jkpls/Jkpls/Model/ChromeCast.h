@@ -20,6 +20,7 @@
 
 -(void)showActionSheetOnView:(UIView *)view;
 -(BOOL)sendTextMessage:(NSString *)message;
+-(BOOL)isConnected;
 
 @end
 

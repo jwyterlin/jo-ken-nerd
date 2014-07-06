@@ -12,5 +12,6 @@
 
 extern NSString *const kUpdatedListDevices;
 extern NSString *const kTutorialViewController;
+extern NSString *const kChromeCastIsConnected;
 
 @end

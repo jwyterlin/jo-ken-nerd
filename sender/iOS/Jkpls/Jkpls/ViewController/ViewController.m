@@ -21,6 +21,8 @@
 
 @implementation ViewController
 
+@synthesize tfNamePlayer = _tfNamePlayer;
+
 #pragma mark - Getter Methods -
 
 #pragma mark - View Lifecycle
@@ -32,7 +34,12 @@
     self.chromeCast = [ChromeCast new];
     self.chromeCast.delegate = self;
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateListDevices:) name:kUpdatedListDevices object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(chromeCastIsConnected:) name:kChromeCastIsConnected object:nil];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toucheOnView)];
+    tap.numberOfTapsRequired = 1;
+    
+    [self.view addGestureRecognizer:tap];
     
 }
 
@@ -59,12 +66,12 @@
     
 }
 
-#pragma mark - Helper Methods
+-(IBAction)changedName:(UITextField *)textfield {
+    
+    NSLog( @"%@", textfield.text );
+    
+    [self sendNamePlayerToChromeCast];
 
--(void)updateListDevices:(NSNotification *)notification {
-    
-//    [ChromeCast showActionSheetOnView:self.view];
-    
 }
 
 #pragma mark - ChromeCastDelegate Methods
@@ -83,6 +90,8 @@
     [self setImage:[UIImage imageNamed:@"cast_on.png"] onButton:self.chromeCastTouched];
     
     [self showMessage:@"Conexão concluída com sucesso!"];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kChromeCastIsConnected object:nil userInfo:nil];
 
 }
 
@@ -127,6 +136,48 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:message message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
     
     [alert show];
+    
+}
+
+-(void)toucheOnView {
+    
+    [self.tfNamePlayer resignFirstResponder];
+    
+}
+
+-(void)sendNamePlayerToChromeCast {
+    
+    if ( [self.chromeCast isConnected] ) {
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:kChromeCastIsConnected object:nil];
+        
+        NSString *message;
+        
+        if ( self.tfNamePlayer.text == nil ) {
+            
+            message = @"Jogador";
+            
+        } else {
+            
+            if ( self.tfNamePlayer.text ) {
+                message = @"Jogador";
+            } else {
+                message = self.tfNamePlayer.text;
+            }
+            
+        }
+        
+        if ( ! [self.chromeCast sendTextMessage:message] ) {
+            [self showMessage:@"Falha na comunicação. Por favor tente novamente."];
+        }
+        
+    }
+    
+}
+
+-(void)chromeCastIsConnected:(NSNotification *)notification {
+    
+    [self sendNamePlayerToChromeCast];
     
 }
 
