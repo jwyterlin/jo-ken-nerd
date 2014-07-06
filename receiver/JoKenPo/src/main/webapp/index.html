@@ -38,6 +38,8 @@ Reference: https://github.com/googlecast/CastHelloText-android
                 // handler for 'senderdisconnected' event
                 castReceiverManager.onSenderDisconnected = function(event) {
                     console.log('Received Sender Disconnected event: ' + event.data);
+                    mPlayer1.score = 0;
+                    mPlayer2.score = 0;
                     if (event.senderId == mPlayer1.senderId) {
                         mPlayer1 = -1;
                         var player1Name = document.getElementById('player1name');
