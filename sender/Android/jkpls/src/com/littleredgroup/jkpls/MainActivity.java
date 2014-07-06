@@ -7,6 +7,7 @@ import java.util.Date;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
@@ -34,7 +35,6 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
-import com.google.android.gms.internal.et;
 
 public class MainActivity extends ActionBarActivity implements OnClickListener {
 	private final String CLASS_TAG = MainActivity.class.getSimpleName();
@@ -107,6 +107,12 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.action_tutorial:
+			Intent intent = new Intent(this, TutorialActivity.class);
+			startActivity(intent);
+			overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+		}
 		return super.onOptionsItemSelected(item);
 	}
 
@@ -356,22 +362,27 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 		switch (v.getId()) {
 		case R.id.game_iv_rock:
 			sendMessage(CastMessages.messageToChoice(Constants.CHOICE_ROCK));
+			setResult(R.string.msg_wait_oponent);
 			break;
 
 		case R.id.game_iv_paper:
 			sendMessage(CastMessages.messageToChoice(Constants.CHOICE_PAPER));
+			setResult(R.string.msg_wait_oponent);
 			break;
 
 		case R.id.game_iv_scissor:
 			sendMessage(CastMessages.messageToChoice(Constants.CHOICE_SCISSOR));
+			setResult(R.string.msg_wait_oponent);
 			break;
 
 		case R.id.game_iv_lizard:
 			sendMessage(CastMessages.messageToChoice(Constants.CHOICE_LIZARD));
+			setResult(R.string.msg_wait_oponent);
 			break;
 
 		case R.id.game_iv_spock:
 			sendMessage(CastMessages.messageToChoice(Constants.CHOICE_SPOCK));
+			setResult(R.string.msg_wait_oponent);
 			break;
 
 		default:
