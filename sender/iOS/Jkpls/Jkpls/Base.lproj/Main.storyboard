@@ -99,7 +99,7 @@
                         <barButtonItem key="rightBarButtonItem" image="help_icon.png" id="rgN-jj-OBS">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="showTutorial:" destination="vXZ-lx-hvc" id="jVI-iT-kOp"/>
+                                <segue destination="3lw-RP-dtK" kind="push" id="Wgx-j1-pME"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -111,6 +111,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-435" y="-326"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="J0b-Gf-yPw">
+            <objects>
+                <viewController id="3lw-RP-dtK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cMZ-Kt-5A9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ov2-fJ-fML"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wVB-Sn-xJX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="help_instruction.png" translatesAutoresizingMaskIntoConstraints="NO" id="BYR-sw-16E">
+                                <rect key="frame" x="0.0" y="63" width="320" height="505"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="50V-Lp-ucF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o5w-8R-xJI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="-318"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cbI-l5-c3b">
@@ -135,12 +160,14 @@
     <resources>
         <image name="cast_off.png" width="29" height="23"/>
         <image name="help_icon.png" width="30" height="29"/>
+        <image name="help_instruction.png" width="320" height="568"/>
         <image name="largato.png" width="57" height="57"/>
         <image name="papel.png" width="57" height="57"/>
         <image name="pedra.png" width="57" height="57"/>
         <image name="spock.png" width="57" height="57"/>
         <image name="tesoura.png" width="57" height="57"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
