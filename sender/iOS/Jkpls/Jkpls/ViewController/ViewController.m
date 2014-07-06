@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "TutorialViewController.h"
 #import "ChromeCast.h"
+#import "NativeJsonSerializer.h"
 
 @interface ViewController () {
 
@@ -91,7 +92,9 @@
     
     [self showMessage:@"Conexão concluída com sucesso!"];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:kChromeCastIsConnected object:nil userInfo:nil];
+    [self sendNamePlayerToChromeCast];
+    
+    //[[NSNotificationCenter defaultCenter] postNotificationName:kChromeCastIsConnected object:nil userInfo:nil];
 
 }
 
@@ -168,10 +171,11 @@
         }
         
         NSString *action = @"connect";
-        // {"action:"connect","name":"victor"}
-        NSString *stringJson = [NSString stringWithFormat:@"{\"action\":\"%@\",\"name\":\"%@\"}",action,namePlayer];
+        NSDictionary *jsonDict = @{ @"action": action, @"name": namePlayer};
         
-        if ( ! [self.chromeCast sendTextMessage:stringJson] ) {
+        NSString * jsonString = [GCKJSONUtils writeJSON:jsonDict];
+        
+        if ( ! [self.chromeCast sendTextMessage:jsonString] ) {
             [self showMessage:@"Falha na comunicação. Por favor tente novamente."];
         }
         
