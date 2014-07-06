@@ -14,6 +14,8 @@
 @property (nonatomic, strong) ChromeCast *chromeCast;
 @property (weak, nonatomic) IBOutlet UIButton *chromeCastTouched;
 @property(nonatomic,strong) IBOutlet UITextField *tfNamePlayer;
+@property(nonatomic,strong) IBOutlet UILabel *lbResultGame;
+@property(nonatomic,strong) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 -(IBAction)choseOption:(UIButton *)sender;
 -(IBAction)changedName:(UITextField *)textfield;
