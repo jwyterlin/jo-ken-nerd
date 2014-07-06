@@ -53,7 +53,11 @@
 }
 
 -(IBAction)chromeCastTouched:(id)sender {
-    [self.chromeCast showActionSheetOnView:self.view];
+    if (self.chromeCast.isConnected) {
+        [self.chromeCast disconnectDevice];
+    } else {
+        [self.chromeCast showActionSheetOnView:self.view];   
+    }
 }
 
 -(IBAction)choseOption:(UIButton *)sender {
