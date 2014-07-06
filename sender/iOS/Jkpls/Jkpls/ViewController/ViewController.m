@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "TutorialViewController.h"
 #import "ChromeCast.h"
-#import "NativeJsonSerializer.h"
 
 @interface ViewController () {
 
