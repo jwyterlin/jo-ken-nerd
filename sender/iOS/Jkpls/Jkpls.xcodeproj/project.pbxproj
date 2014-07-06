@@ -8,16 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		713F33951968B5B7006900CC /* TextChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 713F33941968B5B7006900CC /* TextChannel.m */; };
+		713F33C41968FDB9006900CC /* cast_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33B51968FDB9006900CC /* cast_off.png */; };
+		713F33C51968FDB9006900CC /* cast_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33B61968FDB9006900CC /* cast_on.png */; };
+		713F33C61968FDB9006900CC /* cast_on0.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33B71968FDB9006900CC /* cast_on0.png */; };
+		713F33C71968FDB9006900CC /* cast_on1.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33B81968FDB9006900CC /* cast_on1.png */; };
+		713F33C81968FDB9006900CC /* cast_on2.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33B91968FDB9006900CC /* cast_on2.png */; };
+		713F33C91968FDB9006900CC /* largato.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33BA1968FDB9006900CC /* largato.png */; };
+		713F33CA1968FDB9006900CC /* largato@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33BB1968FDB9006900CC /* largato@2x.png */; };
+		713F33CB1968FDB9006900CC /* papel.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33BC1968FDB9006900CC /* papel.png */; };
+		713F33CC1968FDB9006900CC /* papel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33BD1968FDB9006900CC /* papel@2x.png */; };
+		713F33CD1968FDB9006900CC /* pedra.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33BE1968FDB9006900CC /* pedra.png */; };
+		713F33CE1968FDB9006900CC /* pedra@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33BF1968FDB9006900CC /* pedra@2x.png */; };
+		713F33CF1968FDB9006900CC /* spock.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33C01968FDB9006900CC /* spock.png */; };
+		713F33D01968FDB9006900CC /* spock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33C11968FDB9006900CC /* spock@2x.png */; };
+		713F33D11968FDB9006900CC /* tesoura.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33C21968FDB9006900CC /* tesoura.png */; };
+		713F33D21968FDB9006900CC /* tesoura@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33C31968FDB9006900CC /* tesoura@2x.png */; };
 		7143ED591968A2EF001D4735 /* ChromeCast.m in Sources */ = {isa = PBXBuildFile; fileRef = 7143ED581968A2EF001D4735 /* ChromeCast.m */; };
 		71D79C6D196876A300F18801 /* TutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71D79C6C196876A300F18801 /* TutorialViewController.xib */; };
 		71D79C6F196876AB00F18801 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D79C6E196876AB00F18801 /* ViewController.m */; };
 		7B36EBD4196894CD00B88FF3 /* ChromeCastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B36EBD3196894CD00B88FF3 /* ChromeCastViewController.xib */; };
 		7B36EBD819689A5400B88FF3 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B36EBD719689A5400B88FF3 /* Constants.m */; };
-		7B36EBDF19689E6400B88FF3 /* cast_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B36EBDA19689E6400B88FF3 /* cast_off.png */; };
-		7B36EBE019689E6400B88FF3 /* cast_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B36EBDB19689E6400B88FF3 /* cast_on.png */; };
-		7B36EBE119689E6400B88FF3 /* cast_on0.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B36EBDC19689E6400B88FF3 /* cast_on0.png */; };
-		7B36EBE219689E6400B88FF3 /* cast_on1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B36EBDD19689E6400B88FF3 /* cast_on1.png */; };
-		7B36EBE319689E6400B88FF3 /* cast_on2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B36EBDE19689E6400B88FF3 /* cast_on2.png */; };
 		7B5B34E519686D4600406276 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E419686D4600406276 /* Foundation.framework */; };
 		7B5B34E719686D4600406276 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E619686D4600406276 /* CoreGraphics.framework */; };
 		7B5B34E919686D4600406276 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E819686D4600406276 /* UIKit.framework */; };
@@ -48,6 +58,21 @@
 /* Begin PBXFileReference section */
 		713F33931968B5B7006900CC /* TextChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextChannel.h; sourceTree = "<group>"; };
 		713F33941968B5B7006900CC /* TextChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextChannel.m; sourceTree = "<group>"; };
+		713F33B51968FDB9006900CC /* cast_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cast_off.png; sourceTree = "<group>"; };
+		713F33B61968FDB9006900CC /* cast_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cast_on.png; sourceTree = "<group>"; };
+		713F33B71968FDB9006900CC /* cast_on0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cast_on0.png; sourceTree = "<group>"; };
+		713F33B81968FDB9006900CC /* cast_on1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cast_on1.png; sourceTree = "<group>"; };
+		713F33B91968FDB9006900CC /* cast_on2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cast_on2.png; sourceTree = "<group>"; };
+		713F33BA1968FDB9006900CC /* largato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = largato.png; sourceTree = "<group>"; };
+		713F33BB1968FDB9006900CC /* largato@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "largato@2x.png"; sourceTree = "<group>"; };
+		713F33BC1968FDB9006900CC /* papel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = papel.png; sourceTree = "<group>"; };
+		713F33BD1968FDB9006900CC /* papel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "papel@2x.png"; sourceTree = "<group>"; };
+		713F33BE1968FDB9006900CC /* pedra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pedra.png; sourceTree = "<group>"; };
+		713F33BF1968FDB9006900CC /* pedra@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pedra@2x.png"; sourceTree = "<group>"; };
+		713F33C01968FDB9006900CC /* spock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spock.png; sourceTree = "<group>"; };
+		713F33C11968FDB9006900CC /* spock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spock@2x.png"; sourceTree = "<group>"; };
+		713F33C21968FDB9006900CC /* tesoura.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tesoura.png; sourceTree = "<group>"; };
+		713F33C31968FDB9006900CC /* tesoura@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tesoura@2x.png"; sourceTree = "<group>"; };
 		7143ED571968A2EF001D4735 /* ChromeCast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChromeCast.h; sourceTree = "<group>"; };
 		7143ED581968A2EF001D4735 /* ChromeCast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromeCast.m; sourceTree = "<group>"; };
 		71D79C6C196876A300F18801 /* TutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialViewController.xib; sourceTree = "<group>"; };
@@ -56,11 +81,6 @@
 		7B36EBD3196894CD00B88FF3 /* ChromeCastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChromeCastViewController.xib; sourceTree = "<group>"; };
 		7B36EBD619689A5400B88FF3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Helpers/Constants.h; sourceTree = "<group>"; };
 		7B36EBD719689A5400B88FF3 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Helpers/Constants.m; sourceTree = "<group>"; };
-		7B36EBDA19689E6400B88FF3 /* cast_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cast_off.png; path = Images/cast_off.png; sourceTree = "<group>"; };
-		7B36EBDB19689E6400B88FF3 /* cast_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cast_on.png; path = Images/cast_on.png; sourceTree = "<group>"; };
-		7B36EBDC19689E6400B88FF3 /* cast_on0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cast_on0.png; path = Images/cast_on0.png; sourceTree = "<group>"; };
-		7B36EBDD19689E6400B88FF3 /* cast_on1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cast_on1.png; path = Images/cast_on1.png; sourceTree = "<group>"; };
-		7B36EBDE19689E6400B88FF3 /* cast_on2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cast_on2.png; path = Images/cast_on2.png; sourceTree = "<group>"; };
 		7B5B34E119686D4600406276 /* Jkpls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jkpls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5B34E419686D4600406276 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7B5B34E619686D4600406276 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -153,13 +173,23 @@
 		7B36EBD919689E5100B88FF3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				7B36EBDA19689E6400B88FF3 /* cast_off.png */,
-				7B36EBDB19689E6400B88FF3 /* cast_on.png */,
-				7B36EBDC19689E6400B88FF3 /* cast_on0.png */,
-				7B36EBDD19689E6400B88FF3 /* cast_on1.png */,
-				7B36EBDE19689E6400B88FF3 /* cast_on2.png */,
+				713F33B51968FDB9006900CC /* cast_off.png */,
+				713F33B61968FDB9006900CC /* cast_on.png */,
+				713F33B71968FDB9006900CC /* cast_on0.png */,
+				713F33B81968FDB9006900CC /* cast_on1.png */,
+				713F33B91968FDB9006900CC /* cast_on2.png */,
+				713F33BA1968FDB9006900CC /* largato.png */,
+				713F33BB1968FDB9006900CC /* largato@2x.png */,
+				713F33BC1968FDB9006900CC /* papel.png */,
+				713F33BD1968FDB9006900CC /* papel@2x.png */,
+				713F33BE1968FDB9006900CC /* pedra.png */,
+				713F33BF1968FDB9006900CC /* pedra@2x.png */,
+				713F33C01968FDB9006900CC /* spock.png */,
+				713F33C11968FDB9006900CC /* spock@2x.png */,
+				713F33C21968FDB9006900CC /* tesoura.png */,
+				713F33C31968FDB9006900CC /* tesoura@2x.png */,
 			);
-			name = Images;
+			path = Images;
 			sourceTree = "<group>";
 		};
 		7B5B34D819686D4600406276 = {
@@ -317,15 +347,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B36EBE319689E6400B88FF3 /* cast_on2.png in Resources */,
+				713F33C81968FDB9006900CC /* cast_on2.png in Resources */,
+				713F33CC1968FDB9006900CC /* papel@2x.png in Resources */,
+				713F33CB1968FDB9006900CC /* papel.png in Resources */,
 				7B36EBD4196894CD00B88FF3 /* ChromeCastViewController.xib in Resources */,
 				7B5B34FD19686D4600406276 /* Images.xcassets in Resources */,
-				7B36EBDF19689E6400B88FF3 /* cast_off.png in Resources */,
-				7B36EBE019689E6400B88FF3 /* cast_on.png in Resources */,
+				713F33D01968FDB9006900CC /* spock@2x.png in Resources */,
+				713F33D11968FDB9006900CC /* tesoura.png in Resources */,
+				713F33CE1968FDB9006900CC /* pedra@2x.png in Resources */,
+				713F33CD1968FDB9006900CC /* pedra.png in Resources */,
+				713F33C41968FDB9006900CC /* cast_off.png in Resources */,
+				713F33D21968FDB9006900CC /* tesoura@2x.png in Resources */,
+				713F33C51968FDB9006900CC /* cast_on.png in Resources */,
+				713F33CA1968FDB9006900CC /* largato@2x.png in Resources */,
+				713F33C91968FDB9006900CC /* largato.png in Resources */,
 				71D79C6D196876A300F18801 /* TutorialViewController.xib in Resources */,
-				7B36EBE219689E6400B88FF3 /* cast_on1.png in Resources */,
+				713F33C71968FDB9006900CC /* cast_on1.png in Resources */,
+				713F33CF1968FDB9006900CC /* spock.png in Resources */,
 				7B5B34EF19686D4600406276 /* InfoPlist.strings in Resources */,
-				7B36EBE119689E6400B88FF3 /* cast_on0.png in Resources */,
+				713F33C61968FDB9006900CC /* cast_on0.png in Resources */,
 				7B5B34F819686D4600406276 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
