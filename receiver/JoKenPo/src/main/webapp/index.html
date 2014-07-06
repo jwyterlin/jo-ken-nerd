@@ -41,18 +41,22 @@ Reference: https://github.com/googlecast/CastHelloText-android
                         mPlayer1 = -1;
                         var player1Name = document.getElementById('player1name');
                         player1Name.innerHTML = 'Aguardando jogador...';
-                        document.getElementById('escolha1').innerHTML = '';
-                        document.getElementById('score1').innerHTML = '';
+                        //document.getElementById('score1').innerHTML = '';
                         $("#load1").fadeIn("slow");
                     }
                     if (event.senderId == mPlayer2.senderId) {
                         mPlayer2 = -1;
                         var player2Name = document.getElementById('player2name');
                         player2Name.innerHTML = 'Aguardando jogador...';
-                        document.getElementById('escolha2').innerHTML = '';
-                        document.getElementById('score2').innerHTML = '';
+                        //document.getElementById('score2').innerHTML = '';
                         $("#load2").fadeIn("slow");
                     }
+                    document.getElementById('result').innerHTML = '';
+                    document.getElementById('escolha1').innerHTML = '';
+                    document.getElementById('escolha2').innerHTML = '';
+                    document.getElementById('aguardando1').innerHTML = '';
+                    document.getElementById('aguardando2').innerHTML = '';
+
                     if (window.castReceiverManager.getSenders().length == 0) {
                         window.close();
                     }
@@ -99,8 +103,25 @@ Reference: https://github.com/googlecast/CastHelloText-android
                 if (action == 'connect') {
                     connect(data.name, senderId);
                 }
-                if (action == 'choice') {
-                    choice(data.value, senderId);
+                if (action == 'update') {
+                    update(senderId, data.name);
+                }
+                if (mPlayer1 != -1 && mPlayer2 != -1) {
+                    if (action == 'choice') {
+                        choice(data.value, senderId);
+                    }
+                }
+            }
+            
+            
+            function update(senderId, name) {
+                if (mPlayer1.senderId == senderId) {
+                    mPlayer1.name = name;
+                    document.getElementById('player1name').innerHTML = mPlayer1.name;
+                }
+                if (mPlayer2.senderId == senderId) {
+                    mPlayer2.name = name;
+                    document.getElementById('player2name').innerHTML = mPlayer2.name;
                 }
             }
 
@@ -109,10 +130,12 @@ Reference: https://github.com/googlecast/CastHelloText-android
                 if (mPlayer1.senderId == senderId) {
                     console.log('player 1 choice: ' + value);
                     mPlayer1.choice = value;
+                    document.getElementById('aguardando2').innerHTML = '';
                     $("#load2").fadeOut("slow");
                     if (mPlayer2.choice == -1) {
-                        document.getElementById('escolha1').innerHTML = 'Aguardando oponente';
+                        document.getElementById('aguardando1').innerHTML = 'Aguardando oponente';
                         document.getElementById('escolha2').innerHTML = '';
+                        document.getElementById('escolha1').innerHTML = '';
                         $("#load1").fadeIn("slow");
                         document.getElementById('result').innerHTML = '';
                     }
@@ -120,10 +143,12 @@ Reference: https://github.com/googlecast/CastHelloText-android
                 if (mPlayer2.senderId == senderId) {
                     console.log('player 2 choice: ' + value);
                     mPlayer2.choice = value;
+                    document.getElementById('aguardando2').innerHTML = '';
                     $("#load1").fadeOut("slow");
                     if (mPlayer1.choice == -1) {
-                        document.getElementById('escolha2').innerHTML = 'Aguardando oponente';
+                        document.getElementById('aguardando2').innerHTML = 'Aguardando oponente';
                         document.getElementById('escolha1').innerHTML = '';
+                        document.getElementById('escolha2').innerHTML = '';
                         $("#load2").fadeIn("slow");
                         document.getElementById('result').innerHTML = '';
                     }
@@ -142,21 +167,23 @@ Reference: https://github.com/googlecast/CastHelloText-android
                             window.messageBus.send(mPlayer1.senderId, '{ "result":"win" }');
                             window.messageBus.send(mPlayer2.senderId, '{ "result":"loses" }');
                             mPlayer1.score++;
-                            document.getElementById('score1').innerHTML = mPlayer1.score;
+                            //document.getElementById('score1').innerHTML = mPlayer1.score;
                         }
                         if (result == mPlayer2.choice) {
                             setResultMsg(mPlayer2.name);
                             window.messageBus.send(mPlayer2.senderId, '{ "result":"win" }');
                             window.messageBus.send(mPlayer1.senderId, '{ "result":"loses" }');
                             mPlayer2.score++;
-                            document.getElementById('score2').innerHTML = mPlayer2.score;
+                            //document.getElementById('score2').innerHTML = mPlayer2.score;
                         }
                         if (result == 'draw') {
                             setResultMsg('draw');
-                            window.messageBus.broadcast('{ "result":"empate" }');
+                            window.messageBus.broadcast('{ "result":"draw" }');
                         }
                         mPlayer1.choice = -1;
                         mPlayer2.choice = -1;
+                        document.getElementById('aguardando2').innerHTML = '';
+                        document.getElementById('aguardando1').innerHTML = '';
                     }
                 }
             }
@@ -164,11 +191,11 @@ Reference: https://github.com/googlecast/CastHelloText-android
             function connect(nome, senderId) {
 
                 if ((mPlayer1 != -1) && (mPlayer1.senderId == senderId)) {
-                    window.messageBus.send(mPlayer1.senderId, '{ "error":"Voce ja esta conectado" }');
+                    window.messageBus.send(mPlayer1.senderId, '{ "error":"already_connected" }');
                     return;
                 }
                 if ((mPlayer2 != -1) && (mPlayer2.senderId == senderId)) {
-                    window.messageBus.send(mPlayer2.senderId, '{ "error":"Voce ja esta conectado" }');
+                    window.messageBus.send(mPlayer2.senderId, '{ "error":"already_connected" }');
                     return;
                 }
 
@@ -190,7 +217,7 @@ Reference: https://github.com/googlecast/CastHelloText-android
                     console.log('Jogador 2 entrou ' + mPlayer2.name);
                 } else {
                     console.log('Unable to join a full game.');
-                    window.messageBus.send(senderId, '{ "error":"A sala está cheia"}');
+                    window.messageBus.send(senderId, '{ "error":"room_full"}');
                     return;
                 }
 
@@ -198,8 +225,7 @@ Reference: https://github.com/googlecast/CastHelloText-android
                 //console.log('mPlayer2: ' + JSON.stringify(JSON.create(mPlayer2)));
 
                 if (mPlayer1 != -1 && mPlayer2 != -1) {
-                    //var json = JSON.parse('{ "sucess":"conectados com sucesso" }');
-                    window.messageBus.broadcast('{ "sucess":"conectados com sucesso" }');
+                    window.messageBus.broadcast('{ "sucess":"sucess_conected" }');
                 }
             }
             ;
@@ -209,44 +235,50 @@ Reference: https://github.com/googlecast/CastHelloText-android
         <div class="row" style="margin-top: 5%">
             <div class="col-md-6">
                 <div class="row">
-                    <div class="col-md-12">
-                        <p class="text-center" id="player1name">Aguardando jogador</p>
+                    <div class="col-md-12" id="titulo">
+                        <p class="text-center" id="player1name" style="color: white">Aguardando jogador</p>
                     </div>
                 </div>
-              </br></br>
+                </br></br>
+                <div class="row">
+                    <div class="text-center" id="aguardando1"></div>
+                </div>
                 <div class="row">
                     <div class="text-center" id="load1">
                         <img src="loader.GIF" alt=""/>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-13">
+                    <div class="col-md-12">
                         <h2 class="text-center" id="escolha1"></h2>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="row">
-                    <div class="col-md-12">
-                        <p class="text-center" id="player2name">Aguardando jogador</p>
+                    <div class="col-md-12" id="titulo">
+                        <p class="text-center" id="player2name"  style="color: white">Aguardando jogador</p>
                     </div>
                 </div>
-              </br></br>
+                </br></br>
+                <div class="row">
+                    <div class="text-center" id="aguardando2"></div>
+                </div>
                 <div class="row">
                     <div class="text-center" id="load2">
                         <img src="loader.GIF" alt=""/>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-13">
+                    <div class="col-md-12">
                         <h2 class="text-center" id="escolha2"></h2>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-15">
-                <h4 class="text-center" id="result"></h4>
+            <div class="col-md-12">
+                <h2 class="text-center" id="result"></h2>
             </div>
         </div>
     </body>
