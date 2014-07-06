@@ -185,6 +185,10 @@
     
     NSLog( @"device found!!!" );
     
+    self.actionSheet = nil;
+    
+    [self actionSheet];
+    
     if ( ! [self listDevicesHasThisDeviceName:device.friendlyName] ) {
         
         [self.devices     addObject:device];
@@ -220,6 +224,9 @@
 }
 
 -(void)deviceManager:(GCKDeviceManager *)deviceManager didDisconnectWithError:(NSError *)error {
+    
+    [self.devices removeAllObjects];
+    self.actionSheet = nil;
 
     if ( [_delegate respondsToSelector:@selector(didFailWithError:deviceManager:)] ) {
         [_delegate didFailWithError:error deviceManager:deviceManager];  // Chama o método que o controller do usuário implementou
