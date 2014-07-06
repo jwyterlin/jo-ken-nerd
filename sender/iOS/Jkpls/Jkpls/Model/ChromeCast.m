@@ -154,8 +154,7 @@
     NSLog( @"self.deviceManager: %@", _deviceManager );
     
     if ( _deviceManager == nil ) {
-        [self deviceManager];
-        NSLog( @"self.deviceManager - 2: %@", self.deviceManager );
+        return NO;
     }
     
     return [self.deviceManager isConnected];
