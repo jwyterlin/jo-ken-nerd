@@ -55,3 +55,13 @@ function setResultMsg(result) {
         document.getElementById('result').innerHTML = result + ' é o vencedor!!!';
     }
 }
+
+function setScore(num, score) {
+    if (num == 1) {
+        document.getElementById('score1').innerHTML = 'Pontuação: ' + score;
+    }
+    if (num == 2) {
+        document.getElementById('score2').innerHTML = 'Pontuação: ' + score;
+    }
+    
+}
