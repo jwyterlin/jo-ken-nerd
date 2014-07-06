@@ -179,6 +179,7 @@
 -(void)deviceManagerDidConnect:(GCKDeviceManager *)deviceManager {
     
     [self.deviceManager launchApplication:APPID];
+    [self.deviceManager joinApplication:APPID];
     
     if ( [_delegate respondsToSelector:@selector(didConnect:)] ) {
         [_delegate didConnect:deviceManager];  // Chama o método que o controller do usuário implementou
