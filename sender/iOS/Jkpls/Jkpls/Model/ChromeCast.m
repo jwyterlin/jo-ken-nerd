@@ -158,7 +158,10 @@
     }
     
     return [self.deviceManager isConnected];
+}
 
+- (void)disconnectDevice {
+    [self.deviceManager disconnect];
 }
 
 #pragma mark - UIActionSheetDelegate Methods -
