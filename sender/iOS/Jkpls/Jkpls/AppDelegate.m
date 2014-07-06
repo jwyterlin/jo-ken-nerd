@@ -8,11 +8,18 @@
 
 #import "AppDelegate.h"
 
+@interface AppDelegate ()
+
+- (void)_setupStyleSheet;
+
+@end
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [self _setupStyleSheet];
+    
     return YES;
 }
 							
@@ -42,5 +49,14 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark - Private Methods - 
+
+- (void)_setupStyleSheet {
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navigation_bg"] forBarMetrics:UIBarMetricsDefault];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+}
+
 
 @end
