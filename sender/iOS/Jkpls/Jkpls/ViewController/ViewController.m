@@ -162,7 +162,7 @@
             
         } else {
             
-            if ( self.tfNamePlayer.text ) {
+            if ( [self.tfNamePlayer.text isEqualToString:@""] ) {
                 namePlayer = @"Jogador";
             } else {
                 namePlayer = self.tfNamePlayer.text;
