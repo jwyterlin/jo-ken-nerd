@@ -207,17 +207,7 @@
 
 -(void)deviceManagerDidConnect:(GCKDeviceManager *)deviceManager {
 
-//    if ( ! [self.deviceManager isConnectedToApp] ) {
-    
-        [self.deviceManager launchApplication:APPID];
-        
-//    }
-    
-//    [self.deviceManager joinApplication:APPID];
-    
-    if ( [_delegate respondsToSelector:@selector(didConnect:)] ) {
-        [_delegate didConnect:deviceManager];  // Chama o método que o controller do usuário implementou
-    }
+    [self.deviceManager launchApplication:APPID];
     
 }
 
@@ -243,7 +233,10 @@
 didConnectToCastApplication:(GCKApplicationMetadata *)applicationMetadata
             sessionID:(NSString *)sessionID
   launchedApplication:(BOOL)launchedApplication {
-    
+
+    if ( [_delegate respondsToSelector:@selector(didConnect:)] ) {
+        [_delegate didConnect:deviceManager];  // Chama o método que o controller do usuário implementou
+    }
 
 }
 
