@@ -66,16 +66,21 @@
     NSDictionary *jsonDict = @{ @"action": action, @"value": message};
     NSString *jsonString = [GCKJSONUtils writeJSON:jsonDict];
     
-    if ( [self.chromeCast sendTextMessage:jsonString] ) {
-        
-        [self.activityIndicator startAnimating];
-        self.lbResultGame.text = @"Aguardando o oponente";
-        
-    } else {
-        
-        [self showMessage:@"Falha na comunicação. Por favor tente novamente."];
+    if ( [self.chromeCast isConnected] ) {
+    
+        if ( [self.chromeCast sendTextMessage:jsonString] ) {
+            
+            [self.activityIndicator startAnimating];
+            self.lbResultGame.text = @"Aguardando o oponente";
+            
+        } else {
+            
+            [self showMessage:@"Falha na comunicação. Por favor tente novamente."];
+            
+        }
         
     }
+    
 }
 
 -(IBAction)changedName:(UITextField *)textfield {
