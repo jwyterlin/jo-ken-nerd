@@ -26,9 +26,32 @@ function move(oponente, escolha) {
     }
 }
 
-//$(function() {
-//    $("#botao").click(function() {
-//            updatePlayerName(1, 'Lucas');
-//            updatePlayerName(2, 'Teste');
-//        });
-//});
+function updateChoices(c1, c2) {
+    document.getElementById('escolha1').innerHTML = c1;
+    document.getElementById('escolha2').innerHTML = c2;
+}
+
+function getResult(c1, c2) {
+    if (c1 == c2) {
+        updateChoices(c1, c2);
+        return 'draw';
+    }
+
+    var quadro = [[-1, 2, 1, 1, 5], [2, -1, 3, 4, 2], [1, 3, -1, 3, 5], [1, 4, 3, -1, 4], [5, 2, 5, 4, -1]];
+    var result = quadro[c1-1][c2-1];
+    if (result == c1) {
+        updateChoices(c1, c2);
+        return c1;
+    } else {
+        updateChoices(c1, c2);
+        return c2;
+    }
+}
+
+function setResultMsg(result) {
+    if (result == 'draw') {
+        document.getElementById('result').innerHTML = 'Empate';
+    } else {
+        document.getElementById('result').innerHTML = result + ' é o vencedor!!!';
+    }
+}
