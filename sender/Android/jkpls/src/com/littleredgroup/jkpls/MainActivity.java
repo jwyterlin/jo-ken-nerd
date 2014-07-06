@@ -2,9 +2,6 @@ package com.littleredgroup.jkpls;
 
 import java.io.IOException;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarActivity;
@@ -12,12 +9,15 @@ import android.support.v7.app.MediaRouteActionProvider;
 import android.support.v7.media.MediaRouteSelector;
 import android.support.v7.media.MediaRouter;
 import android.support.v7.media.MediaRouter.RouteInfo;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.view.View.OnClickListener;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.cast.Cast;
@@ -30,7 +30,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements OnClickListener {
 	private final String CLASS_TAG = MainActivity.class.getSimpleName();
 
 	private MediaRouter mMediaRouter;
@@ -41,9 +41,14 @@ public class MainActivity extends ActionBarActivity {
 	private Cast.Listener mCastListener;
 	private boolean wasLaunched;
 	private boolean mWaitingForReconnect;
-	private String mSessionId;
+	// private String mSessionId;
 	private MyMessageReceivedCallback mMyMessageReceivedCallbacks;
-	EditText edit = null;
+	EditText etName = null;
+	private ImageView ivRock;
+	private ImageView ivPaper;
+	private ImageView ivScissor;
+	private ImageView ivLizard;
+	private ImageView ivSpock;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -51,26 +56,40 @@ public class MainActivity extends ActionBarActivity {
 		setContentView(R.layout.activity_main);
 
 		initializeMediaRouter();
+		setComponentsView();
+		setViewListerns();
+	}
 
-		Button b1 = (Button) findViewById(R.id.button1);
-		edit = (EditText) findViewById(R.id.editText1);
+	private void setComponentsView() {
+		ivRock = (ImageView) findViewById(R.id.game_iv_rock);
+		ivPaper = (ImageView) findViewById(R.id.game_iv_paper);
+		ivScissor = (ImageView) findViewById(R.id.game_iv_scissor);
+		ivLizard = (ImageView) findViewById(R.id.game_iv_lizard);
+		ivSpock = (ImageView) findViewById(R.id.game_iv_spock);
 
-		b1.setOnClickListener(new View.OnClickListener() {
+		etName = (EditText) findViewById(R.id.editText1);
+	}
 
-			@Override
-			public void onClick(View view) {
+	private void setViewListerns() {
+		ivRock.setOnClickListener(this);
+		ivPaper.setOnClickListener(this);
+		ivScissor.setOnClickListener(this);
+		ivLizard.setOnClickListener(this);
+		ivSpock.setOnClickListener(this);
 
-				JSONObject object = new JSONObject();      
-				try {
-					object.put("action", "choice");
-					object.put("value",
-							Integer.valueOf(edit.getText().toString()));
-				} catch (JSONException e) {
-					e.printStackTrace();
-				}
-				Log.d(CLASS_TAG, object.toString());
-				sendMessage(object.toString());
+		etName.addTextChangedListener(new TextWatcher() {
+			public void afterTextChanged(Editable editable) {
 
+			}
+
+			public void beforeTextChanged(CharSequence s, int start, int count,
+					int after) {
+
+			}
+
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
+				sendMessage(CastMessages.messageUpdateUser(s.toString()));
 			}
 		});
 	}
@@ -128,11 +147,10 @@ public class MainActivity extends ActionBarActivity {
 				@Override
 				public void onApplicationDisconnected(int errorCode) {
 					Log.d(CLASS_TAG, "application has stopped");
-					// tearDown();
+					tearDown();
 				}
 
 			};
-			// Connect to Google Play services
 			Cast.CastOptions.Builder apiOptionsBuilder = Cast.CastOptions
 					.builder(mSelectedDevice, mCastListener);
 			mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -255,8 +273,7 @@ public class MainActivity extends ActionBarActivity {
 							+ status.getStatusCode());
 
 			if (status.isSuccess()) {
-				mSessionId = result.getSessionId();
-
+				// mSessionId = result.getSessionId();
 				wasLaunched = result.getWasLaunched();
 				mMyMessageReceivedCallbacks = new MyMessageReceivedCallback();
 
@@ -268,15 +285,7 @@ public class MainActivity extends ActionBarActivity {
 					Log.e(CLASS_TAG, "Exception while creating channel", e);
 				}
 
-				JSONObject object = new JSONObject();
-				try {
-					object.put("name", "victor");
-					object.put("action", "connect");
-				} catch (JSONException e) {
-					e.printStackTrace();
-				}
-				Log.d(CLASS_TAG, object.toString());
-				sendMessage(object.toString());
+				sendMessage(CastMessages.messageSetupUser("Victor"));
 
 			} else {
 				Log.e(CLASS_TAG, "application could not launch");
@@ -285,7 +294,6 @@ public class MainActivity extends ActionBarActivity {
 		}
 	};
 
-	// Google Play services callbacks
 	private class GooglePlayConnectionFailedListener implements
 			GoogleApiClient.OnConnectionFailedListener {
 		@Override
@@ -295,15 +303,13 @@ public class MainActivity extends ActionBarActivity {
 		}
 	}
 
-	// Tear down the connection to the receiver
 	private void tearDown() {
 		Log.d(CLASS_TAG, "teardown");
 		if (mGoogleApiClient != null) {
 			if (wasLaunched) {
 				if (mGoogleApiClient.isConnected()) {
 					try {
-						Cast.CastApi.stopApplication(mGoogleApiClient,
-								mSessionId);
+						Cast.CastApi.leaveApplication(mGoogleApiClient);
 						if (mMyMessageReceivedCallbacks != null) {
 							Cast.CastApi.removeMessageReceivedCallbacks(
 									mGoogleApiClient,
@@ -321,6 +327,34 @@ public class MainActivity extends ActionBarActivity {
 		}
 		mSelectedDevice = null;
 		mWaitingForReconnect = false;
-		mSessionId = null;
+		// mSessionId = null;
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.game_iv_rock:
+			sendMessage(CastMessages.messageToChoice(Constants.CHOICE_ROCK));
+			break;
+
+		case R.id.game_iv_paper:
+			sendMessage(CastMessages.messageToChoice(Constants.CHOICE_PAPER));
+			break;
+
+		case R.id.game_iv_scissor:
+			sendMessage(CastMessages.messageToChoice(Constants.CHOICE_SCISSOR));
+			break;
+
+		case R.id.game_iv_lizard:
+			sendMessage(CastMessages.messageToChoice(Constants.CHOICE_LIZARD));
+			break;
+
+		case R.id.game_iv_spock:
+			sendMessage(CastMessages.messageToChoice(Constants.CHOICE_SPOCK));
+			break;
+
+		default:
+			break;
+		}
 	}
 }
