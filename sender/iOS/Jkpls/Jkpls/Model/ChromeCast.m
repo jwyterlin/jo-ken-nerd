@@ -158,7 +158,10 @@
     }
     
     return [self.deviceManager isConnected];
+}
 
+- (void)disconnectDevice {
+    [self.deviceManager disconnect];
 }
 
 #pragma mark - UIActionSheetDelegate Methods -
@@ -184,6 +187,10 @@
 -(void)deviceDidComeOnline:(GCKDevice *)device {
     
     NSLog( @"device found!!!" );
+    
+    self.actionSheet = nil;
+    
+    [self actionSheet];
     
     if ( ! [self listDevicesHasThisDeviceName:device.friendlyName] ) {
         
@@ -220,9 +227,12 @@
 }
 
 -(void)deviceManager:(GCKDeviceManager *)deviceManager didDisconnectWithError:(NSError *)error {
+    
+    [self.devices removeAllObjects];
+    self.actionSheet = nil;
 
-    if ( [_delegate respondsToSelector:@selector(didFailWithError:deviceManager:)] ) {
-        [_delegate didFailWithError:error deviceManager:deviceManager];  // Chama o método que o controller do usuário implementou
+    if ( [_delegate respondsToSelector:@selector(didDisconnectWithError:deviceManager:)] ) {
+        [_delegate didDisconnectWithError:error deviceManager:deviceManager];  // Chama o método que o controller do usuário implementou
     }
     
 }

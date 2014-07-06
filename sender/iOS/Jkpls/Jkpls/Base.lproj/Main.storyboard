@@ -84,7 +84,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Jo Ken Po Lizard Spock" id="d2i-lF-YTw">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="YEm-87-FPK">
+                        <barButtonItem key="leftBarButtonItem" id="YEm-87-FPK">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="16z-q4-I3M">
                                 <rect key="frame" x="16" y="11" width="29" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -96,7 +96,7 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="help_icon.png" style="done" id="rgN-jj-OBS">
+                        <barButtonItem key="rightBarButtonItem" image="help_icon.png" id="rgN-jj-OBS">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="showTutorial:" destination="vXZ-lx-hvc" id="jVI-iT-kOp"/>

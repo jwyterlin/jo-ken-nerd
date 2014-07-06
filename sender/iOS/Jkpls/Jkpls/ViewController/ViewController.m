@@ -14,6 +14,7 @@
 
     NSTimer *timer;
     int counter;
+    NSTimer *timerChangeName;
     
 }
 
@@ -31,10 +32,7 @@
     
     [super viewDidLoad];
     
-    self.chromeCast = [ChromeCast new];
-    self.chromeCast.delegate = self;
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(chromeCastIsConnected:) name:kChromeCastIsConnected object:nil];
+    [self initChromeCast];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toucheOnView)];
     tap.numberOfTapsRequired = 1;
@@ -53,24 +51,36 @@
 }
 
 -(IBAction)chromeCastTouched:(id)sender {
-    [self.chromeCast showActionSheetOnView:self.view];
+    if (self.chromeCast.isConnected) {
+        [self.chromeCast disconnectDevice];
+    } else {
+        [self.chromeCast showActionSheetOnView:self.view];   
+    }
 }
 
 -(IBAction)choseOption:(UIButton *)sender {
-    
+    NSString *action = @"choice";
     NSString *message = [NSString stringWithFormat:@"%i",sender.tag];
+    NSDictionary *jsonDict = @{ @"action": action, @"value": message};
+    NSString *jsonString = [GCKJSONUtils writeJSON:jsonDict];
     
-    if ( ! [self.chromeCast sendTextMessage:message] ) {
+    if ( ! [self.chromeCast sendTextMessage:jsonString] ) {
         [self showMessage:@"Falha na comunicação. Por favor tente novamente."];
     }
-    
 }
 
 -(IBAction)changedName:(UITextField *)textfield {
     
     NSLog( @"%@", textfield.text );
     
-    [self sendNamePlayerToChromeCast];
+    if ( timerChangeName != nil ) {
+        
+        [timerChangeName invalidate];
+        timerChangeName = nil;
+        
+    }
+
+    timerChangeName = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(changeName:) userInfo:nil repeats:NO];
 
 }
 
@@ -78,7 +88,7 @@
 
 -(void)didStartScanner {
     
-    timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(loading:) userInfo:nil repeats:NO];
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(loading:) userInfo:nil repeats:YES];
     
 }
 
@@ -91,9 +101,7 @@
     
     [self showMessage:@"Conexão concluída com sucesso!"];
     
-    [self sendNamePlayerToChromeCast];
-    
-    //[[NSNotificationCenter defaultCenter] postNotificationName:kChromeCastIsConnected object:nil userInfo:nil];
+    [self sendNamePlayerToChromeCastWithAction:@"connect"];
 
 }
 
@@ -104,7 +112,26 @@
     
     [self setImage:[UIImage imageNamed:@"cast_off.png"] onButton:self.chromeCastTouched];
     
-    [self showMessage:@"Falha na conexão"];
+    self.chromeCast = nil;
+    
+    [self initChromeCast];
+    
+    [self showMessage:[NSString stringWithFormat:@"Falha na conexão: %@", error.localizedDescription ]];
+    
+}
+
+-(void)didDisconnectWithError:(NSError *)error deviceManager:(GCKDeviceManager *)device {
+    
+    [timer invalidate];
+    timer = nil;
+    
+    [self setImage:[UIImage imageNamed:@"cast_off.png"] onButton:self.chromeCastTouched];
+    
+    self.chromeCast = nil;
+    
+    [self initChromeCast];
+    
+    [self showMessage:@"Desconectado"];
     
 }
 
@@ -147,11 +174,9 @@
     
 }
 
--(void)sendNamePlayerToChromeCast {
+-(void)sendNamePlayerToChromeCastWithAction:(NSString *)action {
     
     if ( [self.chromeCast isConnected] ) {
-        
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:kChromeCastIsConnected object:nil];
         
         NSString *namePlayer;
         
@@ -169,10 +194,9 @@
             
         }
         
-        NSString *action = @"connect";
         NSDictionary *jsonDict = @{ @"action": action, @"name": namePlayer};
         
-        NSString * jsonString = [GCKJSONUtils writeJSON:jsonDict];
+        NSString *jsonString = [GCKJSONUtils writeJSON:jsonDict];
         
         if ( ! [self.chromeCast sendTextMessage:jsonString] ) {
             [self showMessage:@"Falha na comunicação. Por favor tente novamente."];
@@ -184,7 +208,20 @@
 
 -(void)chromeCastIsConnected:(NSNotification *)notification {
     
-    [self sendNamePlayerToChromeCast];
+    [self sendNamePlayerToChromeCastWithAction:@"connect"];
+    
+}
+
+-(void)changeName:(NSTimer *)__timer {
+    NSLog(@"changeName");
+    [self sendNamePlayerToChromeCastWithAction:@"update"];
+    
+}
+
+-(void)initChromeCast {
+    
+    self.chromeCast = [ChromeCast new];
+    self.chromeCast.delegate = self;
     
 }
 
