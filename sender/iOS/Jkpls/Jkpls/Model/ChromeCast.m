@@ -144,11 +144,14 @@
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     
-    GCKDevice *selectedDevice = [self.deviceScanner.devices objectAtIndex:buttonIndex - 1];
+    if ( buttonIndex == 0 ) {
+        return;
+    }
+    
+    GCKDevice *selectedDevice = self.deviceScanner.devices[buttonIndex - 1];
     
     NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
-    self.deviceManager = [[GCKDeviceManager alloc]  initWithDevice:selectedDevice
-                                            clientPackageName:[info objectForKey:@"CFBundleIdentifier"]];
+    self.deviceManager = [[GCKDeviceManager alloc]  initWithDevice:selectedDevice clientPackageName:[info objectForKey:@"CFBundleIdentifier"]];
     
     self.deviceManager.delegate = self;
     [self.deviceManager connect];
