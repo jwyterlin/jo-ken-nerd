@@ -1,4 +1,4 @@
-vermelin
+Jo Ken Nerd
 ========
 
-Projeto da equipe vermelin para a primeira Hackaton do GDG de Juiz de Fora
+Projeto da equipe LittleRedGroup para a primeira Hackaton do GDG de Juiz de Fora
