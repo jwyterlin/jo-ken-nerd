@@ -6,108 +6,68 @@
 //  Copyright (c) 2014 Jhonathan Wyterlin. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GameViewController.h"
 #import "ChromeCast.h"
 
-@interface ViewController () {
-
+@interface GameViewController () {
     NSTimer *timer;
     int counter;
-    NSTimer *timerChangeName;
-    
 }
+
+@property (nonatomic, strong) UIAlertController *alertController;
 
 @end
 
-@implementation ViewController
-
-@synthesize tfNamePlayer = _tfNamePlayer;
-@synthesize lbResultGame = _lbResultGame;
-@synthesize activityIndicator = _activityIndicator;
+@implementation GameViewController
 
 #pragma mark - Getter Methods -
+
+- (UIAlertController *)alertController {
+    if (!_alertController) {
+        _alertController = [UIAlertController alertControllerWithTitle:@"Resultado"
+                                                                message:nil
+                                                         preferredStyle:UIAlertControllerStyleAlert];
+        [_alertController addAction:[UIAlertAction actionWithTitle:@"Cancelar" style:UIAlertActionStyleCancel handler:nil]];
+    }
+    return _alertController;
+}
 
 #pragma mark - View Lifecycle
 
 -(void)viewDidLoad {
-    
     [super viewDidLoad];
-    
-    [self initChromeCast];
-    
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toucheOnView)];
-    tap.numberOfTapsRequired = 1;
-    
-    [self.view addGestureRecognizer:tap];
-    
+    [self.currentGameMode initialize];
 }
+
+#pragma mark - Private Methods -
 
 #pragma mark - IBAction Methods
 
--(IBAction)chromeCastTouched:(id)sender {
-    
+- (IBAction)chromeCastTouched:(id)sender {
     self.lbResultGame.text = @"";
     [self.activityIndicator stopAnimating];
     
     if (self.chromeCast.isConnected) {
         [self.chromeCast disconnectDevice];
     } else {
-        [self.chromeCast showActionSheetOnView:self.view];   
+        [self.chromeCast showActionSheetOnView:self.view];
     }
-    
 }
 
--(IBAction)choseOption:(UIButton *)sender {
-    
+- (IBAction)choseOption:(UIButton *)sender {
     self.lbResultGame.text = @"";
-    
-    NSString *action = @"choice";
-    NSString *message = [NSString stringWithFormat:@"%i",sender.tag];
-    NSDictionary *jsonDict = @{ @"action": action, @"value": message};
-    NSString *jsonString = [GCKJSONUtils writeJSON:jsonDict];
-    
-    if ( [self.chromeCast isConnected] ) {
-    
-        if ( [self.chromeCast sendTextMessage:jsonString] ) {
-            
-            [self.activityIndicator startAnimating];
-            self.lbResultGame.text = @"Aguardando o oponente";
-            
-        } else {
-            
-            [self showMessage:@"Falha na comunicação. Por favor tente novamente."];
-            
-        }
-        
-    }
-    
+    [self.currentGameMode startGameWithChoice:[NSString stringWithFormat:@"%i",sender.tag]];
+    self.alertController.message = [self.currentGameMode resultGame];
+    [self presentViewController:self.alertController animated:YES completion:nil];
 }
 
--(IBAction)changedName:(UITextField *)textfield {
-    
-    NSLog( @"%@", textfield.text );
-    
-    if ( timerChangeName != nil ) {
-        
-        [timerChangeName invalidate];
-        timerChangeName = nil;
-        
-    }
+#pragma mark - ChromeCastDelegate Methods -
 
-    timerChangeName = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(changeName:) userInfo:nil repeats:NO];
-
-}
-
-#pragma mark - ChromeCastDelegate Methods
-
--(void)didStartScanner {
-    
+- (void)didStartScanner {
     timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(loading:) userInfo:nil repeats:YES];
-    
 }
 
--(void)didConnect:(GCKDeviceManager *)device {
-
+- (void)didConnect:(GCKDeviceManager *)device {
     [timer invalidate];
     timer = nil;
     
@@ -118,11 +78,9 @@
     [self sendNamePlayerToChromeCastWithAction:@"connect"];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getGameResult:) name:kGameResultWasReceived object:nil];
-
 }
 
--(void)didFailWithError:(NSError *)error deviceManager:(GCKDeviceManager *)device {
-    
+- (void)didFailWithError:(NSError *)error deviceManager:(GCKDeviceManager *)device {
     [timer invalidate];
     timer = nil;
     
@@ -130,14 +88,12 @@
     
     self.chromeCast = nil;
     
-    [self initChromeCast];
+//    [self initChromeCast];
     
     [self showMessage:[NSString stringWithFormat:@"Falha na conexão: %@", error.localizedDescription ]];
-    
 }
 
--(void)didDisconnectWithError:(NSError *)error deviceManager:(GCKDeviceManager *)device {
-    
+- (void)didDisconnectWithError:(NSError *)error deviceManager:(GCKDeviceManager *)device {
     [timer invalidate];
     timer = nil;
     
@@ -145,16 +101,14 @@
     
     self.chromeCast = nil;
     
-    [self initChromeCast];
+//    [self initChromeCast];
     
     [self showMessage:@"Desconectado"];
-    
 }
 
 #pragma mark - Helper Methods
 
 -(void)loading:(NSTimer *)timer {
-    
     counter++;
     
     if ( counter == 1 ) {
@@ -165,84 +119,36 @@
         [self setImage:[UIImage imageNamed:@"cast_on2.png"] onButton:self.chromeCastTouched];
         counter = 0;
     }
-    
 }
 
--(void)setImage:(UIImage *)image onButton:(UIButton *)button {
-    
+- (void)setImage:(UIImage *)image onButton:(UIButton *)button {
     [button setImage:image forState:UIControlStateNormal];
     [button setImage:image forState:UIControlStateSelected];
     [button setImage:image forState:UIControlStateHighlighted];
-    
 }
 
--(void)showMessage:(NSString *)message {
-    
+- (void)showMessage:(NSString *)message {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:message message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
     
     [alert show];
-    
 }
 
--(void)toucheOnView {
-    
-    [self.tfNamePlayer resignFirstResponder];
-    
-}
-
--(void)sendNamePlayerToChromeCastWithAction:(NSString *)action {
-    
+- (void)sendNamePlayerToChromeCastWithAction:(NSString *)action {
     if ( [self.chromeCast isConnected] ) {
-        
-        NSString *namePlayer;
-        
-        if ( self.tfNamePlayer.text == nil ) {
-            
-            namePlayer = @"Jogador";
-            
-        } else {
-            
-            if ( [self.tfNamePlayer.text isEqualToString:@""] ) {
-                namePlayer = @"Jogador";
-            } else {
-                namePlayer = self.tfNamePlayer.text;
-            }
-            
-        }
-        
-        NSDictionary *jsonDict = @{ @"action": action, @"name": namePlayer};
-        
+
+        NSDictionary *jsonDict = @{ @"action": action, @"name": self.currentGameMode.playerName};
         NSString *jsonString = [GCKJSONUtils writeJSON:jsonDict];
-        
         if ( ! [self.chromeCast sendTextMessage:jsonString] ) {
             [self showMessage:@"Falha na comunicação. Por favor tente novamente."];
         }
-        
     }
-    
 }
 
--(void)chromeCastIsConnected:(NSNotification *)notification {
-    
+- (void)chromeCastIsConnected:(NSNotification *)notification {
     [self sendNamePlayerToChromeCastWithAction:@"connect"];
-    
 }
 
--(void)changeName:(NSTimer *)__timer {
-    NSLog(@"changeName");
-    [self sendNamePlayerToChromeCastWithAction:@"update"];
-    
-}
-
--(void)initChromeCast {
-    
-    self.chromeCast = [ChromeCast new];
-    self.chromeCast.delegate = self;
-    
-}
-
--(void)getGameResult:(NSNotification *)notification {
-    
+- (void)getGameResult:(NSNotification *)notification {
     [self.activityIndicator stopAnimating];
     
     NSDictionary *dictionary = notification.object;
@@ -286,7 +192,6 @@
     } else {
         self.lbResultGame.text = @"";
     }
-    
 }
 
 @end

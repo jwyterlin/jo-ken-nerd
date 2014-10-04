@@ -18,9 +18,9 @@
 @property (nonatomic, strong) TextChannel *textChannel;
 @property(strong,nonatomic) id<ChromeCastDelegate> delegate;
 
--(void)showActionSheetOnView:(UIView *)view;
--(BOOL)sendTextMessage:(NSString *)message;
--(BOOL)isConnected;
+- (void)showActionSheetOnView:(UIView *)view;
+- (BOOL)sendTextMessage:(NSString *)message;
+- (BOOL)isConnected;
 - (void)disconnectDevice;
 
 @end
@@ -29,9 +29,9 @@
 
 @optional
 
--(void)didStartScanner;
--(void)didConnect:(GCKDeviceManager *)device;
--(void)didFailWithError:(NSError *)error deviceManager:(GCKDeviceManager *)device;
--(void)didDisconnectWithError:(NSError *)error deviceManager:(GCKDeviceManager *)device;
+- (void)didStartScanner;
+- (void)didConnect:(GCKDeviceManager *)device;
+- (void)didFailWithError:(NSError *)error deviceManager:(GCKDeviceManager *)device;
+- (void)didDisconnectWithError:(NSError *)error deviceManager:(GCKDeviceManager *)device;
 
 @end

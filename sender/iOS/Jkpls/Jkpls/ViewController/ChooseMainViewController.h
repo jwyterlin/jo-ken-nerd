@@ -8,14 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController
+@interface ChooseMainViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UITextField *nomeTextField;
 
 @property(nonatomic,strong) IBOutlet UILabel *lbSinglePlayer;
 @property(nonatomic,strong) IBOutlet UILabel *lbMultiPlayer;
 
 @property(nonatomic,strong) IBOutlet UIButton *btnPlayerVsCom;
-@property(nonatomic,strong) IBOutlet UIButton *btnChromeCast;
-@property(nonatomic,strong) IBOutlet UIButton *btnWifi;
-@property(nonatomic,strong) IBOutlet UIButton *btnBluetooth;
 
 @end

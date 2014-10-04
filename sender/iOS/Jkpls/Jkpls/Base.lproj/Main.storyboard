@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="oSH-oF-heZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="oSH-oF-heZ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Jo Ken Nerd-->
+        <!--Game View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gameViewController" id="vXZ-lx-hvc" customClass="GameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -18,7 +18,6 @@
                         <subviews>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owB-59-jyH">
                                 <rect key="frame" x="50" y="244" width="57" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="spock.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -29,7 +28,6 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwl-CN-jqX">
                                 <rect key="frame" x="214" y="244" width="57" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="papel.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -40,7 +38,6 @@
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jg-QN-GD0">
                                 <rect key="frame" x="86" y="331" width="57" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="largato.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,7 +48,6 @@
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZK-tQ-Are">
                                 <rect key="frame" x="191" y="331" width="57" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="tesoura.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,7 +58,6 @@
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGm-WV-pWA">
                                 <rect key="frame" x="132" y="179" width="57" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="pedra.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,31 +66,33 @@
                                     <action selector="choseOption:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5OT-2l-rDe"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Jogador" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oAG-x2-f6X">
-                                <rect key="frame" x="20" y="79" width="280" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="changedName:" destination="vXZ-lx-hvc" eventType="editingChanged" id="GZW-4G-Adq"/>
-                                </connections>
-                            </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="afV-Ol-K2N">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsN-0O-IZH">
+                                <rect key="frame" x="0.0" y="527" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Rwr-Z0-bat"/>
+                                    <barButtonItem image="help_icon.png" id="rgN-jj-OBS">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="3lw-RP-dtK" kind="push" id="Wgx-j1-pME"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojd-jZ-SuF">
-                                <rect key="frame" x="20" y="480" width="280" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="472" width="320" height="39"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="afV-Ol-K2N">
-                                <rect key="frame" x="150" y="527" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Jo Ken Nerd" id="d2i-lF-YTw">
-                        <barButtonItem key="leftBarButtonItem" id="YEm-87-FPK">
+                    <navigationItem key="navigationItem" id="d2i-lF-YTw">
+                        <barButtonItem key="rightBarButtonItem" id="YEm-87-FPK">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="16z-q4-I3M">
                                 <rect key="frame" x="16" y="11" width="29" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -107,28 +104,21 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="help_icon.png" id="rgN-jj-OBS">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <segue destination="3lw-RP-dtK" kind="push" id="Wgx-j1-pME"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="afV-Ol-K2N" id="WZV-0P-XpV"/>
                         <outlet property="chromeCastTouched" destination="16z-q4-I3M" id="qbh-2K-Pa9"/>
                         <outlet property="lbResultGame" destination="ojd-jZ-SuF" id="Twa-hY-BEW"/>
-                        <outlet property="tfNamePlayer" destination="oAG-x2-f6X" id="KG4-lX-CGO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-42" y="-331"/>
         </scene>
-        <!--Main View Controller - Jo Ken Nerd-->
+        <!--Jo Ken Nerd-->
         <scene sceneID="uT4-bA-fN9">
             <objects>
-                <viewController id="Cj2-cd-Ivv" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chooseViewController" id="Cj2-cd-Ivv" customClass="ChooseMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="muS-yK-JGz"/>
                         <viewControllerLayoutGuide type="bottom" id="ekY-vk-u3u"/>
@@ -137,54 +127,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdJ-R6-223">
-                                <rect key="frame" x="73" y="370" width="175" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Single Player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csh-Hc-tLg">
+                                <rect key="frame" x="110" y="158" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smD-R2-xOc">
+                                <rect key="frame" x="73" y="187" width="175" height="30"/>
                                 <color key="backgroundColor" red="0.95294117647058818" green="0.29411764705882354" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Bluetooth">
+                                <state key="normal" title="Player vs COM">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="push" identifier="singlePlayerSegue" id="1Gm-yt-PgE"/>
+                                </connections>
                             </button>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMF-sU-GVT">
-                                <rect key="frame" x="73" y="294" width="175" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Jogador" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oAG-x2-f6X">
+                                <rect key="frame" x="20" y="87" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="changedName:" destination="vXZ-lx-hvc" eventType="editingChanged" id="GZW-4G-Adq"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMF-sU-GVT">
+                                <rect key="frame" x="73" y="283" width="175" height="30"/>
                                 <color key="backgroundColor" red="0.95294117647058818" green="0.29411764705882354" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Chromecast">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="push" id="aiF-X4-Xrh"/>
+                                    <segue destination="vXZ-lx-hvc" kind="push" identifier="chromecastSegue" id="CpC-qS-Inb"/>
                                 </connections>
                             </button>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smD-R2-xOc">
-                                <rect key="frame" x="73" y="197" width="175" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.95294117647058818" green="0.29411764705882354" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Player vs COM">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvG-d1-bxe">
-                                <rect key="frame" x="73" y="332" width="175" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.95294117647058818" green="0.29411764705882354" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Wifi">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Single Player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csh-Hc-tLg">
-                                <rect key="frame" x="110" y="168" width="100" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Multiplayer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3p-QV-fa3">
-                                <rect key="frame" x="118" y="265" width="85" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Multiplayer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3p-QV-fa3">
+                                <rect key="frame" x="118" y="254" width="85" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -194,12 +173,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Jo Ken Nerd" id="0uO-fC-TFo"/>
                     <connections>
-                        <outlet property="btnBluetooth" destination="jdJ-R6-223" id="HBC-NE-K6b"/>
-                        <outlet property="btnChromeCast" destination="gMF-sU-GVT" id="tdu-CH-Lgl"/>
                         <outlet property="btnPlayerVsCom" destination="smD-R2-xOc" id="Vay-nq-8Rs"/>
-                        <outlet property="btnWifi" destination="qvG-d1-bxe" id="o4y-Ux-xVe"/>
                         <outlet property="lbMultiPlayer" destination="u3p-QV-fa3" id="Dqi-SX-nrr"/>
                         <outlet property="lbSinglePlayer" destination="Csh-Hc-tLg" id="cT4-uf-qUy"/>
+                        <outlet property="nomeTextField" destination="oAG-x2-f6X" id="6gq-w6-GJo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FV7-jF-77F" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -220,7 +197,6 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="help_instruction.png" translatesAutoresizingMaskIntoConstraints="NO" id="BYR-sw-16E">
                                 <rect key="frame" x="0.0" y="63" width="320" height="505"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -243,7 +219,7 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="Cj2-cd-Ivv" kind="relationship" relationship="rootViewController" id="Bq4-X0-0dK"/>
+                        <segue destination="Cj2-cd-Ivv" kind="relationship" relationship="rootViewController" id="rpt-r6-bG0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggA-Cz-M4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -261,10 +237,13 @@
         <image name="spock.png" width="57" height="57"/>
         <image name="tesoura.png" width="57" height="57"/>
     </resources>
-    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="CpC-qS-Inb"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
