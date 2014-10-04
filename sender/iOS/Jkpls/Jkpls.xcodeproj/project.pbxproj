@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BB2EB3319B77C8B00C27AD3 /* ChooseMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB2EB3119B77C8B00C27AD3 /* ChooseMainViewController.m */; };
 		712B177219695B87002D2BA2 /* help_instruction@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 712B177119695B87002D2BA2 /* help_instruction@2x.png */; };
 		713F33951968B5B7006900CC /* TextChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 713F33941968B5B7006900CC /* TextChannel.m */; };
 		713F33C41968FDB9006900CC /* cast_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33B51968FDB9006900CC /* cast_off.png */; };
@@ -27,8 +28,11 @@
 		713F33DB19692A03006900CC /* cast_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33D819692A03006900CC /* cast_on@2x.png */; };
 		713F33DC19692A03006900CC /* help_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33D919692A03006900CC /* help_icon.png */; };
 		713F33DE19694F45006900CC /* help_instruction.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33DD19694F45006900CC /* help_instruction.png */; };
+		71432CE919DF8D5D00A9ED65 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 71432CE819DF8D5D00A9ED65 /* Game.m */; };
+		71432CF019DF8E8F00A9ED65 /* SinglePlayerGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 71432CEF19DF8E8F00A9ED65 /* SinglePlayerGame.m */; };
+		71432CF319DF914F00A9ED65 /* ChromecastGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 71432CF219DF914F00A9ED65 /* ChromecastGame.m */; };
 		7143ED591968A2EF001D4735 /* ChromeCast.m in Sources */ = {isa = PBXBuildFile; fileRef = 7143ED581968A2EF001D4735 /* ChromeCast.m */; };
-		71D79C6F196876AB00F18801 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D79C6E196876AB00F18801 /* ViewController.m */; };
+		71D79C6F196876AB00F18801 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D79C6E196876AB00F18801 /* GameViewController.m */; };
 		7B36EBD4196894CD00B88FF3 /* ChromeCastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B36EBD3196894CD00B88FF3 /* ChromeCastViewController.xib */; };
 		7B36EBD819689A5400B88FF3 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B36EBD719689A5400B88FF3 /* Constants.m */; };
 		7B5B34E519686D4600406276 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E419686D4600406276 /* Foundation.framework */; };
@@ -58,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5BB2EB3019B77C8B00C27AD3 /* ChooseMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseMainViewController.h; sourceTree = "<group>"; };
+		5BB2EB3119B77C8B00C27AD3 /* ChooseMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseMainViewController.m; sourceTree = "<group>"; };
 		712B177119695B87002D2BA2 /* help_instruction@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help_instruction@2x.png"; sourceTree = "<group>"; };
 		713F33931968B5B7006900CC /* TextChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextChannel.h; sourceTree = "<group>"; };
 		713F33941968B5B7006900CC /* TextChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextChannel.m; sourceTree = "<group>"; };
@@ -79,10 +85,16 @@
 		713F33D819692A03006900CC /* cast_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cast_on@2x.png"; sourceTree = "<group>"; };
 		713F33D919692A03006900CC /* help_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_icon.png; sourceTree = "<group>"; };
 		713F33DD19694F45006900CC /* help_instruction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_instruction.png; sourceTree = "<group>"; };
+		71432CE719DF8D4900A9ED65 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		71432CE819DF8D5D00A9ED65 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		71432CEE19DF8E8F00A9ED65 /* SinglePlayerGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinglePlayerGame.h; sourceTree = "<group>"; };
+		71432CEF19DF8E8F00A9ED65 /* SinglePlayerGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinglePlayerGame.m; sourceTree = "<group>"; };
+		71432CF119DF914F00A9ED65 /* ChromecastGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChromecastGame.h; sourceTree = "<group>"; };
+		71432CF219DF914F00A9ED65 /* ChromecastGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromecastGame.m; sourceTree = "<group>"; };
 		7143ED571968A2EF001D4735 /* ChromeCast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChromeCast.h; sourceTree = "<group>"; };
 		7143ED581968A2EF001D4735 /* ChromeCast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromeCast.m; sourceTree = "<group>"; };
-		71D79C6E196876AB00F18801 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		71D79C70196876B000F18801 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		71D79C6E196876AB00F18801 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		71D79C70196876B000F18801 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		7B36EBD3196894CD00B88FF3 /* ChromeCastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChromeCastViewController.xib; sourceTree = "<group>"; };
 		7B36EBD619689A5400B88FF3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Helpers/Constants.h; sourceTree = "<group>"; };
 		7B36EBD719689A5400B88FF3 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Helpers/Constants.m; sourceTree = "<group>"; };
@@ -139,6 +151,12 @@
 				7143ED581968A2EF001D4735 /* ChromeCast.m */,
 				713F33931968B5B7006900CC /* TextChannel.h */,
 				713F33941968B5B7006900CC /* TextChannel.m */,
+				71432CE719DF8D4900A9ED65 /* Game.h */,
+				71432CE819DF8D5D00A9ED65 /* Game.m */,
+				71432CEE19DF8E8F00A9ED65 /* SinglePlayerGame.h */,
+				71432CEF19DF8E8F00A9ED65 /* SinglePlayerGame.m */,
+				71432CF119DF914F00A9ED65 /* ChromecastGame.h */,
+				71432CF219DF914F00A9ED65 /* ChromecastGame.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,8 +164,10 @@
 		71D79C6A1968760200F18801 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				71D79C70196876B000F18801 /* ViewController.h */,
-				71D79C6E196876AB00F18801 /* ViewController.m */,
+				71D79C70196876B000F18801 /* GameViewController.h */,
+				71D79C6E196876AB00F18801 /* GameViewController.m */,
+				5BB2EB3019B77C8B00C27AD3 /* ChooseMainViewController.h */,
+				5BB2EB3119B77C8B00C27AD3 /* ChooseMainViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -155,8 +175,8 @@
 		71D79C6B1968769700F18801 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7B5B34F619686D4600406276 /* Main.storyboard */,
 				7B36EBD3196894CD00B88FF3 /* ChromeCastViewController.xib */,
+				7B5B34F619686D4600406276 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,12 +251,12 @@
 		7B5B34EA19686D4600406276 /* Jkpls */ = {
 			isa = PBXGroup;
 			children = (
-				7143ED561968A2D8001D4735 /* Model */,
 				7B5B34F319686D4600406276 /* AppDelegate.h */,
 				7B5B34F419686D4600406276 /* AppDelegate.m */,
 				7B36EBD519689A2300B88FF3 /* Helpers */,
 				7B36EBD919689E5100B88FF3 /* Images */,
 				7B5B34FC19686D4600406276 /* Images.xcassets */,
+				7143ED561968A2D8001D4735 /* Model */,
 				7B5B34EB19686D4600406276 /* Supporting Files */,
 				71D79C6B1968769700F18801 /* View */,
 				71D79C6A1968760200F18801 /* ViewController */,
@@ -426,9 +446,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B5B34F519686D4600406276 /* AppDelegate.m in Sources */,
+				71432CF019DF8E8F00A9ED65 /* SinglePlayerGame.m in Sources */,
 				7B5B34F119686D4600406276 /* main.m in Sources */,
 				7143ED591968A2EF001D4735 /* ChromeCast.m in Sources */,
-				71D79C6F196876AB00F18801 /* ViewController.m in Sources */,
+				71432CF319DF914F00A9ED65 /* ChromecastGame.m in Sources */,
+				71432CE919DF8D5D00A9ED65 /* Game.m in Sources */,
+				71D79C6F196876AB00F18801 /* GameViewController.m in Sources */,
+				5BB2EB3319B77C8B00C27AD3 /* ChooseMainViewController.m in Sources */,
 				7B36EBD819689A5400B88FF3 /* Constants.m in Sources */,
 				713F33951968B5B7006900CC /* TextChannel.m in Sources */,
 			);
