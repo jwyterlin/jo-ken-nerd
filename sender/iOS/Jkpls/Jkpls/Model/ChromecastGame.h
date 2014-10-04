@@ -9,6 +9,10 @@
 #import "Game.h"
 #import "ChromeCast.h"
 
+#define TOGGLE_CHROMECAST_BUTTON_NOTIFICATION @"toggleChromecastButtonNotification"
+#define CHANGE_CHROMECAST_IMAGE_STATUS_NOTIFICATION @"changeChromecastImageStatusNotification"
+#define STATUS_USER_CHROMECAST_NOTIFICATION @"statusUserChromecastNotification"
+
 @interface ChromecastGame : Game <ChromeCastDelegate>
 
 @property (nonatomic, strong) NSTimer *timer;

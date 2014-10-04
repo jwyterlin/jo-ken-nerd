@@ -8,17 +8,12 @@
 
 #import "ChromecastGame.h"
 
-#define TOGGLE_CHROMECAST_BUTTON_NOTIFICATION @"toggleChromecastButtonNotification"
-#define CHANGE_CHROMECAST_IMAGE_STATUS_NOTIFICATION @"changeChromecastImageStatusNotification"
-
 @interface ChromeCast ()
 
 - (void)_toggleChromecastButtonNotification;
-
 - (void)_showMessage:(NSString *)message;
 - (void)_sendNamePlayerToChromeCastWithAction:(NSString *)action;
-
--(void)_loading:(NSTimer *)timer;
+- (void)_loading:(NSTimer *)timer;
 
 - (void)getGameResult:(NSNotification *)notification;
 
@@ -43,10 +38,8 @@
     
     if ( [self.chromeCast isConnected] ) {
         if ( [self.chromeCast sendTextMessage:jsonString] ) {
-
-            // Verificar aonde colocar essa mensagem
-            // self.lbResultGame.text = @"Aguardando o oponente";
-            
+            [[NSNotificationCenter defaultCenter] postNotificationName:STATUS_USER_CHROMECAST_NOTIFICATION
+                                                                object:@"Aguardando o oponente"];
         }
     } else {
         [self _showMessage:@"Falha na comunicação. Por favor tente novamente."];
@@ -64,7 +57,11 @@
 }
 
 - (void)_showMessage:(NSString *)message {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:message message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:message
+                                                    message:nil
+                                                   delegate:nil
+                                          cancelButtonTitle:nil
+                                          otherButtonTitles:@"OK", nil];
     
     [alert show];
 }

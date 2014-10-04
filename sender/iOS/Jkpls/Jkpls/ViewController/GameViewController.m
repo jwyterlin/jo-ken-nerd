@@ -12,9 +12,6 @@
 #import "SinglePlayerGame.h"
 #import "ChromeCastGame.h"
 
-#define TOGGLE_CHROMECAST_BUTTON_NOTIFICATION @"toggleChromecastButtonNotification"
-#define CHANGE_CHROMECAST_IMAGE_STATUS_NOTIFICATION @"changeChromecastImageStatusNotification"
-
 @interface GameViewController ()
 
 @property (nonatomic, strong) UIAlertController *alertController;
@@ -23,6 +20,7 @@
 
 - (void)_changeChromecastImageStatusNotification:(NSNotification *)notification;
 - (void)_toggleChromecastButton:(NSNotification *)notification;
+- (void)_statusUserChromecastNotification:(NSNotification *)notification;
 
 @end
 
@@ -50,6 +48,10 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(_changeChromecastImageStatusNotification:)
                                                  name:CHANGE_CHROMECAST_IMAGE_STATUS_NOTIFICATION
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(_statusUserChromecastNotification:)
+                                                 name:STATUS_USER_CHROMECAST_NOTIFICATION
                                                object:nil];
 }
 
@@ -81,7 +83,7 @@
 - (IBAction)choseOption:(UIButton *)sender {
     [self.activityIndicator startAnimating];
     self.lbResultGame.text = @"";
-    [self.currentGameMode startGameWithChoice:[NSString stringWithFormat:@"%i",sender.tag]];
+    [self.currentGameMode startGameWithChoice:[NSString stringWithFormat:@"%li",(long)sender.tag]];
     if ([self.currentGameMode resultGame].length) {
         self.alertController.message = [self.currentGameMode resultGame];
         [self presentViewController:self.alertController animated:YES completion:nil];
@@ -92,14 +94,23 @@
 #pragma mark - NSNotification Methods -
 
 - (void)_changeChromecastImageStatusNotification:(NSNotification *)notification {
-    UIImage *image = (UIImage *)notification.object;
-    [self.chromeCastButton setImage:image forState:UIControlStateNormal];
-    [self.chromeCastButton setImage:image forState:UIControlStateSelected];
-    [self.chromeCastButton setImage:image forState:UIControlStateHighlighted];
+    if ([notification.object isKindOfClass:[UIImage class]]) {
+        UIImage *image = (UIImage *)notification.object;
+        [self.chromeCastButton setImage:image forState:UIControlStateNormal];
+        [self.chromeCastButton setImage:image forState:UIControlStateSelected];
+        [self.chromeCastButton setImage:image forState:UIControlStateHighlighted];
+    }
 }
 
 - (void)_toggleChromecastButton:(NSNotification *)notification {
     self.chromeCastButton.hidden = NO;
+}
+
+- (void)_statusUserChromecastNotification:(NSNotification *)notification {
+    if ([notification.object isKindOfClass:[NSString class]]) {
+        NSString *statusUser = (NSString *)notification.object;
+        self.lbResultGame.text = statusUser;
+    }
 }
 
 @end

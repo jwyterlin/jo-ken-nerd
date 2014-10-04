@@ -18,15 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3J-49-X0w">
-                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="PUC-dq-K9l"/>
-                                    <barButtonItem image="help_icon.png" id="mmE-jQ-3fj">
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXN-LO-Tdt">
                                 <rect key="frame" x="0.0" y="397" width="320" height="39"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,8 +25,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zmw-Wa-m70">
-                                <rect key="frame" x="36" y="116" width="250" height="250"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmw-Wa-m70">
+                                <rect key="frame" x="35" y="115" width="250" height="250"/>
                                 <subviews>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCK-VY-MNu">
                                         <rect key="frame" x="179" y="85" width="57" height="57"/>
@@ -96,6 +87,18 @@
                                     <constraint firstAttribute="height" constant="250" id="eVE-ju-kaa"/>
                                 </constraints>
                             </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3J-49-X0w">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="PUC-dq-K9l"/>
+                                    <barButtonItem image="help_icon.png" id="mmE-jQ-3fj">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="3lw-RP-dtK" kind="push" id="4Y8-GC-XeS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -146,62 +149,62 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do Jogador" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="prv-U8-g2Y">
-                                <rect key="frame" x="20" y="90" width="280" height="30"/>
+                                <rect key="frame" x="20" y="94" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="changedName:" destination="vXZ-lx-hvc" eventType="editingChanged" id="SOr-TE-hQN"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6U-on-Nvm">
-                                <rect key="frame" x="73" y="331" width="175" height="30"/>
-                                <color key="backgroundColor" red="0.95294117649999999" green="0.29411764709999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Chromecast">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="push" identifier="chromecastSegue" id="4so-ta-w9r"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Single Player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCL-09-b9x">
-                                <rect key="frame" x="110" y="206" width="100" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiplayer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9k-xo-Fl1">
-                                <rect key="frame" x="118" y="302" width="85" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbQ-n4-a2U">
-                                <rect key="frame" x="73" y="235" width="175" height="30"/>
-                                <color key="backgroundColor" red="0.95294117649999999" green="0.29411764709999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Player vs COM">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="push" identifier="singlePlayerSegue" id="7MY-cg-kUK"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAE-tk-qON">
+                                <rect key="frame" x="10" y="175" width="300" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nr3-pC-twZ">
+                                        <rect key="frame" x="63" y="197" width="175" height="30"/>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.29411764709999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Chromecast">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="push" identifier="chromecastSegue" id="rfP-Ja-R58"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Single Player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9M-3F-vfb">
+                                        <rect key="frame" x="100" y="72" width="100" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Multiplayer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEQ-xf-Gp8">
+                                        <rect key="frame" x="108" y="168" width="85" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hA4-JT-y7u">
+                                        <rect key="frame" x="63" y="101" width="175" height="30"/>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.29411764709999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Player vs COM">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="push" identifier="singlePlayerSegue" id="2Id-dt-TVW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UbQ-n4-a2U" firstAttribute="top" secondItem="uCL-09-b9x" secondAttribute="bottom" constant="8" symbolic="YES" id="AEA-cl-ONQ"/>
-                            <constraint firstItem="prv-U8-g2Y" firstAttribute="leading" secondItem="y3T-rr-2m8" secondAttribute="leadingMargin" constant="4" id="Aba-vM-kLT"/>
-                            <constraint firstItem="UbQ-n4-a2U" firstAttribute="leading" secondItem="y3T-rr-2m8" secondAttribute="leadingMargin" constant="57" id="Q5b-Oq-r3W"/>
-                            <constraint firstItem="UbQ-n4-a2U" firstAttribute="trailing" secondItem="m6U-on-Nvm" secondAttribute="trailing" id="SM4-bi-RID"/>
-                            <constraint firstItem="prv-U8-g2Y" firstAttribute="top" secondItem="muS-yK-JGz" secondAttribute="bottom" constant="26" id="UB8-Tg-Dn9"/>
-                            <constraint firstItem="UbQ-n4-a2U" firstAttribute="centerX" secondItem="uCL-09-b9x" secondAttribute="centerX" id="WCm-Il-8FL"/>
-                            <constraint firstItem="q9k-xo-Fl1" firstAttribute="top" secondItem="UbQ-n4-a2U" secondAttribute="bottom" constant="37" id="YHL-H6-NnN"/>
-                            <constraint firstItem="prv-U8-g2Y" firstAttribute="centerX" secondItem="uCL-09-b9x" secondAttribute="centerX" id="cSB-7w-lDm"/>
-                            <constraint firstItem="uCL-09-b9x" firstAttribute="top" secondItem="prv-U8-g2Y" secondAttribute="bottom" constant="86" id="mzb-u2-sTy"/>
-                            <constraint firstItem="UbQ-n4-a2U" firstAttribute="leading" secondItem="m6U-on-Nvm" secondAttribute="leading" id="nKF-9M-GXl"/>
-                            <constraint firstItem="m6U-on-Nvm" firstAttribute="top" secondItem="q9k-xo-Fl1" secondAttribute="bottom" constant="8" symbolic="YES" id="oaZ-7Q-xdj"/>
-                            <constraint firstItem="q9k-xo-Fl1" firstAttribute="centerX" secondItem="y3T-rr-2m8" secondAttribute="centerX" id="pdY-Gi-ahP"/>
-                            <constraint firstItem="q9k-xo-Fl1" firstAttribute="centerX" secondItem="m6U-on-Nvm" secondAttribute="centerX" id="uv4-ef-6bX"/>
+                            <constraint firstItem="mAE-tk-qON" firstAttribute="top" secondItem="prv-U8-g2Y" secondAttribute="bottom" constant="51" id="Qfg-gz-NGy"/>
+                            <constraint firstItem="ekY-vk-u3u" firstAttribute="top" secondItem="mAE-tk-qON" secondAttribute="bottom" constant="93" id="UxJ-bp-l95"/>
+                            <constraint firstItem="prv-U8-g2Y" firstAttribute="leading" secondItem="y3T-rr-2m8" secondAttribute="leadingMargin" constant="4" id="Z4g-dX-lsN"/>
+                            <constraint firstItem="mAE-tk-qON" firstAttribute="leading" secondItem="y3T-rr-2m8" secondAttribute="leadingMargin" constant="-6" id="a4o-aa-giZ"/>
+                            <constraint firstItem="prv-U8-g2Y" firstAttribute="top" secondItem="muS-yK-JGz" secondAttribute="bottom" constant="30" id="d4U-Tu-OQc"/>
+                            <constraint firstItem="mAE-tk-qON" firstAttribute="centerX" secondItem="prv-U8-g2Y" secondAttribute="centerX" id="d4s-17-efm"/>
+                            <constraint firstItem="prv-U8-g2Y" firstAttribute="centerX" secondItem="y3T-rr-2m8" secondAttribute="centerX" id="zKI-bA-D1Y"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Jo Ken Nerd" id="0uO-fC-TFo"/>
@@ -219,7 +222,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ov2-fJ-fML"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wVB-Sn-xJX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="help_instruction.png" translatesAutoresizingMaskIntoConstraints="NO" id="BYR-sw-16E">
@@ -237,7 +240,7 @@
         <!--Navigation Controller-->
         <scene sceneID="cbI-l5-c3b">
             <objects>
-                <navigationController definesPresentationContext="YES" id="oSH-oF-heZ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mainNavigationController" definesPresentationContext="YES" id="oSH-oF-heZ" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TcN-nn-Wws">
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -270,7 +273,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="7MY-cg-kUK"/>
+        <segue reference="2Id-dt-TVW"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
