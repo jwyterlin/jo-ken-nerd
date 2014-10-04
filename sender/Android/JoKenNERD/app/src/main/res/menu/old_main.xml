@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_media_route"
+        android:title="@string/title_cast"
+        app:actionProviderClass="android.support.v7.app.MediaRouteActionProvider"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_tutorial"
+        android:orderInCategory="100"
+        android:title="@string/title_tutorial"
+        app:showAsAction="never"/>
+
+</menu>

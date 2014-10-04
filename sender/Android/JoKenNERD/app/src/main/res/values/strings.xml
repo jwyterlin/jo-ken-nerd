@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Jo Ken Nerd</string>
+
+    <!-- Configurations -->
+    <string name="lbl_user">User</string>
+    <string name="cast_app_id">209A5252</string>
+    <string name="cast_namespace">urn:x-cast:com.littleredgroup.jkpls</string>
+    <string name="hint_name">Nome</string>
+
+    <string name="cd_image_rock">Image Rock</string>
+    <string name="cd_image_paper">Image Paper</string>
+    <string name="cd_image_scissor">Image Scissor</string>
+    <string name="cd_image_lizard">Image Lizard</string>
+    <string name="cd_image_spock">Image Spock</string>
+
+    <string name="msg_win">Parabéns! Você ganhou.</string>
+    <string name="msg_draw">Empatou.</string>
+    <string name="msg_loses">Que pena! Você perdeu.</string>
+    <string name="msg_sucess">Bem-vindo ao Jogo.</string>
+    <string name="msg_room_full">Sala cheia.</string>
+    <string name="msg_already_connected">Voccê já está conectado.</string>
+    <string name="msg_wait_oponent">Aguardando o oponente.</string>
+
+    <string name="title_cast">Cast</string>
+    <string name="title_tutorial">Tutorial</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="choice_rock">Pedra</string>
+    <string name="choice_paper">Papel</string>
+    <string name="choice_scissor">Tesoura</string>
+    <string name="choice_lizard">Lagarto</string>
+    <string name="choice_spock">Spock</string>
+</resources>
