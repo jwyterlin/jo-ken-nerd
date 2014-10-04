@@ -10,13 +10,11 @@
 #import "ChromeCast.h"
 #import "Game.h"
 
-@interface GameViewController : UIViewController<ChromeCastDelegate>
+@interface GameViewController : UIViewController <ChromeCastDelegate>
 
 @property (nonatomic, strong) Game *currentGameMode;
 
-@property (nonatomic, strong) ChromeCast *chromeCast;
-
-@property (weak, nonatomic) IBOutlet UIButton *chromeCastTouched;
+@property (weak, nonatomic) IBOutlet UIButton *chromeCastButton;
 
 @property(nonatomic,strong) IBOutlet UILabel *lbResultGame;
 @property(nonatomic,strong) IBOutlet UIActivityIndicatorView *activityIndicator;

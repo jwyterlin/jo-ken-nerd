@@ -11,6 +11,7 @@
 @interface Game : NSObject
 
 @property (nonatomic, strong) NSString *playerName;
+@property (nonatomic, strong) NSString *messageResultGame;
 
 - (void)initialize;
 

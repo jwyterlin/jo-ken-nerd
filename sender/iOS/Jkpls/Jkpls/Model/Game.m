@@ -8,6 +8,10 @@
 
 #import "Game.h"
 
+@interface Game ()
+
+@end
+
 @implementation Game
 
 #pragma mark - Public Methods -

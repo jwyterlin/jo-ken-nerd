@@ -10,8 +10,6 @@
 
 @interface SinglePlayerGame ()
 
-@property (nonatomic, strong) NSString *messageResultGame;
-
 @end
 @implementation SinglePlayerGame
 

@@ -7,7 +7,15 @@
 //
 
 #import "Game.h"
+#import "ChromeCast.h"
 
-@interface ChromecastGame : Game
+@interface ChromecastGame : Game <ChromeCastDelegate>
+
+@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic) int counter;
+
+@property (nonatomic, strong) ChromeCast *chromeCast;
+
+- (void)chromeCastButtonTouched:(id)sender;
 
 @end

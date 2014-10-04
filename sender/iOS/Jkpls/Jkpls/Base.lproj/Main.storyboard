@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="oSH-oF-heZ">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -93,7 +94,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="d2i-lF-YTw">
                         <barButtonItem key="rightBarButtonItem" id="YEm-87-FPK">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="16z-q4-I3M">
+                            <button key="customView" hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="16z-q4-I3M">
                                 <rect key="frame" x="16" y="11" width="29" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="cast_off.png">
@@ -107,7 +108,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="afV-Ol-K2N" id="WZV-0P-XpV"/>
-                        <outlet property="chromeCastTouched" destination="16z-q4-I3M" id="qbh-2K-Pa9"/>
+                        <outlet property="chromeCastButton" destination="16z-q4-I3M" id="oXi-Ps-IcG"/>
                         <outlet property="lbResultGame" destination="ojd-jZ-SuF" id="Twa-hY-BEW"/>
                     </connections>
                 </viewController>
