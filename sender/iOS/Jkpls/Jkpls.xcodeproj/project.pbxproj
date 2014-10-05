@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5BB2EB3319B77C8B00C27AD3 /* ChooseMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB2EB3119B77C8B00C27AD3 /* ChooseMainViewController.m */; };
+		71144F7419E0B54900B1C692 /* GameLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 71144F7319E0B54900B1C692 /* GameLogic.m */; };
 		712B177219695B87002D2BA2 /* help_instruction@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 712B177119695B87002D2BA2 /* help_instruction@2x.png */; };
 		713F33951968B5B7006900CC /* TextChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 713F33941968B5B7006900CC /* TextChannel.m */; };
 		713F33C41968FDB9006900CC /* cast_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 713F33B51968FDB9006900CC /* cast_off.png */; };
@@ -64,6 +65,8 @@
 /* Begin PBXFileReference section */
 		5BB2EB3019B77C8B00C27AD3 /* ChooseMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseMainViewController.h; sourceTree = "<group>"; };
 		5BB2EB3119B77C8B00C27AD3 /* ChooseMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseMainViewController.m; sourceTree = "<group>"; };
+		71144F7219E0B54900B1C692 /* GameLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLogic.h; sourceTree = "<group>"; };
+		71144F7319E0B54900B1C692 /* GameLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameLogic.m; sourceTree = "<group>"; };
 		712B177119695B87002D2BA2 /* help_instruction@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "help_instruction@2x.png"; sourceTree = "<group>"; };
 		713F33931968B5B7006900CC /* TextChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextChannel.h; sourceTree = "<group>"; };
 		713F33941968B5B7006900CC /* TextChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextChannel.m; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 				7143ED581968A2EF001D4735 /* ChromeCast.m */,
 				713F33931968B5B7006900CC /* TextChannel.h */,
 				713F33941968B5B7006900CC /* TextChannel.m */,
+				71144F7219E0B54900B1C692 /* GameLogic.h */,
+				71144F7319E0B54900B1C692 /* GameLogic.m */,
 				71432CE719DF8D4900A9ED65 /* Game.h */,
 				71432CE819DF8D5D00A9ED65 /* Game.m */,
 				71432CEE19DF8E8F00A9ED65 /* SinglePlayerGame.h */,
@@ -452,6 +457,7 @@
 				71432CF319DF914F00A9ED65 /* ChromecastGame.m in Sources */,
 				71432CE919DF8D5D00A9ED65 /* Game.m in Sources */,
 				71D79C6F196876AB00F18801 /* GameViewController.m in Sources */,
+				71144F7419E0B54900B1C692 /* GameLogic.m in Sources */,
 				5BB2EB3319B77C8B00C27AD3 /* ChooseMainViewController.m in Sources */,
 				7B36EBD819689A5400B88FF3 /* Constants.m in Sources */,
 				713F33951968B5B7006900CC /* TextChannel.m in Sources */,

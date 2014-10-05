@@ -30,7 +30,7 @@
 
 - (UIAlertController *)alertController {
     if (!_alertController) {
-        _alertController = [UIAlertController alertControllerWithTitle:@"Resultado"
+        _alertController = [UIAlertController alertControllerWithTitle:nil
                                                                 message:nil
                                                          preferredStyle:UIAlertControllerStyleAlert];
         [_alertController addAction:[UIAlertAction actionWithTitle:@"Cancelar" style:UIAlertActionStyleCancel handler:nil]];
@@ -85,7 +85,8 @@
     self.lbResultGame.text = @"";
     [self.currentGameMode startGameWithChoice:[NSString stringWithFormat:@"%li",(long)sender.tag]];
     if ([self.currentGameMode resultGame].length) {
-        self.alertController.message = [self.currentGameMode resultGame];
+        self.alertController.title = [self.currentGameMode titleResultGame];
+        self.alertController.message = [self.currentGameMode messageResultGame];
         [self presentViewController:self.alertController animated:YES completion:nil];
     }
     [self.activityIndicator stopAnimating];
