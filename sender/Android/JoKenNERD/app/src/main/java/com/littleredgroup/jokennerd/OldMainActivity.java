@@ -79,7 +79,7 @@ public class OldMainActivity extends ActionBarActivity implements OnClickListene
         ivLizard = (ImageView) findViewById(R.id.game_iv_lizard);
         ivSpock = (ImageView) findViewById(R.id.game_iv_spock);
 
-        etName = (EditText) findViewById(R.id.editText1);
+        etName = (EditText) findViewById(R.id.main_et_name);
         tvResult = (TextView) findViewById(R.id.game_tv_result);
     }
 
