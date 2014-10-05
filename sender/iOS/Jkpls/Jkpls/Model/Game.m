@@ -20,7 +20,10 @@
 
 - (void)startGameWithChoice:(NSString *)choice {}
 
-- (NSString *)resultGame {
+- (NSString *)titleResultGame {
+    return nil;
+}
+- (NSString *)messageResultGame {
     return nil;
 }
 
