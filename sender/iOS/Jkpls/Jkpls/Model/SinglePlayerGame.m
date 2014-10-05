@@ -52,7 +52,7 @@
     if ([self.resultGame isEqual:WIN]) {
         message = [NSString stringWithFormat:@"\n %@ ganha de %@", nameOfMyChoice, nameOfOtherChoice];
     } else if ([self.resultGame isEqual:LOSE]) {
-        message = [NSString stringWithFormat:@"\n %@ ganha de %@", nameOfOtherChoice, nameOfMyChoice];
+        message = [NSString stringWithFormat:@"\n %@ perde para %@", nameOfMyChoice, nameOfOtherChoice];
     } else if ([self.resultGame isEqual:DRAW]) {
         message = @"\n Jogue novamente!";
     }
