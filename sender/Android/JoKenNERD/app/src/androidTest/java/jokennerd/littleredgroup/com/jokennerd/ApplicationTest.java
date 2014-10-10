@@ -1,4 +1,4 @@
-package com.littleredgroup.jokennerd;
+package jokennerd.littleredgroup.com.jokennerd;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

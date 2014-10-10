@@ -5,7 +5,7 @@ android {
     buildToolsVersion "20.0.0"
 
     defaultConfig {
-        applicationId "com.littleredgroup.jokennerd"
+        applicationId "jokennerd.littleredgroup.com.jokennerd"
         minSdkVersion 9
         targetSdkVersion 20
         versionCode 1
