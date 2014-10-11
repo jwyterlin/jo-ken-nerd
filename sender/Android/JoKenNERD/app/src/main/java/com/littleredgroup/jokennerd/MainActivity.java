@@ -2,7 +2,6 @@ package com.littleredgroup.jokennerd;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.MediaRouteButton;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,10 +12,9 @@ import com.littleredgroup.jokennerd.custom.BaseActionBarActivity;
 
 
 public class MainActivity extends BaseActionBarActivity implements View.OnClickListener {
-
     Button btnSingle;
     EditText etName;
-    MediaRouteButton btnMediaRoute;
+    Button btnMultiPlayerCast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +27,12 @@ public class MainActivity extends BaseActionBarActivity implements View.OnClickL
     private void instanceComponents() {
         btnSingle = (Button) findViewById(R.id.main_btn_single_player_vs_com);
         etName = (EditText) findViewById(R.id.main_et_name);
-        btnMediaRoute = (MediaRouteButton) findViewById(R.id.main_btn_multi_player_chromecast);
+        btnMultiPlayerCast = (Button) findViewById(R.id.main_btn_multi_player_cast );
     }
 
     private void setListeners() {
         btnSingle.setOnClickListener(this);
+        btnMultiPlayerCast.setOnClickListener(this);
     }
 
     @Override
@@ -44,7 +43,6 @@ public class MainActivity extends BaseActionBarActivity implements View.OnClickL
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -58,7 +56,12 @@ public class MainActivity extends BaseActionBarActivity implements View.OnClickL
                 intent = new Intent(this, PlayerVsComGameActivity.class);
                 startActivity(intent);
                 break;
-        }
 
+            case R.id.main_btn_multi_player_cast:
+                intent = new Intent(this, ChromecastGameActivity.class);
+                startActivity(intent);
+                break;
+
+        }
     }
 }

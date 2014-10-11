@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/hint_name"
-        android:inputType="textCapWords"></EditText>
+        android:inputType="textCapWords"/>
 
 
     <LinearLayout
@@ -46,13 +46,13 @@
             android:layout_height="wrap_content" />
 
 
-        <android.support.v7.app.MediaRouteButton
-            android:id="@+id/main_btn_multi_player_chromecast"
+        <Button
+            android:id="@+id/main_btn_multi_player_cast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Chromecast"
             style="@style/ButtonAppTheme"
-            android:mediaRouteTypes="user" />
+           />
 
     </LinearLayout>
 

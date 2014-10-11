@@ -51,13 +51,43 @@ public class OldMainActivity extends ActionBarActivity implements OnClickListene
     private boolean mWaitingForReconnect;
     // private String mSessionId;
     private MyMessageReceivedCallback mMyMessageReceivedCallbacks;
+    ResultCallback<ApplicationConnectionResult> castResultCallback = new ResultCallback<ApplicationConnectionResult>() {
+
+        @Override
+        public void onResult(ApplicationConnectionResult result) {
+            Status status = result.getStatus();
+            Log.d(CLASS_TAG,
+                    "ApplicationConnectionResultCallback.onResult: statusCode"
+                            + status.getStatusCode());
+
+            if (status.isSuccess()) {
+                // mSessionId = result.getSessionId();
+                wasLaunched = result.getWasLaunched();
+                mMyMessageReceivedCallbacks = new MyMessageReceivedCallback();
+
+                try {
+                    Cast.CastApi.setMessageReceivedCallbacks(mGoogleApiClient,
+                            mMyMessageReceivedCallbacks.getNamespace(),
+                            mMyMessageReceivedCallbacks);
+                } catch (IOException e) {
+                    Log.e(CLASS_TAG, "Exception while creating channel", e);
+                }
+
+                sendMessage(CastMessages.messageSetupUser(etName.getText()
+                        .toString()));
+
+            } else {
+                Log.e(CLASS_TAG, "application could not launch");
+                tearDown();
+            }
+        }
+    };
     private EditText etName;
     private ImageView ivRock;
     private ImageView ivPaper;
     private ImageView ivScissor;
     private ImageView ivLizard;
     private ImageView ivSpock;
-
     private TextView tvResult;
 
     @Override
@@ -203,136 +233,6 @@ public class OldMainActivity extends ActionBarActivity implements OnClickListene
         }
     }
 
-    private class MyMediaRouterCallback extends MediaRouter.Callback {
-        @Override
-        public void onRouteSelected(MediaRouter router, RouteInfo route) {
-            mSelectedDevice = CastDevice.getFromBundle(route.getExtras());
-            launchReceiver();
-        }
-
-        @Override
-        public void onRouteUnselected(MediaRouter router, RouteInfo route) {
-            tearDown();
-            mSelectedDevice = null;
-        }
-    }
-
-    class MyMessageReceivedCallback implements MessageReceivedCallback {
-
-        public String getNamespace() {
-            return getString(R.string.cast_namespace);
-        }
-
-        @Override
-        public void onMessageReceived(CastDevice castDevice, String namespace,
-                                      String message) {
-            JSONObject jResult = null;
-            try {
-                jResult = new JSONObject(message);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            String msgResult = "";
-            try {
-                msgResult = getMessageStatus(jResult);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            setMessaegStatus(msgResult);
-
-            Log.d("onMessageReceived ", message);
-        }
-
-    }
-
-    private class GooglePlayConnectionCallbacks implements
-            GoogleApiClient.ConnectionCallbacks {
-
-        @Override
-        public void onConnected(Bundle connectionHint) {
-
-            try {
-                if (mWaitingForReconnect) {
-                    mWaitingForReconnect = false;
-
-                    // Check if the receiver app is still running
-                    if ((connectionHint != null)
-                            && connectionHint
-                            .getBoolean(Cast.EXTRA_APP_NO_LONGER_RUNNING)) {
-                        Log.d(CLASS_TAG, "App  is no longer running");
-                    } else {
-
-                        // Re-create the custom message channel
-                        try {
-                            Cast.CastApi.setMessageReceivedCallbacks(
-                                    mGoogleApiClient,
-                                    mMyMessageReceivedCallbacks.getNamespace(),
-                                    mMyMessageReceivedCallbacks);
-                        } catch (IOException e) {
-                            Log.e(CLASS_TAG,
-                                    "Exception while creating channel", e);
-                        }
-                    }
-
-                } else {
-                    Cast.CastApi.launchApplication(mGoogleApiClient,
-                            getString(R.string.cast_app_id)).setResultCallback(
-                            castResultCallback);
-
-                }
-            } catch (Exception e) {
-                Log.e(CLASS_TAG, "Failed to launch application", e);
-            }
-        }
-
-        @Override
-        public void onConnectionSuspended(int cause) {
-            mWaitingForReconnect = true;
-        }
-
-    }
-
-    ResultCallback<ApplicationConnectionResult> castResultCallback = new ResultCallback<ApplicationConnectionResult>() {
-
-        @Override
-        public void onResult(ApplicationConnectionResult result) {
-            Status status = result.getStatus();
-            Log.d(CLASS_TAG,
-                    "ApplicationConnectionResultCallback.onResult: statusCode"
-                            + status.getStatusCode());
-
-            if (status.isSuccess()) {
-                // mSessionId = result.getSessionId();
-                wasLaunched = result.getWasLaunched();
-                mMyMessageReceivedCallbacks = new MyMessageReceivedCallback();
-
-                try {
-                    Cast.CastApi.setMessageReceivedCallbacks(mGoogleApiClient,
-                            mMyMessageReceivedCallbacks.getNamespace(),
-                            mMyMessageReceivedCallbacks);
-                } catch (IOException e) {
-                    Log.e(CLASS_TAG, "Exception while creating channel", e);
-                }
-
-                sendMessage(CastMessages.messageSetupUser(etName.getText()
-                        .toString()));
-
-            } else {
-                Log.e(CLASS_TAG, "application could not launch");
-                tearDown();
-            }
-        }
-    };
-
-    private class GooglePlayConnectionFailedListener implements
-            GoogleApiClient.OnConnectionFailedListener {
-        @Override
-        public void onConnectionFailed(ConnectionResult result) {
-            tearDown();
-            Log.d("onConnectionFailed", result.toString());
-        }
-    }
-
     private void tearDown() {
         Log.d(CLASS_TAG, "teardown");
         if (mGoogleApiClient != null) {
@@ -438,5 +338,103 @@ public class OldMainActivity extends ActionBarActivity implements OnClickListene
     private String getNameUserRandom() {
         return getString(R.string.lbl_user)
                 + new SimpleDateFormat("SSS").format(new Date());
+    }
+
+    private class MyMediaRouterCallback extends MediaRouter.Callback {
+        @Override
+        public void onRouteSelected(MediaRouter router, RouteInfo route) {
+            mSelectedDevice = CastDevice.getFromBundle(route.getExtras());
+            launchReceiver();
+        }
+
+        @Override
+        public void onRouteUnselected(MediaRouter router, RouteInfo route) {
+            tearDown();
+            mSelectedDevice = null;
+        }
+    }
+
+    class MyMessageReceivedCallback implements MessageReceivedCallback {
+
+        public String getNamespace() {
+            return getString(R.string.cast_namespace);
+        }
+
+        @Override
+        public void onMessageReceived(CastDevice castDevice, String namespace,
+                                      String message) {
+            JSONObject jResult = null;
+            try {
+                jResult = new JSONObject(message);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            String msgResult = "";
+            try {
+                msgResult = getMessageStatus(jResult);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            setMessaegStatus(msgResult);
+
+            Log.d("onMessageReceived ", message);
+        }
+
+    }
+
+    private class GooglePlayConnectionCallbacks implements
+            GoogleApiClient.ConnectionCallbacks {
+
+        @Override
+        public void onConnected(Bundle connectionHint) {
+
+            try {
+                if (mWaitingForReconnect) {
+                    mWaitingForReconnect = false;
+
+                    // Check if the receiver app is still running
+                    if ((connectionHint != null)
+                            && connectionHint
+                            .getBoolean(Cast.EXTRA_APP_NO_LONGER_RUNNING)) {
+                        Log.d(CLASS_TAG, "App  is no longer running");
+                    } else {
+
+                        // Re-create the custom message channel
+                        try {
+                            Cast.CastApi.setMessageReceivedCallbacks(
+                                    mGoogleApiClient,
+                                    mMyMessageReceivedCallbacks.getNamespace(),
+                                    mMyMessageReceivedCallbacks);
+                        } catch (IOException e) {
+                            Log.e(CLASS_TAG,
+                                    "Exception while creating channel", e);
+                        }
+                    }
+
+                } else {
+                    Cast.CastApi.launchApplication(mGoogleApiClient,
+                            getString(R.string.cast_app_id)).setResultCallback(
+                            castResultCallback);
+
+                }
+            } catch (Exception e) {
+                Log.e(CLASS_TAG, "Failed to launch application", e);
+            }
+        }
+
+        @Override
+        public void onConnectionSuspended(int cause) {
+            mWaitingForReconnect = true;
+        }
+
+    }
+
+    private class GooglePlayConnectionFailedListener implements
+            GoogleApiClient.OnConnectionFailedListener {
+        @Override
+        public void onConnectionFailed(ConnectionResult result) {
+            tearDown();
+            Log.d("onConnectionFailed", result.toString());
+        }
     }
 }
