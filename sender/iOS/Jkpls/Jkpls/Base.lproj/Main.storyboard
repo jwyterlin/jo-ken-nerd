@@ -20,7 +20,6 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXN-LO-Tdt">
                                 <rect key="frame" x="0.0" y="397" width="320" height="39"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -157,10 +156,10 @@
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAE-tk-qON">
-                                <rect key="frame" x="10" y="175" width="300" height="300"/>
+                                <rect key="frame" x="10" y="184" width="300" height="200"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nr3-pC-twZ">
-                                        <rect key="frame" x="63" y="197" width="175" height="30"/>
+                                        <rect key="frame" x="63" y="147" width="175" height="30"/>
                                         <color key="backgroundColor" red="0.95294117649999999" green="0.29411764709999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Chromecast">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -171,18 +170,18 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Single Player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9M-3F-vfb">
-                                        <rect key="frame" x="100" y="72" width="100" height="21"/>
+                                        <rect key="frame" x="100" y="22" width="100" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Multiplayer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEQ-xf-Gp8">
-                                        <rect key="frame" x="108" y="168" width="85" height="21"/>
+                                        <rect key="frame" x="108" y="118" width="85" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hA4-JT-y7u">
-                                        <rect key="frame" x="63" y="101" width="175" height="30"/>
+                                        <rect key="frame" x="63" y="51" width="175" height="30"/>
                                         <color key="backgroundColor" red="0.95294117649999999" green="0.29411764709999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Player vs COM">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -198,8 +197,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mAE-tk-qON" firstAttribute="top" secondItem="prv-U8-g2Y" secondAttribute="bottom" constant="51" id="Qfg-gz-NGy"/>
-                            <constraint firstItem="ekY-vk-u3u" firstAttribute="top" secondItem="mAE-tk-qON" secondAttribute="bottom" constant="93" id="UxJ-bp-l95"/>
+                            <constraint firstItem="mAE-tk-qON" firstAttribute="top" secondItem="prv-U8-g2Y" secondAttribute="bottom" constant="60" id="Qfg-gz-NGy"/>
+                            <constraint firstItem="ekY-vk-u3u" firstAttribute="top" secondItem="mAE-tk-qON" secondAttribute="bottom" constant="184" id="UxJ-bp-l95"/>
                             <constraint firstItem="prv-U8-g2Y" firstAttribute="leading" secondItem="y3T-rr-2m8" secondAttribute="leadingMargin" constant="4" id="Z4g-dX-lsN"/>
                             <constraint firstItem="mAE-tk-qON" firstAttribute="leading" secondItem="y3T-rr-2m8" secondAttribute="leadingMargin" constant="-6" id="a4o-aa-giZ"/>
                             <constraint firstItem="prv-U8-g2Y" firstAttribute="top" secondItem="muS-yK-JGz" secondAttribute="bottom" constant="30" id="d4U-Tu-OQc"/>
@@ -211,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FV7-jF-77F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-476" y="-330.99999999999994"/>
+            <point key="canvasLocation" x="-476" y="-331"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="J0b-Gf-yPw">

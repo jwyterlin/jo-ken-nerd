@@ -11,13 +11,15 @@
 #import "ChromeCast.h"
 #import "SinglePlayerGame.h"
 #import "ChromeCastGame.h"
+#import "BattleResultView.h"
+#import "GameLogic.h"
+
 
 @interface GameViewController ()
 
-@property (nonatomic, strong) UIAlertController *alertController;
+@property (nonatomic, strong) BattleResultView *resultView;
 
 - (void)_addNotificationCenter;
-
 - (void)_changeChromecastImageStatusNotification:(NSNotification *)notification;
 - (void)_toggleChromecastButton:(NSNotification *)notification;
 - (void)_statusUserChromecastNotification:(NSNotification *)notification;
@@ -28,14 +30,13 @@
 
 #pragma mark - Getter Methods -
 
-- (UIAlertController *)alertController {
-    if (!_alertController) {
-        _alertController = [UIAlertController alertControllerWithTitle:nil
-                                                                message:nil
-                                                         preferredStyle:UIAlertControllerStyleAlert];
-        [_alertController addAction:[UIAlertAction actionWithTitle:@"Cancelar" style:UIAlertActionStyleCancel handler:nil]];
+- (BattleResultView *)resultView {
+    if (!_resultView) {
+        _resultView = [[BattleResultView alloc] init];
+        _resultView.center = self.view.center;
+        [self.view addSubview:_resultView];
     }
-    return _alertController;
+    return _resultView;
 }
 
 #pragma mark - Private Methods -
@@ -85,9 +86,16 @@
     self.lbResultGame.text = @"";
     [self.currentGameMode startGameWithChoice:[NSString stringWithFormat:@"%li",(long)sender.tag]];
     if ([self.currentGameMode resultGame].length) {
-        self.alertController.title = [self.currentGameMode titleResultGame];
-        self.alertController.message = [self.currentGameMode messageResultGame];
-        [self presentViewController:self.alertController animated:YES completion:nil];
+        
+        self.resultView.titleLabel.text = [self.currentGameMode titleResultGame];
+        self.resultView.descriptionLabel.text = [self.currentGameMode messageResultGame];
+        self.resultView.myPlayer.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@", [GameLogic realNameOfChoice:self.currentGameMode.myChoice]]];
+        
+        self.resultView.OtherPlayer.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@", [GameLogic realNameOfChoice:self.currentGameMode.otherChoice]]];
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            self.resultView.alpha = 1.0f;
+        }];
     }
     [self.activityIndicator stopAnimating];
 }
