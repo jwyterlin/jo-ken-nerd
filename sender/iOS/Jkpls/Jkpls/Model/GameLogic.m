@@ -76,7 +76,7 @@
             name = @"Tesoura";
             break;
         case CHOICE_LIZARD:
-            name = @"Largarto";
+            name = @"Largato";
             break;
         case CHOICE_SPOCK:
             name = @"Spock";
