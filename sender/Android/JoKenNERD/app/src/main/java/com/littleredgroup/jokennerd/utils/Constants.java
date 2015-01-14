@@ -26,4 +26,8 @@ public class Constants {
 	public static final String RESULT_ROOM_IS_FULL = "room_full";
 	public static final String RESULT_SUCCES_CONECTED = "succes_conected";
 
+    public static final String TAG_NAME = "name";
+
+
+
 }

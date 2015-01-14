@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.littleredgroup.jokennerd.custom.BaseActionBarActivity;
 import com.littleredgroup.jokennerd.custom.onChoiceClick;
+import com.littleredgroup.jokennerd.utils.Constants;
 
 /**
  * Created by fbvictorhugo on 10/4/14.
@@ -23,6 +24,12 @@ public class GameActivity extends BaseActionBarActivity implements View.OnClickL
 
     private TextView tvResult;
 
+    private String playerName;
+
+    public String getPlayerName() {
+        return playerName;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +38,7 @@ public class GameActivity extends BaseActionBarActivity implements View.OnClickL
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setComponentsView();
         setListeners();
+        playerName = getIntent().getStringExtra(Constants.TAG_NAME);
     }
 
     private void setComponentsView() {

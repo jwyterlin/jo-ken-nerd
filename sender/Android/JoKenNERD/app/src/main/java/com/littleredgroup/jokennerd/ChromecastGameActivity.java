@@ -63,7 +63,7 @@ public class ChromecastGameActivity extends GameActivity {
                     Log.e(TAG, "Exception while creating channel", e);
                 }
 
-                sendMessage(CastMessages.messageSetupUser("Hello"));
+                sendMessage(CastMessages.messageSetupUser(getPlayerName()));
 
             } else {
                 Log.e(TAG, "application could not launch");
@@ -80,11 +80,18 @@ public class ChromecastGameActivity extends GameActivity {
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        mMediaRouter.addCallback(mMediaRouteSelector, mMediaRouterCallback,
+                MediaRouter.CALLBACK_FLAG_REQUEST_DISCOVERY);
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
         // Add the callback to start device discovery
         mMediaRouter.addCallback(mMediaRouteSelector, mMediaRouterCallback,
-                MediaRouter.CALLBACK_FLAG_REQUEST_DISCOVERY);
+                MediaRouter.CALLBACK_FLAG_PERFORM_ACTIVE_SCAN);
     }
 
     @Override
@@ -92,6 +99,12 @@ public class ChromecastGameActivity extends GameActivity {
         // Remove the callback to stop device discovery
         mMediaRouter.removeCallback(mMediaRouterCallback);
         super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        mMediaRouter.removeCallback(mMediaRouterCallback);
+        super.onStop();
     }
 
     @Override
