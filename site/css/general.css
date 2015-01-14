@@ -410,6 +410,20 @@ color: #ECEBEB;
 	font-size: 1.25em;
 }
 
+.content-style-form input[type="submit"] {
+	display: block;
+	margin-top: 2.5em;
+	padding: 1.5em;
+	width: 100%;
+	border: none;
+	background: #e75854;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 800;
+	font-size: 1.00em;
+}
+
 .content-style-form .icon-close {
 	top: 0;
 	right: 0;
@@ -506,12 +520,12 @@ color: #ECEBEB;
 	background-color: #f0f0f0;
 }
 
-.content-style-form-4 form button {
+.content-style-form-4 form button input[type="submit"]  {
 	background: #34495e;
 }
 
 .content-style-form-4 form button:focus,
-.content-style-form-4 form button:hover {
+.content-style-form-4 form button:hover input[type="submit"] {
 	background: #F04C41;
 }
 
