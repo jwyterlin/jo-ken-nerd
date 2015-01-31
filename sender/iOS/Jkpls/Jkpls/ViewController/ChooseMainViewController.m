@@ -13,16 +13,33 @@
 #import "SinglePlayerGame.h"
 #import "ChromecastGame.h"
 
-@interface ChooseMainViewController ()
+@interface ChooseMainViewController () <UIGestureRecognizerDelegate>
+
+@property (nonatomic, strong) UITapGestureRecognizer *dismissKeyboardGesture;
 
 @property (nonatomic, strong) NSTimer *timerChangeName;
 
 - (void)roundingButton:(UIButton *)button;
 //- (void)changeName:(NSTimer *)timer;
 
+- (void)_addGesturesRecognizer;
+- (void)_dismissKeyboard;
+
 @end
 
 @implementation ChooseMainViewController
+
+#pragma mark - Getter Methods
+
+- (UIGestureRecognizer *)dismissKeyboardGesture {
+    if (!_dismissKeyboardGesture) {
+        _dismissKeyboardGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_dismissKeyboard)];
+        _dismissKeyboardGesture.delegate = self;
+    }
+    return _dismissKeyboardGesture;
+}
+
+#pragma mark - UIViewController Methods
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,6 +49,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self setTitle:@"Jo Ken Nerd"];
+    
+    [self _addGesturesRecognizer];
 }
 
 #pragma mark - Helper Methods
@@ -45,6 +64,14 @@
 //- (void)changeName:(NSTimer *)timer {
 ////    [self sendNamePlayerToChromeCastWithAction:@"update"];
 //}
+
+- (void)_addGesturesRecognizer {
+    [self.view addGestureRecognizer:self.dismissKeyboardGesture];
+}
+
+- (void)_dismissKeyboard {
+    [self.view endEditing:YES];
+}
 
 #pragma mark - IBAction Methods -
 
