@@ -77,7 +77,10 @@
     [self.activityIndicator stopAnimating];
     
     if ([self.currentGameMode respondsToSelector:@selector(chromeCastButtonTouched:)]) {
-        [self performSelector:@selector(chromeCastButtonTouched:) withObject:self];
+        if ([self.currentGameMode isKindOfClass:[ChromecastGame class]]) {
+            ChromecastGame *multiplayerMode = (ChromecastGame *)self.currentGameMode;
+            [multiplayerMode chromeCastButtonTouched:sender];
+        }
     }
 }
 

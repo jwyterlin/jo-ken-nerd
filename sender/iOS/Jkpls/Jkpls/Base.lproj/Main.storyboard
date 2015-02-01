@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="oSH-oF-heZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="oSH-oF-heZ">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -166,7 +166,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="push" identifier="chromecastSegue" id="rfP-Ja-R58"/>
+                                            <segue destination="vXZ-lx-hvc" kind="push" identifier="chromecastSegue" id="G8e-Uw-eDU"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Single Player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9M-3F-vfb">
@@ -188,7 +188,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="push" identifier="singlePlayerSegue" id="2Id-dt-TVW"/>
+                                            <segue destination="vXZ-lx-hvc" kind="push" identifier="singlePlayerSegue" id="uv8-JB-Zuc"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -207,6 +207,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Jo Ken Nerd" id="0uO-fC-TFo"/>
+                    <connections>
+                        <outlet property="btnPlayerVsCom" destination="nr3-pC-twZ" id="Uxm-VJ-YcY"/>
+                        <outlet property="btnSinglePlayer" destination="hA4-JT-y7u" id="Cjx-3a-5Yi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FV7-jF-77F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -272,7 +276,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="2Id-dt-TVW"/>
+        <segue reference="G8e-Uw-eDU"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

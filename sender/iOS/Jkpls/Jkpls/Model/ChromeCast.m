@@ -81,7 +81,7 @@
     
     if ( ! _actionSheet ) {
         
-        _actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+        _actionSheet = [[UIActionSheet alloc] initWithTitle:@"Chromecasts Disponíveis"
                                                    delegate:self
                                           cancelButtonTitle:nil
                                      destructiveButtonTitle:@"Cancelar"

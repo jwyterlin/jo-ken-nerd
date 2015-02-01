@@ -22,7 +22,6 @@
 		7B5B34E519686D4600406276 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E419686D4600406276 /* Foundation.framework */; };
 		7B5B34E719686D4600406276 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E619686D4600406276 /* CoreGraphics.framework */; };
 		7B5B34E919686D4600406276 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E819686D4600406276 /* UIKit.framework */; };
-		7B5B34EF19686D4600406276 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B5B34ED19686D4600406276 /* InfoPlist.strings */; };
 		7B5B34F119686D4600406276 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B34F019686D4600406276 /* main.m */; };
 		7B5B34F519686D4600406276 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B34F419686D4600406276 /* AppDelegate.m */; };
 		7B5B34F819686D4600406276 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B5B34F619686D4600406276 /* Main.storyboard */; };
@@ -30,7 +29,6 @@
 		7B5B350419686D4600406276 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B350319686D4600406276 /* XCTest.framework */; };
 		7B5B350519686D4600406276 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E419686D4600406276 /* Foundation.framework */; };
 		7B5B350619686D4600406276 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E819686D4600406276 /* UIKit.framework */; };
-		7B5B350E19686D4700406276 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B5B350C19686D4700406276 /* InfoPlist.strings */; };
 		7B5B351019686D4700406276 /* JkplsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B350F19686D4700406276 /* JkplsTests.m */; };
 		D993F8E917D842779F63F7B9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFABEDCE520B44C2A77AC1D4 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -63,6 +61,8 @@
 		71BE284B19E8D0E000C049C6 /* BattleResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BattleResultView.h; path = ../View/BattleResultView.h; sourceTree = "<group>"; };
 		71BE284C19E8D0E000C049C6 /* BattleResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BattleResultView.m; path = ../View/BattleResultView.m; sourceTree = "<group>"; };
 		71BE285119E8DB7F00C049C6 /* BattleResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BattleResultView.xib; sourceTree = "<group>"; };
+		71C68F9F1A7DA12400BCB58B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		71C68FA01A7DA12900BCB58B /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
 		71D79C6E196876AB00F18801 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		71D79C70196876B000F18801 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		7B36EBD3196894CD00B88FF3 /* ChromeCastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChromeCastViewController.xib; sourceTree = "<group>"; };
@@ -73,7 +73,6 @@
 		7B5B34E619686D4600406276 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7B5B34E819686D4600406276 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7B5B34EC19686D4600406276 /* Jkpls-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Jkpls-Info.plist"; sourceTree = "<group>"; };
-		7B5B34EE19686D4600406276 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B5B34F019686D4600406276 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B5B34F219686D4600406276 /* Jkpls-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jkpls-Prefix.pch"; sourceTree = "<group>"; };
 		7B5B34F319686D4600406276 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,7 +82,6 @@
 		7B5B350219686D4600406276 /* JkplsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JkplsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5B350319686D4600406276 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7B5B350B19686D4700406276 /* JkplsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JkplsTests-Info.plist"; sourceTree = "<group>"; };
-		7B5B350D19686D4700406276 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B5B350F19686D4700406276 /* JkplsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JkplsTests.m; sourceTree = "<group>"; };
 		BFABEDCE520B44C2A77AC1D4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CF92C7B5CA4318A2A326D5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -224,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				7B5B34EC19686D4600406276 /* Jkpls-Info.plist */,
-				7B5B34ED19686D4600406276 /* InfoPlist.strings */,
 				7B5B34F019686D4600406276 /* main.m */,
 				7B5B34F219686D4600406276 /* Jkpls-Prefix.pch */,
 			);
@@ -244,7 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				7B5B350B19686D4700406276 /* JkplsTests-Info.plist */,
-				7B5B350C19686D4700406276 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -311,7 +307,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = 7B5B34D819686D4600406276;
@@ -333,7 +328,6 @@
 				7B36EBD4196894CD00B88FF3 /* ChromeCastViewController.xib in Resources */,
 				7B5B34FD19686D4600406276 /* Images.xcassets in Resources */,
 				71BE285219E8DB7F00C049C6 /* BattleResultView.xib in Resources */,
-				7B5B34EF19686D4600406276 /* InfoPlist.strings in Resources */,
 				7B5B34F819686D4600406276 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,7 +336,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B5B350E19686D4700406276 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,29 +413,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7B5B34ED19686D4600406276 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7B5B34EE19686D4600406276 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		7B5B34F619686D4600406276 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7B5B34F719686D4600406276 /* Base */,
+				71C68F9F1A7DA12400BCB58B /* en */,
+				71C68FA01A7DA12900BCB58B /* pt */,
 			);
 			name = Main.storyboard;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		7B5B350C19686D4700406276 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7B5B350D19686D4700406276 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

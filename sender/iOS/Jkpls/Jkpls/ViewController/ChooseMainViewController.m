@@ -43,6 +43,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self roundingButton:self.btnSinglePlayer];
     [self roundingButton:self.btnPlayerVsCom];
 }
 
