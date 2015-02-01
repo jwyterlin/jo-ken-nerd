@@ -158,17 +158,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAE-tk-qON">
                                 <rect key="frame" x="10" y="184" width="300" height="200"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nr3-pC-twZ">
-                                        <rect key="frame" x="63" y="147" width="175" height="30"/>
-                                        <color key="backgroundColor" red="0.95294117649999999" green="0.29411764709999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Chromecast">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="push" identifier="chromecastSegue" id="G8e-Uw-eDU"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Single Player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9M-3F-vfb">
                                         <rect key="frame" x="100" y="22" width="100" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -188,7 +177,18 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="vXZ-lx-hvc" kind="push" identifier="singlePlayerSegue" id="uv8-JB-Zuc"/>
+                                            <segue destination="vXZ-lx-hvc" kind="push" identifier="singlePlayerSegue" id="yYS-7L-OXi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nr3-pC-twZ">
+                                        <rect key="frame" x="63" y="147" width="175" height="30"/>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.29411764709999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Chromecast">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="push" identifier="chromecastSegue" id="6GQ-NJ-Wax"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -276,7 +276,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="G8e-Uw-eDU"/>
+        <segue reference="6GQ-NJ-Wax"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

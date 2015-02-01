@@ -1,3 +1,4 @@
 platform:ios, '7.0'
 
 pod 'google-cast-sdk'
+pod 'GoogleAnalytics-iOS-SDK'

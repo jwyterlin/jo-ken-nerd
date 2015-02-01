@@ -1,10 +1,15 @@
 PODS:
-  - google-cast-sdk (2.2.1)
+  - google-cast-sdk (2.5.1)
+  - GoogleAnalytics-iOS-SDK (3.10):
+    - GoogleAnalytics-iOS-SDK/Core (= 3.10)
+  - GoogleAnalytics-iOS-SDK/Core (3.10)
 
 DEPENDENCIES:
   - google-cast-sdk
+  - GoogleAnalytics-iOS-SDK
 
 SPEC CHECKSUMS:
-  google-cast-sdk: e849781ee22e88ccbfab0c529cefa6feccc092b2
+  google-cast-sdk: 140236c945742c883d5b2658ffe5d683709e7781
+  GoogleAnalytics-iOS-SDK: f422062075d9ccb1ea8d783fc5ba3829461e9502
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.35.0

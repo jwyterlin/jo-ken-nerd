@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnSinglePlayer;
 
 @property(nonatomic,strong) IBOutlet UILabel *lbMultiPlayer;
-
 @property(nonatomic,strong) IBOutlet UIButton *btnPlayerVsCom;
 
 @end
