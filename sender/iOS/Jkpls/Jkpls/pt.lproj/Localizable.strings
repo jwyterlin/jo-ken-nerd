@@ -1,22 +1,10 @@
+/* 
+  Localizable.strings
+  Jkpls
 
-/* Class = "IBUINavigationItem"; title = "Jo Ken Nerd"; ObjectID = "0uO-fC-TFo"; */
-"0uO-fC-TFo.title" = "Jo Ken Nerd";
-
-/* Class = "IBUILabel"; text = "Single Player"; ObjectID = "f9M-3F-vfb"; */
-"f9M-3F-vfb.text" = "Single Player";
-
-/* Class = "IBUIButton"; normalTitle = "Player vs COM"; ObjectID = "hA4-JT-y7u"; */
-"hA4-JT-y7u.normalTitle" = "Player vs COM";
-
-/* Class = "IBUIButton"; normalTitle = "Chromecast"; ObjectID = "nr3-pC-twZ"; */
-"nr3-pC-twZ.normalTitle" = "Chromecast";
-
-/* Class = "IBUITextField"; placeholder = "Nome do Jogador"; ObjectID = "prv-U8-g2Y"; */
-"prv-U8-g2Y.placeholder" = "Nome do Jogador";
-
-/* Class = "IBUILabel"; text = "Multiplayer"; ObjectID = "vEQ-xf-Gp8"; */
-"vEQ-xf-Gp8.text" = "Multiplayer";
-
+  Created by Fábio Nogueira  on 01/02/15.
+  Copyright (c) 2015 Little Red Club. All rights reserved.
+*/
 
 "chromecast_disponiveis" = "Chromecasts Disponíveis";
 "cancelar" = "Cancelar";
