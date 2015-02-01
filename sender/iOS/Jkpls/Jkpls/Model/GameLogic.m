@@ -67,19 +67,19 @@
     NSString *name = nil;
     switch (choice) {
         case CHOICE_ROCK:
-            name = @"Pedra";
+            name = NSLocalizedString(@"pedra", nil);
             break;
         case CHOICE_PAPER:
-            name = @"Papel";
+            name = NSLocalizedString(@"papel", nil);
             break;
         case CHOICE_SCISSOR:
-            name = @"Tesoura";
+            name = NSLocalizedString(@"tesoura", nil);
             break;
         case CHOICE_LIZARD:
-            name = @"Largato";
+            name = NSLocalizedString(@"lagarto", nil);
             break;
         case CHOICE_SPOCK:
-            name = @"Spock";
+            name = NSLocalizedString(@"spock", nil);
         default:
         break;
     }

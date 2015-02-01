@@ -16,3 +16,29 @@
 
 /* Class = "IBUILabel"; text = "Multiplayer"; ObjectID = "vEQ-xf-Gp8"; */
 "vEQ-xf-Gp8.text" = "Multiplayer";
+
+
+"chromecast_disponiveis" = "Chromecasts Available";
+"cancelar" = "Cancel";
+"pedra" = "Rock";
+"papel" = "Paper";
+"tesoura" = "Scissor";
+"spock" = "Spock";
+"lagarto" = "Lizard";
+"resultado" = "Result";
+"vencedor" = "Winner";
+"perdedor" = "Loser";
+"empate" = "Draw";
+"jogue_novamente" = "Play again!";
+"ganha" = "wins";
+"perde" = "loses";
+"Aguardando_oponente" = "Waiting for opponent";
+"falha_comunicacao" = "Failure to communicate. Please try again";
+"conexao_sucesso" = "Connection completed sucessfully!";
+"desconectado" = "Offline";
+"falha_conexao" = "Connection failed:";
+"parabens_ganhou" = "Congratulations! You won!";
+"empate" = "Draw";
+"perdeu" = "What a pity! You Lose";
+"bem_vindo" = "Welcome to the game.";
+"sala_cheia" = "Room full";

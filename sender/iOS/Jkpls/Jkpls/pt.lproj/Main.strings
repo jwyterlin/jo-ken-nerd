@@ -16,3 +16,29 @@
 
 /* Class = "IBUILabel"; text = "Multiplayer"; ObjectID = "vEQ-xf-Gp8"; */
 "vEQ-xf-Gp8.text" = "Multiplayer";
+
+
+"chromecast_disponiveis" = "Chromecasts Disponíveis";
+"cancelar" = "Cancelar";
+"pedra" = "Pedra";
+"papel" = "Papel";
+"tesoura" = "Tesoura";
+"spock" = "Spock";
+"lagarto" = "Lagarto";
+"resultado" = "Resultado";
+"vencedor" = "Vencedor";
+"perdedor" = "Perdedor";
+"empate" = "Empate";
+"jogue_novamente" = "Jogue novamente!";
+"ganha" = "ganha de";
+"perde" = "perde de";
+"Aguardando_oponente" = "Aguardando o oponente";
+"falha_comunicacao" = "Falha na comunicação. Por favor tente novamente.";
+"conexao_sucesso" = "Conexão concluída com sucesso!";
+"desconectado" = "Desconectado";
+"falha_conexao" = "Falha na conexão:";
+"parabens_ganhou" = "Parabéns! Você ganhou.";
+"empate" = "Empatou";
+"perdeu" = "Que pena! Você perdeu.";
+"bem_vindo" = "Bem-vindo ao Jogo.";
+"sala_cheia" = "Sala cheia.";
