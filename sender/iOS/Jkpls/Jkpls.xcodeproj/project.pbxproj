@@ -49,7 +49,6 @@
 		5BB2EB3119B77C8B00C27AD3 /* ChooseMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseMainViewController.m; sourceTree = "<group>"; };
 		71144F7219E0B54900B1C692 /* GameLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLogic.h; sourceTree = "<group>"; };
 		71144F7319E0B54900B1C692 /* GameLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameLogic.m; sourceTree = "<group>"; };
-		712F17501A7EB58D00AE528F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		712F17521A7EB58E00AE528F /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
 		713F33931968B5B7006900CC /* TextChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextChannel.h; sourceTree = "<group>"; };
 		713F33941968B5B7006900CC /* TextChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextChannel.m; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		71432CF219DF914F00A9ED65 /* ChromecastGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromecastGame.m; sourceTree = "<group>"; };
 		7143ED571968A2EF001D4735 /* ChromeCast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChromeCast.h; sourceTree = "<group>"; };
 		7143ED581968A2EF001D4735 /* ChromeCast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromeCast.m; sourceTree = "<group>"; };
+		7170D1311A8D6CC7001F3AB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		71BE284B19E8D0E000C049C6 /* BattleResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BattleResultView.h; path = ../View/BattleResultView.h; sourceTree = "<group>"; };
 		71BE284C19E8D0E000C049C6 /* BattleResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BattleResultView.m; path = ../View/BattleResultView.m; sourceTree = "<group>"; };
 		71BE285119E8DB7F00C049C6 /* BattleResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BattleResultView.xib; sourceTree = "<group>"; };
@@ -321,6 +321,7 @@
 			knownRegions = (
 				Base,
 				pt,
+				en,
 			);
 			mainGroup = 7B5B34D819686D4600406276;
 			productRefGroup = 7B5B34E219686D4600406276 /* Products */;
@@ -430,8 +431,8 @@
 		712F17511A7EB58D00AE528F /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				712F17501A7EB58D00AE528F /* en */,
 				712F17521A7EB58E00AE528F /* pt */,
+				7170D1311A8D6CC7001F3AB4 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
