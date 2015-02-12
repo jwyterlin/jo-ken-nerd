@@ -30,7 +30,7 @@
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCK-VY-MNu">
                                         <rect key="frame" x="179" y="85" width="57" height="57"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="papel.png">
+                                        <state key="normal" image="Papel">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -40,7 +40,7 @@
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcY-QY-Yvs">
                                         <rect key="frame" x="156" y="172" width="57" height="57"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="tesoura.png">
+                                        <state key="normal" image="Tesoura">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -50,7 +50,7 @@
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8h2-Ab-71M">
                                         <rect key="frame" x="97" y="20" width="57" height="57"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="pedra.png">
+                                        <state key="normal" image="Pedra">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -63,7 +63,7 @@
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UH-bG-Jgg">
                                         <rect key="frame" x="14" y="85" width="57" height="57"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="spock.png">
+                                        <state key="normal" image="Spock">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -73,7 +73,7 @@
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hB5-02-11q">
                                         <rect key="frame" x="50" y="172" width="57" height="57"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="largato.png">
+                                        <state key="normal" image="Lagarto">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -81,6 +81,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="XEN-Yr-ULA"/>
                                     <constraint firstAttribute="height" constant="250" id="eVE-ju-kaa"/>
@@ -261,14 +262,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Lagarto" width="57" height="57"/>
+        <image name="Papel" width="57" height="57"/>
+        <image name="Pedra" width="57" height="57"/>
+        <image name="Spock" width="57" height="57"/>
+        <image name="Tesoura" width="57" height="57"/>
         <image name="cast_off.png" width="29" height="23"/>
         <image name="help_icon.png" width="30" height="29"/>
         <image name="help_instruction.png" width="320" height="568"/>
-        <image name="largato.png" width="57" height="57"/>
-        <image name="papel.png" width="57" height="57"/>
-        <image name="pedra.png" width="57" height="57"/>
-        <image name="spock.png" width="57" height="57"/>
-        <image name="tesoura.png" width="57" height="57"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

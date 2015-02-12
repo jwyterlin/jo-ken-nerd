@@ -84,7 +84,7 @@
         _actionSheet = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"chromecast_disponiveis", nil)
                                                    delegate:self
                                           cancelButtonTitle:nil
-                                     destructiveButtonTitle:NSLocalizedString(@"cancel", nil)
+                                     destructiveButtonTitle:NSLocalizedString(@"cancelar", nil)
                                           otherButtonTitles:nil, nil];
     }
     
