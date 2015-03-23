@@ -20,6 +20,14 @@ public class BaseActionBarActivity extends ActionBarActivity {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 
+    public void showToastShort(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    public void showToastShort(int message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
     @Override
     public void startActivity(Intent intent) {
         super.startActivity(intent);

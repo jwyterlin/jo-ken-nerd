@@ -7,7 +7,6 @@
 
     <EditText
         android:id="@+id/old_editText1"
-        style="@style/EditTextAppTheme"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/hint_name"

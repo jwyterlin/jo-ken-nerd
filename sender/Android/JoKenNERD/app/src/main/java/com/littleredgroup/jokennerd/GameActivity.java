@@ -1,9 +1,11 @@
 package com.littleredgroup.jokennerd;
 
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.littleredgroup.jokennerd.custom.BaseActionBarActivity;
@@ -23,31 +25,40 @@ public class GameActivity extends BaseActionBarActivity implements View.OnClickL
     private ImageView ivSpock;
 
     private TextView tvResult;
-
     private String playerName;
 
     public String getPlayerName() {
         return playerName;
     }
 
+    protected RelativeLayout rlGameContent;
+    protected TextView tvMessageLayout;
+    protected Toolbar mToolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setComponentsView();
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         setListeners();
         playerName = getIntent().getStringExtra(Constants.TAG_NAME);
     }
 
     private void setComponentsView() {
+        mToolbar = (Toolbar) findViewById(R.id.game_toolbar);
+
         ivRock = (ImageView) findViewById(R.id.game_iv_rock);
         ivPaper = (ImageView) findViewById(R.id.game_iv_paper);
         ivScissor = (ImageView) findViewById(R.id.game_iv_scissor);
         ivLizard = (ImageView) findViewById(R.id.game_iv_lizard);
         ivSpock = (ImageView) findViewById(R.id.game_iv_spock);
         tvResult = (TextView) findViewById(R.id.game_tv_result);
+        rlGameContent = (RelativeLayout) findViewById(R.id.game_rl_content);
+        tvMessageLayout = (TextView) findViewById(R.id.game_tv_message_layout);
     }
 
     private void setListeners() {

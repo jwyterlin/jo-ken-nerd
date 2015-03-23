@@ -18,6 +18,7 @@ public class PlayerVsComGameActivity extends GameActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle(R.string.lbl_single_player);
     }
 
     @Override

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_googlecast"
+        android:orderInCategory="100"
+        android:title="@string/title_googlecast"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_chromecast"
+        android:orderInCategory="100"
+        android:title="@string/title_chromecast"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_hackathon"
+        android:orderInCategory="100"
+        android:title="@string/title_hackathon_gdg_jf"
+        app:showAsAction="never" />
+
+</menu>

@@ -7,7 +7,7 @@
     <string name="lbl_user">User</string>
     <string name="cast_app_id">209A5252</string>
     <string name="cast_namespace">urn:x-cast:com.littleredgroup.jkpls</string>
-    <string name="hint_name">Nome</string>
+    <string name="hint_name">Nome do Jogador</string>
 
     <string name="cd_image_rock">Image Rock</string>
     <string name="cd_image_paper">Image Paper</string>
@@ -22,16 +22,29 @@
     <string name="msg_room_full">Sala cheia.</string>
     <string name="msg_already_connected">Voccê já está conectado.</string>
     <string name="msg_wait_oponent">Aguardando o oponente.</string>
+    <string name="msg_need_chromecast_connection">Necessário estar conectado a um Chromecast</string>
 
     <string name="title_cast">Cast</string>
-    <string name="title_tutorial">Tutorial</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="title_rules">Regras</string>
+    <string name="title_about">Sobre</string>
+    <string name="title_googlecast">Google SDK Cast</string>
+    <string name="title_chromecast">Chromecast</string>
+    <string name="title_hackathon_gdg_jf">1º Hackathon GDG JF</string>
 
     <string name="choice_rock">Pedra</string>
     <string name="choice_paper">Papel</string>
     <string name="choice_scissor">Tesoura</string>
     <string name="choice_lizard">Lagarto</string>
     <string name="choice_spock">Spock</string>
+
+    <string name="lbl_single_player">Single Player</string>
+    <string name="lbl_player_vs_com">Player Vs COM </string>
+    <string name="lbl_multi_player">Multi Player</string>
+    <string name="lbl_chromecast">Chromecast</string>
+
+    <string name="lbl_about_header">O clássico Pedra, Papel, Tesoura, Lagarto e Spock!</string>
+    <string name="lbl_about_game">"Um jogo simples que utiliza a tecnologia Google Cast, possibilitando que os participantes (em modo multiplayer) entrem em uma disputa diante de uma televisão.</string>
+    <string name="lbl_about_chromecast">Para jogar o Multiplayer é necessário um dispositivo de Cast, como o Chromecast.</string>
+    <string name="lbl_about_hackathon_app">O aplicativo foi desenvolvido durante um Hackathon em Juiz de Fora - MG. A equipe LittleRedGroup é formada por Victor Hugo, Lucas Mendes, Jhonathan Wyterlin e Fabio Nogueira encararam o desafio e trabalharam em um aplicativo para ambientes diferentes; Android e iOS apresentando em Chromecast.</string>
+
 </resources>

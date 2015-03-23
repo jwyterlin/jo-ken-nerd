@@ -11,7 +11,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.Apptheme">
+        android:theme="@style/AppTheme">
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -26,12 +26,16 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".TutorialActivity" />
+        <activity android:name=".RulesActivity" />
         <activity android:name=".GameActivity" />
         <activity android:name=".PlayerVsComGameActivity" />
-        <activity android:name=".ChromecastGameActivity" />
+        <activity
+            android:name=".ChromecastGameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_about" />
 
     </application>
-
 
 </manifest>
