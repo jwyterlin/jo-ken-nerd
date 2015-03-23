@@ -1,7 +1,9 @@
 package com.littleredgroup.jokennerd;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 
+import com.littleredgroup.jokennerd.custom.GameResultDialog;
 import com.littleredgroup.jokennerd.utils.Constants;
 import com.littleredgroup.jokennerd.utils.GameLogic;
 
@@ -23,40 +25,41 @@ public class PlayerVsComGameActivity extends GameActivity {
 
     @Override
     public void onRockClick() {
-        machineChoice = getMachineChoice();
-        String result = GameLogic.getResult(Constants.CHOICE_ROCK, machineChoice);
-        showToastLong(result + "  >>  Maquina: " + GameLogic.getTextChoice(this, machineChoice));
+        showResult(Constants.CHOICE_ROCK, getMachineChoice());
     }
 
     @Override
     public void onPaperClick() {
-        machineChoice = getMachineChoice();
-        String result = GameLogic.getResult(Constants.CHOICE_PAPER, machineChoice);
-        showToastLong(result + "  >>  Maquina: " + GameLogic.getTextChoice(this, machineChoice));
+        showResult(Constants.CHOICE_PAPER, getMachineChoice());
     }
 
     @Override
     public void onScissorClick() {
-        machineChoice = getMachineChoice();
-        String result = GameLogic.getResult(Constants.CHOICE_SCISSOR, machineChoice);
-        showToastLong(result + "  >>  Maquina: " + GameLogic.getTextChoice(this, machineChoice));
+        showResult(Constants.CHOICE_SCISSOR, getMachineChoice());
     }
 
     @Override
     public void onLizardClick() {
-        machineChoice = getMachineChoice();
-        String result = GameLogic.getResult(Constants.CHOICE_LIZARD, machineChoice);
-        showToastLong(result + "  >>  Maquina: " + GameLogic.getTextChoice(this, machineChoice));
+        showResult(Constants.CHOICE_LIZARD, getMachineChoice());
     }
 
     @Override
     public void onSpockClick() {
-        machineChoice = getMachineChoice();
-        String result = GameLogic.getResult(Constants.CHOICE_SPOCK, machineChoice);
-        showToastLong(result + "  >>  Maquina: " + GameLogic.getTextChoice(this, machineChoice));
+        showResult(Constants.CHOICE_SPOCK, getMachineChoice());
     }
 
     private int getMachineChoice() {
         return rand.nextInt(5) + 1;
     }
+
+    private void showResult(final int myChoice, final int otherChoice) {
+        String result = GameLogic.getResult(this, myChoice, otherChoice);
+        GameResultDialog dialog = new GameResultDialog(this);
+        dialog.setTitle(R.string.title_result);
+        dialog.setResult(result);
+        dialog.setImagePlayer(GameLogic.getResImageChoice(myChoice));
+        dialog.setImageCom(GameLogic.getResImageChoice(otherChoice));
+        dialog.show();
+    }
+
 }

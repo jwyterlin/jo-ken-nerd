@@ -30,6 +30,7 @@
     <string name="title_googlecast">Google SDK Cast</string>
     <string name="title_chromecast">Chromecast</string>
     <string name="title_hackathon_gdg_jf">1º Hackathon GDG JF</string>
+    <string name="title_result">Resultado</string>
 
     <string name="choice_rock">Pedra</string>
     <string name="choice_paper">Papel</string>
@@ -47,4 +48,7 @@
     <string name="lbl_about_chromecast">Para jogar o Multiplayer é necessário um dispositivo de Cast, como o Chromecast.</string>
     <string name="lbl_about_hackathon_app">O aplicativo foi desenvolvido durante um Hackathon em Juiz de Fora - MG. A equipe LittleRedGroup é formada por Victor Hugo, Lucas Mendes, Jhonathan Wyterlin e Fabio Nogueira encararam o desafio e trabalharam em um aplicativo para ambientes diferentes; Android e iOS apresentando em Chromecast.</string>
 
+    <string name="msg_game_win">Ganhou! :) </string>
+    <string name="msg_game_loses">Perdeu :( </string>
+    <string name="msg_game_draw">Empatou :/</string>
 </resources>

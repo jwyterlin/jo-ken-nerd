@@ -9,53 +9,53 @@ import com.littleredgroup.jokennerd.R;
  */
 public class GameLogic {
 
-    public static String getResult(final int myChoice, final int otherChoice) {
+    public static String getResult(Context context, final int myChoice, final int otherChoice) {
 
         //Draw Game
         if (myChoice == otherChoice) {
-            return Constants.RESULT_DRAW;
+            return context.getString(R.string.msg_game_draw);
         }
 
         switch (myChoice) {
             case Constants.CHOICE_ROCK:
                 if (otherChoice == Constants.CHOICE_SCISSOR || otherChoice == Constants.CHOICE_LIZARD) {
-                    return Constants.RESULT_WIN;
+                    return context.getString(R.string.msg_game_win);
                 } else if (otherChoice == Constants.CHOICE_PAPER || otherChoice == Constants.CHOICE_SPOCK) {
-                    return Constants.RESULT_LOSE;
+                    return context.getString(R.string.msg_game_loses);
                 }
                 break;
 
             case Constants.CHOICE_PAPER:
                 if (otherChoice == Constants.CHOICE_ROCK || otherChoice == Constants.CHOICE_SPOCK) {
-                    return Constants.RESULT_WIN;
+                    return context.getString(R.string.msg_game_win);
                 } else if (otherChoice == Constants.CHOICE_SCISSOR || otherChoice == Constants.CHOICE_LIZARD) {
-                    return Constants.RESULT_LOSE;
+                    return context.getString(R.string.msg_game_loses);
                 }
                 break;
 
 
             case Constants.CHOICE_SCISSOR:
                 if (otherChoice == Constants.CHOICE_PAPER || otherChoice == Constants.CHOICE_LIZARD) {
-                    return Constants.RESULT_WIN;
+                    return context.getString(R.string.msg_game_win);
                 } else if (otherChoice == Constants.CHOICE_ROCK || otherChoice == Constants.CHOICE_SPOCK) {
-                    return Constants.RESULT_LOSE;
+                    return context.getString(R.string.msg_game_loses);
                 }
                 break;
 
             case Constants.CHOICE_LIZARD:
                 if (otherChoice == Constants.CHOICE_PAPER || otherChoice == Constants.CHOICE_SPOCK) {
-                    return Constants.RESULT_WIN;
+                    return context.getString(R.string.msg_game_win);
                 } else if (otherChoice == Constants.CHOICE_ROCK || otherChoice == Constants.CHOICE_SCISSOR) {
-                    return Constants.RESULT_LOSE;
+                    return context.getString(R.string.msg_game_loses);
                 }
                 break;
 
 
             case Constants.CHOICE_SPOCK:
                 if (otherChoice == Constants.CHOICE_ROCK || otherChoice == Constants.CHOICE_SCISSOR) {
-                    return Constants.RESULT_WIN;
+                    return context.getString(R.string.msg_game_win);
                 } else if (otherChoice == Constants.CHOICE_PAPER || otherChoice == Constants.CHOICE_LIZARD) {
-                    return Constants.RESULT_LOSE;
+                    return context.getString(R.string.msg_game_loses);
                 }
                 break;
         }
@@ -77,6 +77,22 @@ public class GameLogic {
                 return context.getString(R.string.choice_spock);
         }
         return "";
+    }
+
+    public static int getResImageChoice(int choice) {
+        switch (choice) {
+            case Constants.CHOICE_ROCK:
+                return R.drawable.rock;
+            case Constants.CHOICE_PAPER:
+                return R.drawable.paper;
+            case Constants.CHOICE_SCISSOR:
+                return R.drawable.scissor;
+            case Constants.CHOICE_LIZARD:
+                return R.drawable.lizard;
+            case Constants.CHOICE_SPOCK:
+                return R.drawable.spock;
+        }
+        return 0;
     }
 
 
