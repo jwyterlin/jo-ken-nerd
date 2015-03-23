@@ -39,10 +39,10 @@
     if ( [self.chromeCast isConnected] ) {
         if ( [self.chromeCast sendTextMessage:jsonString] ) {
             [[NSNotificationCenter defaultCenter] postNotificationName:STATUS_USER_CHROMECAST_NOTIFICATION
-                                                                object:@"Aguardando o oponente"];
+                                                                object:NSLocalizedString(@"aguardando_oponente", nil)];
         }
     } else {
-        [self _showMessage:@"Falha na comunicação. Por favor tente novamente."];
+        [self _showMessage:NSLocalizedString(@"falha_comunicacao", nil)];
     }
 }
 
@@ -72,7 +72,7 @@
         NSDictionary *jsonDict = @{ @"action": action, @"name": self.playerName};
         NSString *jsonString = [GCKJSONUtils writeJSON:jsonDict];
         if ( ! [self.chromeCast sendTextMessage:jsonString] ) {
-            [self _showMessage:@"Falha na comunicação. Por favor tente novamente."];
+            [self _showMessage:NSLocalizedString(@"falha_comunicacao", nil)];
         }
     }
 }
@@ -120,7 +120,7 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:CHANGE_CHROMECAST_IMAGE_STATUS_NOTIFICATION
                                                         object:[UIImage imageNamed:@"cast_on.png"]];
     
-    [self _showMessage:@"Conexão concluída com sucesso!"];
+    [self _showMessage:NSLocalizedString(@"conexao_sucesso", nil)];
     
     [self _sendNamePlayerToChromeCastWithAction:@"connect"];
     
@@ -136,7 +136,7 @@
     
     [self initialize];
     
-    [self _showMessage:[NSString stringWithFormat:@"Falha na conexão: %@", error.localizedDescription ]];
+    [self _showMessage:[NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"falha_conexao", nil), error.localizedDescription ]];
 }
 
 - (void)didDisconnectWithError:(NSError *)error deviceManager:(GCKDeviceManager *)device {
@@ -148,7 +148,7 @@
     
     [self initialize];
     
-    [self _showMessage:@"Desconectado"];
+    [self _showMessage:NSLocalizedString(@"desconectado", <#comment#>)];
 }
 
 #pragma mark - Notifications Methods -
@@ -168,26 +168,26 @@
         
         if ( [stringResult isEqualToString:@"win"] ) {
             // Ganhou
-            self.messageResultGame = @"Parabéns! Você ganhou.";
+            self.messageResultGame = NSLocalizedString(@"parabens_ganhou", nil);
         } else if ( [stringResult isEqualToString:@"draw"] ) {
             // Empatou
-            self.messageResultGame = @"Empatou";
+            self.messageResultGame = NSLocalizedString(@"empate", nil);
         } else if ( [stringResult isEqualToString:@"loses"] ) {
             // Perdeu
-            self.messageResultGame = @"Que pena! Você perdeu.";
+            self.messageResultGame = NSLocalizedString(@"perdeu", nil);
         }
         
     } else if ( dictionary[@"sucess"] ) {
         
         // Sala gerada com sucesso
-        self.messageResultGame = @"Bem-vindo ao Jogo.";
+        self.messageResultGame = NSLocalizedString(@"bem_vindo", nil);
         
     } else if ( dictionary[@"error"] ) {
         
         NSString *stringError = dictionary[@"error"];
         
         if ( [stringError isEqualToString:@"room_full"] ) {
-            self.messageResultGame = @"Sala cheia.";
+            self.messageResultGame = NSLocalizedString(@"sala_cheia", nil);
         } else {
             self.messageResultGame = @"";
         }

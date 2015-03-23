@@ -7,9 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import <GoogleAnalytics-iOS-SDK/GAI.h>
 
 @interface AppDelegate ()
 
+- (void)_setupAnalytics;
 - (void)_setupStyleSheet;
 
 @end
@@ -18,6 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self _setupStyleSheet];
+    [self _setupAnalytics];
     return YES;
 }
 							
@@ -32,6 +35,14 @@
 - (void)applicationWillTerminate:(UIApplication *)application {}
 
 #pragma mark - Private Methods - 
+
+
+- (void)_setupAnalytics {
+    GAI *gai = [GAI sharedInstance];
+    gai.trackUncaughtExceptions = YES;
+    gai.dispatchInterval = 20;
+    [gai trackerWithTrackingId:@"UA-59217890-1"];
+}
 
 - (void)_setupStyleSheet {
     UIImage *backgroundImage = [UIImage imageNamed:@"navigation_bg"];

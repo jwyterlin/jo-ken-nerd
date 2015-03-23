@@ -81,10 +81,10 @@
     
     if ( ! _actionSheet ) {
         
-        _actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+        _actionSheet = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"chromecast_disponiveis", nil)
                                                    delegate:self
                                           cancelButtonTitle:nil
-                                     destructiveButtonTitle:@"Cancelar"
+                                     destructiveButtonTitle:NSLocalizedString(@"cancelar", nil)
                                           otherButtonTitles:nil, nil];
     }
     

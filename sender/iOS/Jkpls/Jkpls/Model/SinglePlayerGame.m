@@ -31,14 +31,14 @@
 }
 
 - (NSString *)titleResultGame {
-    NSString *title = @"Resultado";
+    NSString *title = NSLocalizedString(@"resultado", nil);
     
     if ([self.resultGame isEqual:WIN]) {
-        title = @"Vencedor";
+        title = NSLocalizedString(@"vencedor", nil);
     } else if ([self.resultGame isEqual:LOSE]) {
-        title = @"Perdedor";
+        title = NSLocalizedString(@"perdedor", nil);
     } else if ([self.resultGame isEqual:DRAW]) {
-        title = @"Empate";
+        title = NSLocalizedString(@"empate", nil);
     }
     
     return title;
@@ -50,11 +50,13 @@
     NSString *nameOfOtherChoice = [GameLogic realNameOfChoice:self.otherChoice];
     
     if ([self.resultGame isEqual:WIN]) {
-        message = [NSString stringWithFormat:@"%@ ganha de %@", nameOfMyChoice, nameOfOtherChoice];
+        
+        NSLocalizedString(@"pedra", nil);
+        message = [NSString stringWithFormat:@"%@ %@ %@", nameOfMyChoice, NSLocalizedString(@"ganha", nil), nameOfOtherChoice];
     } else if ([self.resultGame isEqual:LOSE]) {
-        message = [NSString stringWithFormat:@"%@ perde para %@", nameOfMyChoice, nameOfOtherChoice];
+        message = [NSString stringWithFormat:@"%@ %@ %@", nameOfMyChoice, NSLocalizedString(@"perde", nil), nameOfOtherChoice];
     } else if ([self.resultGame isEqual:DRAW]) {
-        message = @"Jogue novamente!";
+        message = NSLocalizedString(@"jogue_novamente", nil);
     }
     
     return message;
