@@ -1,7 +1,9 @@
 package com.littleredgroup.jokennerd;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -46,6 +48,9 @@ public class GameActivity extends BaseActionBarActivity implements View.OnClickL
 
         setListeners();
         playerName = getIntent().getStringExtra(Constants.TAG_NAME);
+        if (TextUtils.isEmpty(playerName)) {
+            playerName = android.os.Build.MODEL + "(" + Build.MANUFACTURER + ")";
+        }
     }
 
     private void setComponentsView() {
@@ -132,7 +137,12 @@ public class GameActivity extends BaseActionBarActivity implements View.OnClickL
         //
     }
 
-    public void setMessaegStatus(String msg) {
+    public void setMessageStatus(String msg) {
+        tvResult.setVisibility(View.VISIBLE);
         tvResult.setText(msg);
+    }
+
+    public void hideMessageStatus() {
+        tvResult.setVisibility(View.GONE);
     }
 }

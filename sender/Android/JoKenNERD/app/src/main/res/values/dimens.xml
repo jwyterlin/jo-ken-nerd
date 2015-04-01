@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="activity_padding">25dp</dimen>
+    <dimen name="activity_padding">20dp</dimen>
 
     <dimen name="game_image_margin">30dp</dimen>
     <dimen name="game_image_size">60dp</dimen>

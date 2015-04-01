@@ -5,7 +5,8 @@
         android:id="@+id/action_media_route"
         android:title="@string/title_cast"
         app:actionProviderClass="android.support.v7.app.MediaRouteActionProvider"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
+
     <item
         android:id="@+id/action_rules"
         android:orderInCategory="100"

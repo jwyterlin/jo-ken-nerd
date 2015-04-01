@@ -24,7 +24,7 @@
     <RelativeLayout
         android:id="@+id/game_rl_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/game_toolbar"
         android:gravity="center"
         android:padding="@dimen/activity_padding">
@@ -88,6 +88,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
+        android:padding="6dp"
+        android:textSize="@dimen/abc_text_size_large_material"
         android:textStyle="bold"
         android:visibility="gone" />
 

@@ -22,15 +22,18 @@ import com.littleredgroup.jokennerd.utils.CastMessages;
 import com.littleredgroup.jokennerd.utils.Constants;
 import com.littleredgroup.jokennerd.utils.Utils;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
 
 /**
  * Created by fbvictorhugo on 10/4/14.
+ * <p/>
+ * implements Google APIs
  */
-public class ChromecastGameActivity extends GameActivity {
+public class ChromecastGameActivity extends GameActivity
+        implements GoogleApiClient.OnConnectionFailedListener,
+        GoogleApiClient.ConnectionCallbacks {
 
     private String TAG = ChromecastGameActivity.class.getSimpleName();
 
@@ -39,7 +42,6 @@ public class ChromecastGameActivity extends GameActivity {
     private MediaRouter.Callback mMediaRouterCallback;
     private CastDevice mSelectedDevice;
     private GoogleApiClient mGoogleApiClient;
-
     private boolean wasLaunched;
     private boolean mWaitingForReconnect;
     private MyMessageReceivedCallback mMyMessageReceivedCallbacks;
@@ -50,22 +52,18 @@ public class ChromecastGameActivity extends GameActivity {
         getSupportActionBar().setTitle(R.string.lbl_multi_player);
         showGameContent(false);
         initializeMediaRouter();
+        addCallbackMediaRouter();
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        // Add the callback to start device discovery
-        mMediaRouter.addCallback(
-                mMediaRouteSelector,
-                mMediaRouterCallback,
-                MediaRouter.CALLBACK_FLAG_PERFORM_ACTIVE_SCAN);
+        addCallbackMediaRouter();
     }
 
     @Override
     protected void onPause() {
-        // Remove the callback to stop device discovery
-        mMediaRouter.removeCallback(mMediaRouterCallback);
+        removeCallbackMediaRouter();
         super.onPause();
     }
 
@@ -81,8 +79,9 @@ public class ChromecastGameActivity extends GameActivity {
         getMenuInflater().inflate(R.menu.game_cast, menu);
 
         MenuItem mediaRouteMenuItem = menu.findItem(R.id.action_media_route);
-        MediaRouteActionProvider mediaRouteActionProvider = (MediaRouteActionProvider) MenuItemCompat
-                .getActionProvider(mediaRouteMenuItem);
+        MediaRouteActionProvider mediaRouteActionProvider =
+                (MediaRouteActionProvider) MenuItemCompat
+                        .getActionProvider(mediaRouteMenuItem);
         mediaRouteActionProvider.setRouteSelector(mMediaRouteSelector);
         return true;
     }
@@ -113,45 +112,47 @@ public class ChromecastGameActivity extends GameActivity {
         if (isShow) {
             rlGameContent.setVisibility(View.VISIBLE);
             tvMessageLayout.setVisibility(View.GONE);
+            tvMessageLayout.setText(R.string.msg_need_chromecast_connection);
         } else {
             rlGameContent.setVisibility(View.INVISIBLE);
             tvMessageLayout.setVisibility(View.VISIBLE);
         }
     }
 
-
     /*  Google SDK Cast Implements */
+    public String getCastNamespace() {
+        return getString(R.string.cast_namespace);
+    }
+
+    public String getCastAppId() {
+        return getString(R.string.cast_app_id);
+    }
+
+    private void addCallbackMediaRouter() {
+        mMediaRouter.addCallback(
+                mMediaRouteSelector,
+                mMediaRouterCallback,
+                MediaRouter.CALLBACK_FLAG_REQUEST_DISCOVERY);
+    }
+
+    private void removeCallbackMediaRouter() {
+        mMediaRouter.removeCallback(mMediaRouterCallback);
+    }
 
     void initializeMediaRouter() {
         mMediaRouter = MediaRouter.getInstance(getApplicationContext());
         mMediaRouteSelector = new MediaRouteSelector.Builder()
                 .addControlCategory(CastMediaControlIntent
-                        .categoryForCast(getString(R.string.cast_app_id)))
-                .build();
+                        .categoryForCast(getString(R.string.cast_app_id))).build();
         mMediaRouterCallback = new MyMediaRouterCallback();
     }
 
     void launchReceiver() {
         try {
-
-
-            final Cast.Listener castListener = new Cast.Listener() {
-
-                @Override
-                public void onApplicationDisconnected(int errorCode) {
-                    Log.d(TAG, "application has stopped");
-                    tearDown();
-                }
-            };
-
-            // A builder to create an instance of Cast.CastOptions to set API configuration parameters for Cast.
-            Cast.CastOptions.Builder castOptionsBuilder =
-                    Cast.CastOptions.builder(mSelectedDevice, castListener);
-
             mGoogleApiClient = new GoogleApiClient.Builder(this)
-                    .addApi(Cast.API, castOptionsBuilder.build())
-                    .addConnectionCallbacks(new MyGoogleApiConnectionCallbacks())
-                    .addOnConnectionFailedListener(new MyGoogleApiConnectionFailedListener()).build();
+                    .addApi(Cast.API, getCastOptionsBuild(mSelectedDevice))
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this).build();
 
             mGoogleApiClient.connect();
         } catch (Exception e) {
@@ -159,7 +160,26 @@ public class ChromecastGameActivity extends GameActivity {
         }
     }
 
-    ResultCallback<Cast.ApplicationConnectionResult> appConnectionResult =
+    private Cast.CastOptions getCastOptionsBuild(final CastDevice castDevice) {
+
+        Cast.Listener castListener = new Cast.Listener() {
+
+            @Override
+            public void onApplicationDisconnected(int errorCode) {
+                Log.d(TAG, "Cast.Listener: Application Disconnected!");
+                tearDown();
+                invalidateOptionsMenu();
+            }
+        };
+
+
+        Cast.CastOptions.Builder builder = Cast.CastOptions.builder(castDevice, castListener);
+        builder.setVerboseLoggingEnabled(true);
+
+        return builder.build();
+    }
+
+    ResultCallback<Cast.ApplicationConnectionResult> appConnectionResultCallback =
             new ResultCallback<Cast.ApplicationConnectionResult>() {
 
                 @Override
@@ -168,13 +188,13 @@ public class ChromecastGameActivity extends GameActivity {
                     Log.d(TAG, "ApplicationConnectionResult " + status.getStatusCode());
 
                     if (status.isSuccess()) {
-                        // mSessionId = result.getSessionId();
+
                         wasLaunched = result.getWasLaunched();
                         mMyMessageReceivedCallbacks = new MyMessageReceivedCallback();
 
                         try {
                             Cast.CastApi.setMessageReceivedCallbacks(mGoogleApiClient,
-                                    mMyMessageReceivedCallbacks.getNamespace(),
+                                    getCastNamespace(),
                                     mMyMessageReceivedCallbacks);
                         } catch (IOException e) {
                             Log.e(TAG, "Exception while creating channel", e);
@@ -192,143 +212,60 @@ public class ChromecastGameActivity extends GameActivity {
     class MyMediaRouterCallback extends MediaRouter.Callback {
         @Override
         public void onRouteAdded(MediaRouter router, MediaRouter.RouteInfo route) {
-
+            Log.d("MediaRouter.Callback", route.getName() + " Added.");
+            tvMessageLayout.setText(String.format(getString(R.string.msg_suggest_cast),
+                    route.getName()));
         }
 
         @Override
         public void onRouteRemoved(MediaRouter router, MediaRouter.RouteInfo route) {
-
+            Log.d("MediaRouter.Callback", route.getName() + " Removed.");
         }
 
         @Override
         public void onRouteSelected(MediaRouter router, MediaRouter.RouteInfo route) {
+            Log.d("MediaRouter.Callback", route.getName() + " Selected!");
             mSelectedDevice = CastDevice.getFromBundle(route.getExtras());
+            setMessageStatus(String.format(getString(R.string.msg_cast_connected), route.getName()));
             launchReceiver();
         }
 
         @Override
         public void onRouteUnselected(MediaRouter router, MediaRouter.RouteInfo route) {
+            Log.d("MediaRouter.Callback", route.getName() + " Unselected.");
             tearDown();
             mSelectedDevice = null;
             showGameContent(false);
         }
     }
 
-    class MyGoogleApiConnectionCallbacks
-            implements GoogleApiClient.ConnectionCallbacks {
-
-        @Override
-        public void onConnected(Bundle connectionHint) {
-
-            showGameContent(true);
-            try {
-                if (mWaitingForReconnect) {
-                    mWaitingForReconnect = false;
-
-                    if ((connectionHint != null) &&
-                            connectionHint.getBoolean(Cast.EXTRA_APP_NO_LONGER_RUNNING)) {
-
-                        Log.d(TAG, "App não está mais sendo executado");
-                    } else {
-                        try {
-                            Cast.CastApi.setMessageReceivedCallbacks(
-                                    mGoogleApiClient,
-                                    mMyMessageReceivedCallbacks.getNamespace(),
-                                    mMyMessageReceivedCallbacks);
-                        } catch (IOException e) {
-                            Log.e(TAG, "Exception while creating channel", e);
-                        }
-                    }
-
-                } else {
-                    Cast.CastApi.launchApplication(mGoogleApiClient,
-                            getString(R.string.cast_app_id)).setResultCallback(
-                            appConnectionResult);
-
-                }
-            } catch (Exception e) {
-                Log.e(TAG, "Failed to launch application", e);
-            }
-        }
-
-        @Override
-        public void onConnectionSuspended(int cause) {
-            mWaitingForReconnect = true;
-        }
-    }
-
-    class MyGoogleApiConnectionFailedListener implements
-            GoogleApiClient.OnConnectionFailedListener {
-        @Override
-        public void onConnectionFailed(ConnectionResult result) {
-            tearDown();
-            Log.d("onConnectionFailed", result.toString());
-        }
-    }
-
     class MyMessageReceivedCallback implements Cast.MessageReceivedCallback {
-
-        public String getNamespace() {
-            return getString(R.string.cast_namespace);
-        }
 
         @Override
         public void onMessageReceived(CastDevice castDevice,
-                                      String namespace,
-                                      String message) {
-            JSONObject jResult = null;
+                                      String namespace, String message) {
+
             try {
-                jResult = new JSONObject(message);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            String msgResult = "";
-            try {
-                msgResult = getMessageStatus(jResult);
+                String msgResult = getMessageStatus(new JSONObject(message));
+                setMessageStatus(msgResult);
+
+                Log.d("onMessageReceived ", message);
             } catch (Exception e) {
+                setMessageStatus(e.getMessage());
                 e.printStackTrace();
             }
-            setMessaegStatus(msgResult);
-
-            Log.d("onMessageReceived ", message);
         }
     }
 
-    void tearDown() {
-        Log.d(TAG, "teardown");
-        if (mGoogleApiClient != null) {
-            if (wasLaunched) {
-                if (mGoogleApiClient.isConnected()) {
-                    try {
-                        Cast.CastApi.leaveApplication(mGoogleApiClient);
-                        if (mMyMessageReceivedCallbacks != null) {
-                            Cast.CastApi.removeMessageReceivedCallbacks(
-                                    mGoogleApiClient,
-                                    mMyMessageReceivedCallbacks.getNamespace());
-                            mMyMessageReceivedCallbacks = null;
-                        }
-                    } catch (IOException e) {
-                        Log.e(TAG, "Exception while removing channel", e);
-                    }
-                    mGoogleApiClient.disconnect();
-                }
-                wasLaunched = false;
-            }
-            mGoogleApiClient = null;
-        }
-        mSelectedDevice = null;
-        mWaitingForReconnect = false;
-    }
-
-    void sendMessageToCast(String message) {
+    void sendMessageToCast(final String message) {
         try {
             Cast.CastApi.sendMessage(mGoogleApiClient,
-                    mMyMessageReceivedCallbacks.getNamespace(), message)
+                    getCastNamespace(), message)
                     .setResultCallback(new ResultCallback<Status>() {
                         @Override
                         public void onResult(Status result) {
                             if (result.isSuccess()) {
-
+                                Log.d("Cast.sendMessage", message);
                             }
                         }
                     });
@@ -338,80 +275,144 @@ public class ChromecastGameActivity extends GameActivity {
         }
     }
 
+    void tearDown() {
+        Log.d(TAG, "teardown");
+
+        if (wasLaunched) {
+            if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
+                try {
+                    Cast.CastApi.leaveApplication(mGoogleApiClient);
+                    if (mMyMessageReceivedCallbacks != null) {
+                        Cast.CastApi.removeMessageReceivedCallbacks(
+                                mGoogleApiClient, getCastNamespace());
+                        mMyMessageReceivedCallbacks = null;
+                        invalidateOptionsMenu();
+                        showGameContent(false);
+                        hideMessageStatus();
+                    }
+                } catch (IOException e) {
+                    Log.e(TAG, "Exception while removing channel", e);
+                }
+                mGoogleApiClient.disconnect();
+            }
+            wasLaunched = false;
+        }
+
+        mGoogleApiClient = null;
+        mSelectedDevice = null;
+        mWaitingForReconnect = false;
+    }
+
+    /* Google APIs  */
+
+    @Override
+    public void onConnected(Bundle bundle) {
+        showGameContent(true);
+        if (mWaitingForReconnect) {
+            mWaitingForReconnect = false;
+            if ((bundle != null) && bundle.getBoolean(Cast.EXTRA_APP_NO_LONGER_RUNNING)) {
+                Log.d(TAG, "App não está mais sendo executado");
+            } else {
+                try {
+                    Cast.CastApi.setMessageReceivedCallbacks(
+                            mGoogleApiClient, getCastNamespace(),
+                            mMyMessageReceivedCallbacks);
+                } catch (IOException e) {
+                    Log.e(TAG, "Exception while creating channel", e);
+                }
+            }
+        } else {
+            Cast.CastApi.launchApplication(mGoogleApiClient,
+                    getCastAppId()).setResultCallback(appConnectionResultCallback);
+        }
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+        mWaitingForReconnect = true;
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+        Log.d("onConnectionFailed", connectionResult.toString());
+        tearDown();
+    }
+
     /* Game */
     private String getMessageStatus(JSONObject json) throws Exception {
+
         if (json == null) {
             return "";
         }
 
-        if (json.has(Constants.KEY_SUCESS)) {
-            if (json.getString(Constants.KEY_SUCESS) != null
-                    && json.getString(Constants.KEY_SUCESS).equals(
-                    Constants.RESULT_SUCCES_CONECTED)) {
+        String message = "";
 
-                return getString(R.string.msg_sucess);
+        if (json.has(Constants.KEY_SUCESS)
+                && json.getString(Constants.KEY_SUCESS).equals(
+                Constants.RESULT_SUCCESS_CONECTED)) {
 
-            }
-        } else if (json.has(Constants.KEY_ERROR)) {
-            if (json.getString(Constants.KEY_ERROR) != null
-                    && json.getString(Constants.KEY_ERROR).equals(
-                    Constants.RESULT_ROOM_IS_FULL)) {
+            message = String.format(getString(R.string.msg_success), getPlayerName());
 
-                return getString(R.string.msg_room_full);
+        } else if (json.has(Constants.KEY_ERROR)
+                && json.getString(Constants.KEY_ERROR).equals(
+                Constants.RESULT_ROOM_IS_FULL)) {
 
-            }
+            return getString(R.string.msg_room_full);
 
         } else if (json.has(Constants.KEY_RESULT)) {
-            if (json.getString(Constants.KEY_RESULT) != null
-                    && json.getString(Constants.KEY_RESULT).equals(
+            if (json.getString(Constants.KEY_RESULT).equals(
                     Constants.RESULT_WIN)) {
 
-                return getString(R.string.msg_win);
+                message = getString(R.string.msg_win);
 
-            } else if (json.getString(Constants.KEY_RESULT) != null
-                    && json.getString(Constants.KEY_RESULT).equals(
+            } else if (json.getString(Constants.KEY_RESULT).equals(
                     Constants.RESULT_LOSE)) {
 
-                return getString(R.string.msg_loses);
+                message = getString(R.string.msg_loses);
 
-            } else if (json.getString(Constants.KEY_RESULT) != null
-                    && json.getString(Constants.KEY_RESULT).equals(
+            } else if (json.getString(Constants.KEY_RESULT).equals(
                     Constants.RESULT_DRAW)) {
 
-                return getString(R.string.msg_draw);
+                message = getString(R.string.msg_draw);
             }
         }
 
-        return "";
+        return message;
     }
 
     @Override
     public void onRockClick() {
         sendMessageToCast(CastMessages.messageToChoice(Constants.CHOICE_ROCK));
-        setResult(R.string.msg_wait_oponent);
+        setMessageStatus(getString(R.string.msg_wait_oponent));
     }
 
     @Override
     public void onPaperClick() {
         sendMessageToCast(CastMessages.messageToChoice(Constants.CHOICE_PAPER));
-        setResult(R.string.msg_wait_oponent);
+        setMessageStatus(getString(R.string.msg_wait_oponent));
     }
 
     @Override
     public void onScissorClick() {
         sendMessageToCast(CastMessages.messageToChoice(Constants.CHOICE_SCISSOR));
-        setResult(R.string.msg_wait_oponent);
+        setMessageStatus(getString(R.string.msg_wait_oponent));
     }
 
     @Override
     public void onLizardClick() {
         sendMessageToCast(CastMessages.messageToChoice(Constants.CHOICE_LIZARD));
-        setResult(R.string.msg_wait_oponent);
+        setMessageStatus(getString(R.string.msg_wait_oponent));
     }
 
     @Override
     public void onSpockClick() {
         sendMessageToCast(CastMessages.messageToChoice(Constants.CHOICE_SPOCK));
-        setResult(R.string.msg_wait_oponent);
+        setMessageStatus(getString(R.string.msg_wait_oponent));
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        tearDown();
     }
 }

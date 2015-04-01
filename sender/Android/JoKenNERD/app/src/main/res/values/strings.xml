@@ -18,7 +18,7 @@
     <string name="msg_win">Parabéns! Você ganhou.</string>
     <string name="msg_draw">Empatou.</string>
     <string name="msg_loses">Que pena! Você perdeu.</string>
-    <string name="msg_sucess">Bem-vindo ao Jogo.</string>
+    <string name="msg_success">Bem-vindo ao Jogo %s.</string>
     <string name="msg_room_full">Sala cheia.</string>
     <string name="msg_already_connected">Voccê já está conectado.</string>
     <string name="msg_wait_oponent">Aguardando o oponente.</string>
@@ -50,5 +50,8 @@
 
     <string name="msg_game_win">Ganhou! :) </string>
     <string name="msg_game_loses">Perdeu :( </string>
-    <string name="msg_game_draw">Empatou :/</string>
+    <string name="msg_game_draw">Empatou :/ </string>
+
+    <string name="msg_suggest_cast">Que tal conectar ao %s </string>
+    <string name="msg_cast_connected">Conectado ao %s </string>
 </resources>
