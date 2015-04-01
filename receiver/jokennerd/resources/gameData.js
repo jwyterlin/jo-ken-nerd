@@ -13,8 +13,8 @@ var escolhaop1 = -1;
 var escolhaop2 = -1;
 
 function updateChoices(c1, c2) {
-    $('#escolha1').htlm('<img src="imagem/' + c1 + '.png"/>');
-    $('#escolha2').htlm('<img src="imagem/' + c2 + '.png"/>');
+    $('#escolha1').html('<img src="imagem/' + c1 + '.png"/>');
+    $('#escolha2').html('<img src="imagem/' + c2 + '.png"/>');
 }
 
 function getResult(c1, c2) {
