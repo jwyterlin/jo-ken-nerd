@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<title>Jo Ken NERD</title>
+
+	<!-- CSS  -->
+	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+	<!-- Importando a biblioteca do Cast-->
+	<script type="text/javascript" src="//www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+
+<script type="text/javascript">
+
+        // app ID
+        var applicationID = '209A5252';
+        var namespace = 'urn:x-cast:com.littleredgroup.jkpls';
+        var session = null;
+
+
+        if (!chrome.cast || !chrome.cast.isAvailable) {
+        	setTimeout(initializeCastApi, 1000);
+        }
+
+        /**
+         * initialization
+         * Realiza o procedimento de inicialização do aplicativo
+         */
+         function initializeCastApi() {
+         	var sessionRequest = new chrome.cast.SessionRequest(applicationID);
+         	var apiConfig = new chrome.cast.ApiConfig(sessionRequest,
+         		sessionJoinedListener,
+         		receiverListener);
+         	chrome.cast.initialize(apiConfig, onInitSuccess, onInitError);
+         }
+
+
+        /**
+         * Callback de sucesso em initialization
+         */
+         function onInitSuccess() {
+         	appendMessage("onInitSuccess");
+         }
+
+        /**
+         * Callback de erros em initialization
+         */
+         function onInitError(message) {
+         	appendMessage("onInitError: " + JSON.stringify(message));
+         }
+         
+         function onError(message) {
+         	appendMessage("onError: "+JSON.stringify(message));
+         }
+
+         function onSuccess(message) {
+         	appendMessage("onSuccess: "+message);
+         }
+
+        // Selecao do dispositivo pela extensao do Cast
+        function receiverListener(receivers) {
+        	if(receivers === chrome.cast.ReceiverAvailability.AVAILABLE) {
+        		console.log(receivers);
+        	}
+        }
+
+        function sessionJoinedListener(e) {
+        	console.log(e);
+        	session = e;
+        	session.addUpdateListener(sessionUpdateListener);
+        	session.addMessageListener(namespace, receiverMessage);
+        }
+
+      /**
+         * Listener de atualização de sessão - disparado quando o estado da sessão muda
+         */
+         function sessionUpdateListener(isAlive) {
+         	var message = isAlive ? 'Session Updated' : 'Session Removed';
+         	message += ': ' + session.sessionId;
+         	appendMessage(message);
+         	if (!isAlive) {
+         		session = null;
+         	}
+         };
+
+        /** Função para logar messagens do receiver
+         * @param {string} namespace O namespace da mensagem
+         * @param {string} message A mensagem em si
+         */
+         function receiverMessage(namespace, message) {
+         	appendMessage("receiverMessage: " + namespace + ", " + message);
+         }
+
+         function sendMessage(message) {
+         	if (session!=null) {
+         		session.sendMessage(namespace, message, onSuccess.bind(this, "Message sent: " + message), onError);
+         	}
+         	else {
+         		chrome.cast.requestSession(function(e) {
+         			session = e;
+         			session.sendMessage(namespace, message, onSuccess.bind(this, "Message sent: " + message), onError);
+         		}, onError);
+         	}
+         }
+
+         function appendMessage(message) {
+         	console.log(message);
+         //	var dw = document.getElementById("debugmessage");
+         //	dw.innerHTML += '\n' + JSON.stringify(message);
+     };
+
+     function setNameForPlayerCast() {
+
+     	var name = document.getElementById("input_name").value;
+
+     	if(name.trim().length  === 0) {
+     		name = generateName();
+     		document.getElementById("input_name").value = name;
+     		document.getElementById("input_name").focus();
+     	}
+
+     	var JSONObj = { "action":"connect", "name":name};
+     	sendMessage(JSONObj );
+     }
+
+     function generateName() {
+     	var millis = new Date().getMilliseconds();
+     	var name = "Chrome-".concat(millis);
+     	return name;
+     }
+
+
+
+     function choice(choice){
+     	var JSONObj = { "action":"choice", "value":choice};
+     	sendMessage(JSONObj );
+
+     }
+
+ </script>
+
+</head>
+<body>
+	<nav class="red lighten-1" role="navigation">
+		<div class="container">
+			<div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+				<ul class="right">
+					<li><a href="#">Navbar Link</a></li>
+				</ul>
+
+				<ul id="nav-mobile" class="side-nav">
+					<li><a href="#">Navbar Link</a></li>
+				</ul>
+				<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+			</div>
+		</div>
+	</nav>
+	<div class="section no-pad-bot" id="index-banner">
+		<div class="container">
+			<br><br>
+			<h1 class="header center red-text">Jo Ken NERD - Multiplayer</h1>
+			<div class="row center">
+
+				<form name="fName" class="center col s12" method="get" action="JavaScript:setNameForPlayerCast();">
+					<div class="input-field col s6">
+						<input id="input_name" type="text" class="validate" >
+						<label for="input_name">Nome do Jogador</label>
+					</div>
+					<div class="input-field col s6">
+						<a class="waves-effect  red lighten-1 btn"  onClick="document.fName.submit()">Jogar</a>
+					</div>
+				</form>
+
+			</div>
+
+			<br><br>
+
+		</div>
+	</div>
+
+
+	<div class="container">
+		<div class="section">
+
+			<!--   Icon Section   -->
+			<div class="row">
+				<div class="col s12 m4">
+					<div class="icon-block">
+						<h2 class="center"> <img src="img/1.png"  onClick="choice(1)"></h2>
+						<h5 class="center">Pedra</h5>
+
+					</div>
+				</div>
+
+				<div class="col s12 m4">
+					<div class="icon-block">
+						<h2 class="center"> <img src="img/2.png"  onClick="choice(2)"></h2>
+						<h5 class="center">Papel</h5>
+
+					</div>
+				</div>
+
+				<div class="col s12 m4">
+					<div class="icon-block">
+						<h2 class="center"> <img src="img/3.png"  onClick="choice(3)"></h2>
+						<h5 class="center">Tesoura</h5>
+
+
+					</div>
+				</div>
+
+				<div class="col s12 m4">
+					<div class="icon-block">
+						<h2 class="center"> <img src="img/4.png"  onClick="choice(4)"></h2>
+						<h5 class="center">Largato</h5>
+					</div>
+				</div>
+
+
+				<div class="col s12 m4">
+					<div class="icon-block">
+						&nbsp;
+					</div>
+				</div>
+
+				<div class="col s12 m4">
+					<div class="icon-block">
+						<h2 class="center"> <img src="img/5.png"  onClick="choice(5)"></h2>
+						<h5 class="center">Spock</h5>
+
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<br><br>
+
+		<div class="section">
+
+		</div>
+	</div>
+
+	<footer class="page-footer red">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Company Bio</h5>
+					<p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+				</div>
+				<div class="col l3 s12">
+					<h5 class="white-text">Settings</h5>
+					<ul>
+						<li><a class="white-text" href="#!">Link 1</a></li>
+						<li><a class="white-text" href="#!">Link 2</a></li>
+						<li><a class="white-text" href="#!">Link 3</a></li>
+						<li><a class="white-text" href="#!">Link 4</a></li>
+					</ul>
+				</div>
+				<div class="col l3 s12">
+					<h5 class="white-text">Connect</h5>
+					<ul>
+						<li><a class="white-text" href="#!">Link 1</a></li>
+						<li><a class="white-text" href="#!">Link 2</a></li>
+						<li><a class="white-text" href="#!">Link 3</a></li>
+						<li><a class="white-text" href="#!">Link 4</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+			</div>
+		</div>
+	</footer>
+
+
+	<!--  Scripts-->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<script src="js/init.js"></script>
+
+</body>
+</html>
