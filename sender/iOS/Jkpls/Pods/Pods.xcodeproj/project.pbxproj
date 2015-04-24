@@ -1,2279 +1,730 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>01F11A1E352112DA19FA5275</key>
-		<dict>
-			<key>fileRef</key>
-			<string>759E234DA072F3E0ACB3B16F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>028FD055BD0B8BD06A8CA8B5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKFilterCriteria.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKFilterCriteria.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>02E1E944B0E12D459682C4E6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GAIFields.h</string>
-			<key>path</key>
-			<string>GoogleAnalytics/Library/GAIFields.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>034DF54D218AA340C8E764DD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>83695E9FACD21633C7923468</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>035821F0751D7AAB0A912CB9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1C60CE7E9CF821AEB58F9E1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>05416790C7D8F87351907153</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKCastChannel.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKCastChannel.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0601431AF0D71C44C28630A5</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>17CF8F64752BE6943E68F0BB</string>
-				<string>EA2B804BD1B1D421AFCC1B56</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>06C628420D7A3760A02DD9B5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>TAGManager.h</string>
-			<key>path</key>
-			<string>GoogleTagManager/Library/TAGManager.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0A1806BA8D5C48C0A75E4770</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CD28854065A6B5B305F7693C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0A2F57D9FB74DD9E1DE6B680</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0BF767B2BF43BFED36F46D28</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DA091C1171061EBB658F3B85</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0E28898BE9EE14328CCF4FB3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4957856BA1A6F5772B13873F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0F3FA2AC1D8D61AE289F9763</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>F80A620346ADACA1206EE167</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>8E45A27B499E2FBF84BE4591</string>
-			<key>remoteInfo</key>
-			<string>Pods-google-cast-sdk</string>
-		</dict>
-		<key>10ED7A9DCFE37D90C1588C4C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-google-cast-sdk.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>16E08721DA2BFDC0DCD6B03E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GAIEcommercePromotion.h</string>
-			<key>path</key>
-			<string>GoogleAnalytics/Library/GAIEcommercePromotion.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>17CF8F64752BE6943E68F0BB</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>F0FC5F86AB218894482CE7D5</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>1B8817F8C5B2379D5644709B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>87A22202E20807705AF708A2</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-google-cast-sdk/Pods-google-cast-sdk-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>1F8932CDE9BC690E16C14DFD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9EB5DE7113EE4D3C14152434</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>24DE5CB4F906524A91D00604</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A2FF751609EBF9798FABCCF8</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-GoogleAnalytics-iOS-SDK/Pods-GoogleAnalytics-iOS-SDK-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>252E836A3AA7BA483C4EB58E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2555C0F7639776B0B17DC663</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2555C0F7639776B0B17DC663</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-GoogleAnalytics-iOS-SDK-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>264AB9069C102E4C8FC6CA88</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9ADB566AA26341E73A734E2B</string>
-				<string>A2FF751609EBF9798FABCCF8</string>
-				<string>2555C0F7639776B0B17DC663</string>
-				<string>ADE8C4862E6594AE0F49A2F7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Pods-GoogleAnalytics-iOS-SDK</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2DC96E51B38042A76B321454</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKDevice.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKDevice.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2DF325AF6DE62FC8EFFE3381</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>24DE5CB4F906524A91D00604</string>
-				<string>C868E3EDD2202659DB4BA1D9</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>343826CD10DDFFA9870CA7B4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKImage.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKImage.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>398DD4825D67F78189AA781F</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>3A1E93C7FACFC19A74B4510B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GAI.h</string>
-			<key>path</key>
-			<string>GoogleAnalytics/Library/GAI.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3E4AFCD13223D1760DB1C970</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>AC4C14F589995A95E7A3D447</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3F7952F38D1DEA56F2523B49</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>SystemConfiguration.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/SystemConfiguration.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>4518E6600B67E58E622B1493</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CD28854065A6B5B305F7693C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>48DC38A1714EC35F67A76EDB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKNSDictionary+TypedValueLookup.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKNSDictionary+TypedValueLookup.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4957856BA1A6F5772B13873F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GAIDictionaryBuilder.h</string>
-			<key>path</key>
-			<string>GoogleAnalytics/Library/GAIDictionaryBuilder.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>495E746318C03E4DAA5153D3</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>0A1806BA8D5C48C0A75E4770</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4B411D31DC4F80A51CAB91C0</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>87A22202E20807705AF708A2</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-google-cast-sdk/Pods-google-cast-sdk-prefix.pch</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>4EE187FC49E48D7E9AFF74C9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKApplicationMetadata.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKApplicationMetadata.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4FA1F6F0E336C23BFE42A06F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BC8F7E98BB01B7B7E07D2E86</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5138EC58758951F4E02105EA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E164B0F63BE5289A4E54D8B7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>51FB7D3F4E33471A7F97CA40</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKLogger.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKLogger.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>53F8D30A7BFE1AE0FEFA5420</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKDeviceScanner.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKDeviceScanner.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>542933C428A40EA0BDCFE6E8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D8708B94447B356BF96D593E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5569106F97AC4F1F91AE8790</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-environment.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>575D283DC3D0149E0AB855F7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>51FB7D3F4E33471A7F97CA40</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>579C65B491F29C97C552717A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKMediaControlChannel.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKMediaControlChannel.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5821089424B581B33F5D778A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-google-cast-sdk-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>59509A34415EF6740CB973A9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>TAGDataLayer.h</string>
-			<key>path</key>
-			<string>GoogleTagManager/Library/TAGDataLayer.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5AC70FF46109DB228CC447E6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5AE68D5A478FE2CF49691402</key>
-		<dict>
-			<key>fileRef</key>
-			<string>48DC38A1714EC35F67A76EDB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5DAE7EF791AB1C3F5632CD4D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7509A4C9D5DE0F540419B3C2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>60D1DBA513AB0DDFD1535700</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-google-cast-sdk-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>65D68CFA9780974E36577C99</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>0601431AF0D71C44C28630A5</string>
-			<key>buildPhases</key>
-			<array>
-				<string>9690000726F489381F98DD90</string>
-				<string>495E746318C03E4DAA5153D3</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>C6896EE38E8028ACA3CFBC9F</string>
-				<string>D68938094B61964BAD1DA3D7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>productName</key>
-			<string>Pods</string>
-			<key>productReference</key>
-			<string>398DD4825D67F78189AA781F</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>65F125AB308BB75A30E9C4F7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKSenderApplicationInfo.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKSenderApplicationInfo.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>68BEB27E412ED300433D6FD2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreData.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreData.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>69AFF3E7316E43C12AB70BF0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F65F3B4334B826E40E86026A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>6A367B2F23DF997914E3EDA8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>TAGContainerOpener.h</string>
-			<key>path</key>
-			<string>GoogleTagManager/Library/TAGContainerOpener.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6AA88FEDF8C372FBB0D1937D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3F7952F38D1DEA56F2523B49</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>6ABAA7FF77417DA463430D51</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>1B8817F8C5B2379D5644709B</string>
-				<string>4B411D31DC4F80A51CAB91C0</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>6B3FAD0E6707CF6EFBE8DC1C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GAIEcommerceFields.h</string>
-			<key>path</key>
-			<string>GoogleAnalytics/Library/GAIEcommerceFields.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>71C9DE76424DD55B10D3A956</key>
-		<dict>
-			<key>fileRef</key>
-			<string>06C628420D7A3760A02DD9B5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>73C36143F4228AA786BAA187</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GAITracker.h</string>
-			<key>path</key>
-			<string>GoogleAnalytics/Library/GAITracker.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>73E9432C080F7E12D37CB9E9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>10ED7A9DCFE37D90C1588C4C</string>
-				<string>87A22202E20807705AF708A2</string>
-				<string>60D1DBA513AB0DDFD1535700</string>
-				<string>5821089424B581B33F5D778A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Pods-google-cast-sdk</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7509A4C9D5DE0F540419B3C2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKMediaMetadata.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKMediaMetadata.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>759E234DA072F3E0ACB3B16F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GAILogger.h</string>
-			<key>path</key>
-			<string>GoogleAnalytics/Library/GAILogger.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>769A6B2547E2527139385650</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>TAGContainer.h</string>
-			<key>path</key>
-			<string>GoogleTagManager/Library/TAGContainer.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>78978314107DAA2952869D7A</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7924940D495579FBBD9A5B77</string>
-				<string>7913ADA2C4C5EAE66950485D</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>78A30A0ACBB8CB41A6AD1942</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>F80A620346ADACA1206EE167</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>D5EADA6D4DF77582A15E2A3B</string>
-			<key>remoteInfo</key>
-			<string>Pods-GoogleAnalytics-iOS-SDK</string>
-		</dict>
-		<key>7913ADA2C4C5EAE66950485D</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>RELEASE=1</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7924940D495579FBBD9A5B77</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7EECCCEA2BF83BBF259CBC81</key>
-		<dict>
-			<key>fileRef</key>
-			<string>028FD055BD0B8BD06A8CA8B5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>814996FD9F4F742D7A5D01A6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>68BEB27E412ED300433D6FD2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>83695E9FACD21633C7923468</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKCommon.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKCommon.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>85D18B6FA8C9553052D0D5D2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKError.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKError.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>87A22202E20807705AF708A2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-google-cast-sdk-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8A1B2F3538C67ED56AC3AC5D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CD28854065A6B5B305F7693C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8A661CD4D54B6F456F8E511E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKMediaTextTrackStyle.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKMediaTextTrackStyle.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8A820E81E708816C32B8AF3F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DCCF435574769F35C4DCC858</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8C48ADE73C1B5E83AD9EA559</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F6FB36CCB73077E9B51093DE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8E1C30D00AF46FCF03CD862B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CB52C0639E08262E8940B6D2</string>
-				<string>3E4AFCD13223D1760DB1C970</string>
-				<string>A4E1193413340D75C9AE12C0</string>
-				<string>932D35356FC38B56541DE5E1</string>
-				<string>8C48ADE73C1B5E83AD9EA559</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8E45A27B499E2FBF84BE4591</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>6ABAA7FF77417DA463430D51</string>
-			<key>buildPhases</key>
-			<array>
-				<string>CAA5CBCE730B358627C8650B</string>
-				<string>BEF0599B4889D083E8DF7D37</string>
-				<string>923C263C64487D88D607A628</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-google-cast-sdk</string>
-			<key>productName</key>
-			<string>Pods-google-cast-sdk</string>
-			<key>productReference</key>
-			<string>A01A21BE816C03F09C8AB3AD</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>91FB61C452671B98903F39D7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKColor.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKColor.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>923C263C64487D88D607A628</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F9373FE34C9FE74EFBD5C7F1</string>
-				<string>B484E55DCC7E107EBE351B3D</string>
-				<string>B608303D89E59A9CC7CD8EBD</string>
-				<string>034DF54D218AA340C8E764DD</string>
-				<string>035821F0751D7AAB0A912CB9</string>
-				<string>A075DDFD2B181954FEBC2725</string>
-				<string>E5CE3C712E6F5D8DCF6664E4</string>
-				<string>F9377F74D057944C97CC1248</string>
-				<string>D2122E6FEC3EB029704742C0</string>
-				<string>7EECCCEA2BF83BBF259CBC81</string>
-				<string>E98256591C0777B5ACB48BE8</string>
-				<string>1F8932CDE9BC690E16C14DFD</string>
-				<string>DB9F695F10AB6E9BC5ACA5A1</string>
-				<string>575D283DC3D0149E0AB855F7</string>
-				<string>E391821DDAC57F7A65391477</string>
-				<string>D2E5BC10E830A2CB1C2466D5</string>
-				<string>5DAE7EF791AB1C3F5632CD4D</string>
-				<string>0BF767B2BF43BFED36F46D28</string>
-				<string>F0D5A6962948DE4B6A7CB747</string>
-				<string>C7529E3906E97D3852729A12</string>
-				<string>5AE68D5A478FE2CF49691402</string>
-				<string>D8162733E50976BBAC2AEAF3</string>
-				<string>F3AABA5E5A7ECFA0A9DF2389</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>93247AD849324B334FCCE863</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EF4E6A865BE02D7476DBE04A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>932D35356FC38B56541DE5E1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>398DD4825D67F78189AA781F</string>
-				<string>F33E8AD8EED9366DA3B83EB1</string>
-				<string>A01A21BE816C03F09C8AB3AD</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9690000726F489381F98DD90</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5138EC58758951F4E02105EA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>98D09DCB615EE42A9C39D65C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>769A6B2547E2527139385650</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9ADB566AA26341E73A734E2B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-GoogleAnalytics-iOS-SDK.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9EB5DE7113EE4D3C14152434</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKJSONUtils.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKJSONUtils.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A01A21BE816C03F09C8AB3AD</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-google-cast-sdk.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>A075DDFD2B181954FEBC2725</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2DC96E51B38042A76B321454</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A1AA48B7B0495CFD697BDD67</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GoogleCast.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GoogleCast.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A2FF751609EBF9798FABCCF8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-GoogleAnalytics-iOS-SDK-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A4E1193413340D75C9AE12C0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C02B811A6DE12C18F88921C8</string>
-				<string>A6FCE2E004F0D4F02F50B985</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A6FCE2E004F0D4F02F50B985</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4EE187FC49E48D7E9AFF74C9</string>
-				<string>05416790C7D8F87351907153</string>
-				<string>91FB61C452671B98903F39D7</string>
-				<string>83695E9FACD21633C7923468</string>
-				<string>C1C60CE7E9CF821AEB58F9E1</string>
-				<string>2DC96E51B38042A76B321454</string>
-				<string>DB7D6E1ED1E21523B599AF4E</string>
-				<string>53F8D30A7BFE1AE0FEFA5420</string>
-				<string>85D18B6FA8C9553052D0D5D2</string>
-				<string>028FD055BD0B8BD06A8CA8B5</string>
-				<string>343826CD10DDFFA9870CA7B4</string>
-				<string>9EB5DE7113EE4D3C14152434</string>
-				<string>DE4A7D84C31FE115CEE6FD8D</string>
-				<string>51FB7D3F4E33471A7F97CA40</string>
-				<string>579C65B491F29C97C552717A</string>
-				<string>E313A9F04A95CB795615DF48</string>
-				<string>7509A4C9D5DE0F540419B3C2</string>
-				<string>DA091C1171061EBB658F3B85</string>
-				<string>8A661CD4D54B6F456F8E511E</string>
-				<string>B479276411A0D4747D38B717</string>
-				<string>48DC38A1714EC35F67A76EDB</string>
-				<string>65F125AB308BB75A30E9C4F7</string>
-				<string>A1AA48B7B0495CFD697BDD67</string>
-				<string>73E9432C080F7E12D37CB9E9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>google-cast-sdk</string>
-			<key>path</key>
-			<string>google-cast-sdk</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AA1FA6F82B3F612AA04BC5AE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AC4C14F589995A95E7A3D447</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F0131688AF8E99C1723320A7</string>
-				<string>68BEB27E412ED300433D6FD2</string>
-				<string>CD28854065A6B5B305F7693C</string>
-				<string>EF4E6A865BE02D7476DBE04A</string>
-				<string>3F7952F38D1DEA56F2523B49</string>
-				<string>D8708B94447B356BF96D593E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>ADE8C4862E6594AE0F49A2F7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-GoogleAnalytics-iOS-SDK-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AEC80525E70D1BB692AF7F7D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>60D1DBA513AB0DDFD1535700</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B308CDF1EBC4E5E94B2FA296</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3A1E93C7FACFC19A74B4510B</string>
-				<string>4957856BA1A6F5772B13873F</string>
-				<string>6B3FAD0E6707CF6EFBE8DC1C</string>
-				<string>F65F3B4334B826E40E86026A</string>
-				<string>BC8F7E98BB01B7B7E07D2E86</string>
-				<string>16E08721DA2BFDC0DCD6B03E</string>
-				<string>02E1E944B0E12D459682C4E6</string>
-				<string>759E234DA072F3E0ACB3B16F</string>
-				<string>C3E28B9C39EA9395311468C3</string>
-				<string>73C36143F4228AA786BAA187</string>
-				<string>769A6B2547E2527139385650</string>
-				<string>6A367B2F23DF997914E3EDA8</string>
-				<string>59509A34415EF6740CB973A9</string>
-				<string>DCCF435574769F35C4DCC858</string>
-				<string>06C628420D7A3760A02DD9B5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Core</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B38EAAE939E5D31EBF317254</key>
-		<dict>
-			<key>fileRef</key>
-			<string>16E08721DA2BFDC0DCD6B03E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B479276411A0D4747D38B717</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKMediaTrack.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKMediaTrack.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B484E55DCC7E107EBE351B3D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>05416790C7D8F87351907153</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B4DC14C59966F497ABCA1034</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3A1E93C7FACFC19A74B4510B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B608303D89E59A9CC7CD8EBD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>91FB61C452671B98903F39D7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BC8F7E98BB01B7B7E07D2E86</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GAIEcommerceProductAction.h</string>
-			<key>path</key>
-			<string>GoogleAnalytics/Library/GAIEcommerceProductAction.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BEF0599B4889D083E8DF7D37</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4518E6600B67E58E622B1493</string>
-				<string>93247AD849324B334FCCE863</string>
-				<string>6AA88FEDF8C372FBB0D1937D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C02B811A6DE12C18F88921C8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B308CDF1EBC4E5E94B2FA296</string>
-				<string>264AB9069C102E4C8FC6CA88</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>GoogleAnalytics-iOS-SDK</string>
-			<key>path</key>
-			<string>GoogleAnalytics-iOS-SDK</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1C60CE7E9CF821AEB58F9E1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKDefines.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKDefines.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C1F01D58CA207D48566651D5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6B3FAD0E6707CF6EFBE8DC1C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C3AD3638B9F9372E2C0F3A0E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>73C36143F4228AA786BAA187</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C3E28B9C39EA9395311468C3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GAITrackedViewController.h</string>
-			<key>path</key>
-			<string>GoogleAnalytics/Library/GAITrackedViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C6896EE38E8028ACA3CFBC9F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-GoogleAnalytics-iOS-SDK</string>
-			<key>target</key>
-			<string>D5EADA6D4DF77582A15E2A3B</string>
-			<key>targetProxy</key>
-			<string>78A30A0ACBB8CB41A6AD1942</string>
-		</dict>
-		<key>C7529E3906E97D3852729A12</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B479276411A0D4747D38B717</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C868E3EDD2202659DB4BA1D9</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A2FF751609EBF9798FABCCF8</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Pods-GoogleAnalytics-iOS-SDK/Pods-GoogleAnalytics-iOS-SDK-prefix.pch</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>CAA5CBCE730B358627C8650B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>AEC80525E70D1BB692AF7F7D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CB52C0639E08262E8940B6D2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>CD28854065A6B5B305F7693C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>D2122E6FEC3EB029704742C0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>85D18B6FA8C9553052D0D5D2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D2E5BC10E830A2CB1C2466D5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E313A9F04A95CB795615DF48</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D5EADA6D4DF77582A15E2A3B</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>2DF325AF6DE62FC8EFFE3381</string>
-			<key>buildPhases</key>
-			<array>
-				<string>E8B2AC225207ADE38939F52B</string>
-				<string>F07122F686FB900DF522E2B9</string>
-				<string>E5B8FCF416DB574DD07579BF</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-GoogleAnalytics-iOS-SDK</string>
-			<key>productName</key>
-			<string>Pods-GoogleAnalytics-iOS-SDK</string>
-			<key>productReference</key>
-			<string>F33E8AD8EED9366DA3B83EB1</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>D68938094B61964BAD1DA3D7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Pods-google-cast-sdk</string>
-			<key>target</key>
-			<string>8E45A27B499E2FBF84BE4591</string>
-			<key>targetProxy</key>
-			<string>0F3FA2AC1D8D61AE289F9763</string>
-		</dict>
-		<key>D8162733E50976BBAC2AEAF3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>65F125AB308BB75A30E9C4F7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D83D8E7887BB248CC8D9A44C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D8708B94447B356BF96D593E</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>DA091C1171061EBB658F3B85</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKMediaStatus.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKMediaStatus.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DB7D6E1ED1E21523B599AF4E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKDeviceManager.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKDeviceManager.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DB9F695F10AB6E9BC5ACA5A1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DE4A7D84C31FE115CEE6FD8D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DCCF435574769F35C4DCC858</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>TAGLogger.h</string>
-			<key>path</key>
-			<string>GoogleTagManager/Library/TAGLogger.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DE4A7D84C31FE115CEE6FD8D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKLaunchOptions.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKLaunchOptions.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E164B0F63BE5289A4E54D8B7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E2622C74085CD8801185C033</key>
-		<dict>
-			<key>fileRef</key>
-			<string>59509A34415EF6740CB973A9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E313A9F04A95CB795615DF48</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GCKMediaInformation.h</string>
-			<key>path</key>
-			<string>GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKMediaInformation.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E391821DDAC57F7A65391477</key>
-		<dict>
-			<key>fileRef</key>
-			<string>579C65B491F29C97C552717A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E5B8FCF416DB574DD07579BF</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B4DC14C59966F497ABCA1034</string>
-				<string>0E28898BE9EE14328CCF4FB3</string>
-				<string>C1F01D58CA207D48566651D5</string>
-				<string>69AFF3E7316E43C12AB70BF0</string>
-				<string>4FA1F6F0E336C23BFE42A06F</string>
-				<string>B38EAAE939E5D31EBF317254</string>
-				<string>E77BC2BAB5BF2F1D72DD2DBE</string>
-				<string>01F11A1E352112DA19FA5275</string>
-				<string>FE9F8474CA939E3118B1FF9D</string>
-				<string>C3AD3638B9F9372E2C0F3A0E</string>
-				<string>98D09DCB615EE42A9C39D65C</string>
-				<string>F645B8151731D00466C9967F</string>
-				<string>E2622C74085CD8801185C033</string>
-				<string>8A820E81E708816C32B8AF3F</string>
-				<string>71C9DE76424DD55B10D3A956</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E5CE3C712E6F5D8DCF6664E4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DB7D6E1ED1E21523B599AF4E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E77BC2BAB5BF2F1D72DD2DBE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>02E1E944B0E12D459682C4E6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E8B2AC225207ADE38939F52B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>252E836A3AA7BA483C4EB58E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E98256591C0777B5ACB48BE8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>343826CD10DDFFA9870CA7B4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA2B804BD1B1D421AFCC1B56</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>D83D8E7887BB248CC8D9A44C</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>EA78FD867B982934EABF9CB9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3F7952F38D1DEA56F2523B49</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EF4E6A865BE02D7476DBE04A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>GoogleCast.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/GoogleCast.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>F0131688AF8E99C1723320A7</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CFNetwork.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CFNetwork.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>F07122F686FB900DF522E2B9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F66F350280A73BBDE0B42A4F</string>
-				<string>814996FD9F4F742D7A5D01A6</string>
-				<string>8A1B2F3538C67ED56AC3AC5D</string>
-				<string>EA78FD867B982934EABF9CB9</string>
-				<string>542933C428A40EA0BDCFE6E8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>F0D5A6962948DE4B6A7CB747</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8A661CD4D54B6F456F8E511E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F0FC5F86AB218894482CE7D5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F33E8AD8EED9366DA3B83EB1</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-GoogleAnalytics-iOS-SDK.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>F3AABA5E5A7ECFA0A9DF2389</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A1AA48B7B0495CFD697BDD67</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F645B8151731D00466C9967F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6A367B2F23DF997914E3EDA8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F65F3B4334B826E40E86026A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GAIEcommerceProduct.h</string>
-			<key>path</key>
-			<string>GoogleAnalytics/Library/GAIEcommerceProduct.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F66F350280A73BBDE0B42A4F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F0131688AF8E99C1723320A7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F6FB36CCB73077E9B51093DE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>0A2F57D9FB74DD9E1DE6B680</string>
-				<string>AA1FA6F82B3F612AA04BC5AE</string>
-				<string>E164B0F63BE5289A4E54D8B7</string>
-				<string>5569106F97AC4F1F91AE8790</string>
-				<string>5AC70FF46109DB228CC447E6</string>
-				<string>F0FC5F86AB218894482CE7D5</string>
-				<string>D83D8E7887BB248CC8D9A44C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>path</key>
-			<string>Target Support Files/Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F80A620346ADACA1206EE167</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0510</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>78978314107DAA2952869D7A</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>8E1C30D00AF46FCF03CD862B</string>
-			<key>productRefGroup</key>
-			<string>932D35356FC38B56541DE5E1</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>65D68CFA9780974E36577C99</string>
-				<string>D5EADA6D4DF77582A15E2A3B</string>
-				<string>8E45A27B499E2FBF84BE4591</string>
-			</array>
-		</dict>
-		<key>F9373FE34C9FE74EFBD5C7F1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4EE187FC49E48D7E9AFF74C9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F9377F74D057944C97CC1248</key>
-		<dict>
-			<key>fileRef</key>
-			<string>53F8D30A7BFE1AE0FEFA5420</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FE9F8474CA939E3118B1FF9D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C3E28B9C39EA9395311468C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>F80A620346ADACA1206EE167</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0971BC19C74282EFA1361E10 /* GCKMediaControlChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = ACE7D8F34894743700F8247B /* GCKMediaControlChannel.h */; };
+		0E09F1923764730BA3E34F69 /* GCKCastChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AF1A3F8BE7316132FA56E9C /* GCKCastChannel.h */; };
+		17EDAD83CFFF2142355F1F91 /* GCKColor.h in Headers */ = {isa = PBXBuildFile; fileRef = AA18234C3B9567D179AE6B45 /* GCKColor.h */; };
+		228A7D4387394D356BD0E5DB /* GCKDeviceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E6E5F50F996E509829550A /* GCKDeviceManager.h */; };
+		259DAFC77DCE2ECA63EE7203 /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EDD55D07464B2890A7B70B4 /* GoogleCast.framework */; };
+		298E4105E1F5157A68B43F4E /* GAITrackedViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A027D75BB4E6EEB4EE56748E /* GAITrackedViewController.h */; };
+		2A194DF21C70299594FA7B8F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5AE20A72F6BC9FEBF30890 /* SystemConfiguration.framework */; };
+		2DD718A82628B3339E993577 /* GCKDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 9030081A38B0E14A9B9E2422 /* GCKDevice.h */; };
+		3652051AA6631AC73690C477 /* GCKImage.h in Headers */ = {isa = PBXBuildFile; fileRef = B8C78EE7E7988196E1C40358 /* GCKImage.h */; };
+		3CC7706A30B4715FB014DAFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B010F58F796A094942E4845 /* UIKit.framework */; };
+		404395110997E8538EB5A08D /* GAIEcommerceProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = 63893C324069AB870B517EA3 /* GAIEcommerceProduct.h */; };
+		4DD894855B2C78949E8A1071 /* GCKMediaStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = DFD0C747F761D3446E6947DF /* GCKMediaStatus.h */; };
+		53D2A238AC848B0C32C60096 /* GCKMediaTextTrackStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = D57DC4BFAA333FED51FE506A /* GCKMediaTextTrackStyle.h */; };
+		574A47126A1C93A855ADB7B9 /* GCKFilterCriteria.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FD4ACF974EB8F98573D69AE /* GCKFilterCriteria.h */; };
+		5AB39712E8646B59C08F67AE /* GAIEcommercePromotion.h in Headers */ = {isa = PBXBuildFile; fileRef = 79604C458FA4A8D954AAD67F /* GAIEcommercePromotion.h */; };
+		62E8671EB8E5F9CA6503EADB /* GCKNSDictionary+TypedValueLookup.h in Headers */ = {isa = PBXBuildFile; fileRef = FBDE11F6BF6812DFBF4A3024 /* GCKNSDictionary+TypedValueLookup.h */; };
+		695BCE58AFC6C7204716B534 /* GAIDictionaryBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = E7BD859D1CF8D0A4B5A6DF37 /* GAIDictionaryBuilder.h */; };
+		69CE90BD4F1F743A1EA36DCA /* TAGContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1628C8EE3FE27BA8473DDB18 /* TAGContainer.h */; };
+		6F3B10C48BFCA03BFC60DFBC /* GCKApplicationMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FD20DDA9C48D293BB8A71B2 /* GCKApplicationMetadata.h */; };
+		702EF94B25EFD511A1997124 /* GCKSenderApplicationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A2DBD49A1F8DCD12177611 /* GCKSenderApplicationInfo.h */; };
+		761371770888B6F7589FAEDB /* GCKLaunchOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 51D99C35D6AE508E7F790065 /* GCKLaunchOptions.h */; };
+		82DAD1046B1E9B5F1CBE9A7C /* GCKMediaInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = A16FA08AAC7102FC18F33322 /* GCKMediaInformation.h */; };
+		86D116D7F93A2365D70F5DBA /* GAIFields.h in Headers */ = {isa = PBXBuildFile; fileRef = B5C55306E274942AB177603B /* GAIFields.h */; };
+		88658AB834C775ADB851E9DE /* Pods-google-cast-sdk-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE500A7AD072FCA7194ED87 /* Pods-google-cast-sdk-dummy.m */; };
+		913B538316992029DDF628FF /* GCKCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = E6C7A93BC86EA334E12BE5FD /* GCKCommon.h */; };
+		9C9606FADB60D610754245BF /* GoogleCast.h in Headers */ = {isa = PBXBuildFile; fileRef = B75945F7E7746EAD99919580 /* GoogleCast.h */; };
+		9CEA9859ECD5624B0AA2B9CA /* GCKMediaTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = FFABE596228169BC163402E4 /* GCKMediaTrack.h */; };
+		9EF02A7D9297B8D4DED5D99A /* GCKDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FDA825DF717505CEE25F38B /* GCKDefines.h */; };
+		A02BF67D04DEDAC9DD0E0C81 /* GCKMediaMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 648239E9A2F4BC58088849B9 /* GCKMediaMetadata.h */; };
+		A10D332463602E9B168F049A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17CCAF37304CBE3B4F941D78 /* CFNetwork.framework */; };
+		A7B2A42E46DED3DC671B46C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF61259DB2FED94B061C56A6 /* Foundation.framework */; };
+		A8A8CB49EF17B8EA6CD78802 /* GAIEcommerceFields.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F52455E0F61BE98E4A53D61 /* GAIEcommerceFields.h */; };
+		A97ADE7BF70B7BC59BEC4093 /* GCKLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = FE0FD7F840EBBB8838BFAD3E /* GCKLogger.h */; };
+		AB69309152509C196DEE51A1 /* GAITracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C757D3CDFD8DB4EBD83D9C6 /* GAITracker.h */; };
+		B5B39C908792D37FF2266B44 /* TAGContainerOpener.h in Headers */ = {isa = PBXBuildFile; fileRef = BFFBCFE95CB46393716AD40E /* TAGContainerOpener.h */; };
+		B89F4E5A88959CF6387CBA36 /* TAGManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1ADF44C0F16EBC2CFA196AAB /* TAGManager.h */; };
+		BBDD2E3F78D3E6F46CC8DFAC /* GCKJSONUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4630EF11484B97DE1EEFDCCB /* GCKJSONUtils.h */; };
+		BD4BF72E15F7E98E19CB2F35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF61259DB2FED94B061C56A6 /* Foundation.framework */; };
+		BDADB6A67CB3898CCE447C57 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5AE20A72F6BC9FEBF30890 /* SystemConfiguration.framework */; };
+		BDC9745F6251C563DCDE0B68 /* TAGDataLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C69C9D6DC560AA80665350F /* TAGDataLayer.h */; };
+		C37E11F7D427480602C81670 /* Pods-GoogleAnalytics-iOS-SDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1047AB269AC7B5D86FB308F6 /* Pods-GoogleAnalytics-iOS-SDK-dummy.m */; };
+		CFE8952FF6900268F2B84790 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF61259DB2FED94B061C56A6 /* Foundation.framework */; };
+		DF87DDDD048681DDE8C26139 /* GCKError.h in Headers */ = {isa = PBXBuildFile; fileRef = E599D22F474E51BCD9A9FF30 /* GCKError.h */; };
+		E4813E052A81E69D06F58401 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C722EADB05DC424E0AD4BC9A /* CoreData.framework */; };
+		E4A4048359A17E0CBB842A33 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E03EF634765EC9A6C6CFC03 /* Pods-dummy.m */; };
+		E5CD4C8C03C10A462561320C /* GCKDeviceScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 345039A304A5F553E01281C8 /* GCKDeviceScanner.h */; };
+		EC95EDF100BDCD0523466E01 /* GAI.h in Headers */ = {isa = PBXBuildFile; fileRef = 0204EF8A134517C6AF06C1C8 /* GAI.h */; };
+		EFD0F97252DE5B5E420C17E2 /* TAGLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F124D4DF11D0B728DD3CD6A /* TAGLogger.h */; };
+		F85C1D729D8BEC183C11E906 /* GAILogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F3976B99B2269BA2EA0BE5E /* GAILogger.h */; };
+		FC7632C161B7531B239FC262 /* GAIEcommerceProductAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C67EBA9A4275B1C723BB835 /* GAIEcommerceProductAction.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1DC2C5EC9674B829DFDFE212 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2132E7D3E7A6B15154B0A76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AE15D0CF0D804BDB1023A90;
+			remoteInfo = "Pods-google-cast-sdk";
+		};
+		969BAA323622C53257A7EDC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2132E7D3E7A6B15154B0A76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0098CE3B6080640D98A45F75;
+			remoteInfo = "Pods-GoogleAnalytics-iOS-SDK";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0204EF8A134517C6AF06C1C8 /* GAI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = GoogleAnalytics/Library/GAI.h; sourceTree = "<group>"; };
+		09B63C5F926A888AFDA63A69 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		1047AB269AC7B5D86FB308F6 /* Pods-GoogleAnalytics-iOS-SDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GoogleAnalytics-iOS-SDK-dummy.m"; sourceTree = "<group>"; };
+		1628C8EE3FE27BA8473DDB18 /* TAGContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TAGContainer.h; path = GoogleTagManager/Library/TAGContainer.h; sourceTree = "<group>"; };
+		17CCAF37304CBE3B4F941D78 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		1ADF44C0F16EBC2CFA196AAB /* TAGManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TAGManager.h; path = GoogleTagManager/Library/TAGManager.h; sourceTree = "<group>"; };
+		1F52455E0F61BE98E4A53D61 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceFields.h; path = GoogleAnalytics/Library/GAIEcommerceFields.h; sourceTree = "<group>"; };
+		1FD4ACF974EB8F98573D69AE /* GCKFilterCriteria.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKFilterCriteria.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKFilterCriteria.h"; sourceTree = "<group>"; };
+		27084288DFC4267E41C40DB7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		2C67EBA9A4275B1C723BB835 /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceProductAction.h; path = GoogleAnalytics/Library/GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		2FD20DDA9C48D293BB8A71B2 /* GCKApplicationMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKApplicationMetadata.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKApplicationMetadata.h"; sourceTree = "<group>"; };
+		345039A304A5F553E01281C8 /* GCKDeviceScanner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDeviceScanner.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKDeviceScanner.h"; sourceTree = "<group>"; };
+		37BF781B53A3EBEBFFC18541 /* libPods-GoogleAnalytics-iOS-SDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoogleAnalytics-iOS-SDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C69C9D6DC560AA80665350F /* TAGDataLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TAGDataLayer.h; path = GoogleTagManager/Library/TAGDataLayer.h; sourceTree = "<group>"; };
+		3E832423ABA1CFAC405C5971 /* Pods-google-cast-sdk-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-google-cast-sdk-prefix.pch"; sourceTree = "<group>"; };
+		4630EF11484B97DE1EEFDCCB /* GCKJSONUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKJSONUtils.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKJSONUtils.h"; sourceTree = "<group>"; };
+		4ABC4DD28873F8372484A662 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F3976B99B2269BA2EA0BE5E /* GAILogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAILogger.h; path = GoogleAnalytics/Library/GAILogger.h; sourceTree = "<group>"; };
+		51D99C35D6AE508E7F790065 /* GCKLaunchOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKLaunchOptions.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKLaunchOptions.h"; sourceTree = "<group>"; };
+		5C141A1A3B27099A00C875DB /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		5FDA825DF717505CEE25F38B /* GCKDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDefines.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKDefines.h"; sourceTree = "<group>"; };
+		63893C324069AB870B517EA3 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceProduct.h; path = GoogleAnalytics/Library/GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		648239E9A2F4BC58088849B9 /* GCKMediaMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaMetadata.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKMediaMetadata.h"; sourceTree = "<group>"; };
+		6527410558AC2F4493AC2787 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6A02C1470C58345EF16CDF28 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6AF1A3F8BE7316132FA56E9C /* GCKCastChannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKCastChannel.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKCastChannel.h"; sourceTree = "<group>"; };
+		6E03EF634765EC9A6C6CFC03 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		70E6E5F50F996E509829550A /* GCKDeviceManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDeviceManager.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKDeviceManager.h"; sourceTree = "<group>"; };
+		725F9ACA8785DA7F822458BD /* libPods-google-cast-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-google-cast-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77BDAE3F075C5CB839A8D955 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		79604C458FA4A8D954AAD67F /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommercePromotion.h; path = GoogleAnalytics/Library/GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		7F124D4DF11D0B728DD3CD6A /* TAGLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TAGLogger.h; path = GoogleTagManager/Library/TAGLogger.h; sourceTree = "<group>"; };
+		86BB86AA356886ADF54F9821 /* Pods-google-cast-sdk-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-google-cast-sdk-Private.xcconfig"; sourceTree = "<group>"; };
+		8AC47C0DFFB8ECF4C36D45C0 /* Pods-google-cast-sdk.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-google-cast-sdk.xcconfig"; sourceTree = "<group>"; };
+		8EDD55D07464B2890A7B70B4 /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleCast.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/GoogleCast.framework; sourceTree = DEVELOPER_DIR; };
+		9030081A38B0E14A9B9E2422 /* GCKDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKDevice.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKDevice.h"; sourceTree = "<group>"; };
+		90B8A8A7FDDA22F09D04B4A9 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		99A2DBD49A1F8DCD12177611 /* GCKSenderApplicationInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKSenderApplicationInfo.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKSenderApplicationInfo.h"; sourceTree = "<group>"; };
+		9B010F58F796A094942E4845 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		9C757D3CDFD8DB4EBD83D9C6 /* GAITracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = GoogleAnalytics/Library/GAITracker.h; sourceTree = "<group>"; };
+		A027D75BB4E6EEB4EE56748E /* GAITrackedViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = GoogleAnalytics/Library/GAITrackedViewController.h; sourceTree = "<group>"; };
+		A16FA08AAC7102FC18F33322 /* GCKMediaInformation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaInformation.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKMediaInformation.h"; sourceTree = "<group>"; };
+		A6D02A33BF4B9B2081C1F81B /* Pods-GoogleAnalytics-iOS-SDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GoogleAnalytics-iOS-SDK-prefix.pch"; sourceTree = "<group>"; };
+		AA18234C3B9567D179AE6B45 /* GCKColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKColor.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKColor.h"; sourceTree = "<group>"; };
+		ACE7D8F34894743700F8247B /* GCKMediaControlChannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaControlChannel.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKMediaControlChannel.h"; sourceTree = "<group>"; };
+		B5C55306E274942AB177603B /* GAIFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIFields.h; path = GoogleAnalytics/Library/GAIFields.h; sourceTree = "<group>"; };
+		B75945F7E7746EAD99919580 /* GoogleCast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GoogleCast.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GoogleCast.h"; sourceTree = "<group>"; };
+		B8C78EE7E7988196E1C40358 /* GCKImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKImage.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKImage.h"; sourceTree = "<group>"; };
+		BFFBCFE95CB46393716AD40E /* TAGContainerOpener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TAGContainerOpener.h; path = GoogleTagManager/Library/TAGContainerOpener.h; sourceTree = "<group>"; };
+		C722EADB05DC424E0AD4BC9A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		D57DC4BFAA333FED51FE506A /* GCKMediaTextTrackStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaTextTrackStyle.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKMediaTextTrackStyle.h"; sourceTree = "<group>"; };
+		DFD0C747F761D3446E6947DF /* GCKMediaStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaStatus.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKMediaStatus.h"; sourceTree = "<group>"; };
+		E1C207253D9AC13FE6520D67 /* Pods-GoogleAnalytics-iOS-SDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GoogleAnalytics-iOS-SDK.xcconfig"; sourceTree = "<group>"; };
+		E599D22F474E51BCD9A9FF30 /* GCKError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKError.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKError.h"; sourceTree = "<group>"; };
+		E6C7A93BC86EA334E12BE5FD /* GCKCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKCommon.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKCommon.h"; sourceTree = "<group>"; };
+		E7BD859D1CF8D0A4B5A6DF37 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIDictionaryBuilder.h; path = GoogleAnalytics/Library/GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		EE8EB584E9C58961AC300535 /* Pods-GoogleAnalytics-iOS-SDK-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GoogleAnalytics-iOS-SDK-Private.xcconfig"; sourceTree = "<group>"; };
+		EF61259DB2FED94B061C56A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		FB5AE20A72F6BC9FEBF30890 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		FBDE11F6BF6812DFBF4A3024 /* GCKNSDictionary+TypedValueLookup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GCKNSDictionary+TypedValueLookup.h"; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKNSDictionary+TypedValueLookup.h"; sourceTree = "<group>"; };
+		FE0FD7F840EBBB8838BFAD3E /* GCKLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKLogger.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKLogger.h"; sourceTree = "<group>"; };
+		FFABE596228169BC163402E4 /* GCKMediaTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCKMediaTrack.h; path = "GoogleCastSDK-2.5.1-Release/GoogleCast.framework/Versions/A/Headers/GCKMediaTrack.h"; sourceTree = "<group>"; };
+		FFE500A7AD072FCA7194ED87 /* Pods-google-cast-sdk-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-google-cast-sdk-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		057BD9FD1B9F5F6462AC9B85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7B2A42E46DED3DC671B46C9 /* Foundation.framework in Frameworks */,
+				259DAFC77DCE2ECA63EE7203 /* GoogleCast.framework in Frameworks */,
+				2A194DF21C70299594FA7B8F /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E75C887775C8BF29567E5F6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10D332463602E9B168F049A /* CFNetwork.framework in Frameworks */,
+				E4813E052A81E69D06F58401 /* CoreData.framework in Frameworks */,
+				CFE8952FF6900268F2B84790 /* Foundation.framework in Frameworks */,
+				BDADB6A67CB3898CCE447C57 /* SystemConfiguration.framework in Frameworks */,
+				3CC7706A30B4715FB014DAFB /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F577A98CAD0C2078FE953803 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD4BF72E15F7E98E19CB2F35 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B24D69711DBE795ECEAC143 = {
+			isa = PBXGroup;
+			children = (
+				6527410558AC2F4493AC2787 /* Podfile */,
+				840A22F28CC2948141288FFC /* Frameworks */,
+				8F2259EA3509F84F655598BE /* Pods */,
+				DA14AC0E281EB2598EAEF6B2 /* Products */,
+				E1D39C9427A69B6F3E4B606F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		0D1EAA54AD27C2E9F6041DB0 /* google-cast-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				2FD20DDA9C48D293BB8A71B2 /* GCKApplicationMetadata.h */,
+				6AF1A3F8BE7316132FA56E9C /* GCKCastChannel.h */,
+				AA18234C3B9567D179AE6B45 /* GCKColor.h */,
+				E6C7A93BC86EA334E12BE5FD /* GCKCommon.h */,
+				5FDA825DF717505CEE25F38B /* GCKDefines.h */,
+				9030081A38B0E14A9B9E2422 /* GCKDevice.h */,
+				70E6E5F50F996E509829550A /* GCKDeviceManager.h */,
+				345039A304A5F553E01281C8 /* GCKDeviceScanner.h */,
+				E599D22F474E51BCD9A9FF30 /* GCKError.h */,
+				1FD4ACF974EB8F98573D69AE /* GCKFilterCriteria.h */,
+				B8C78EE7E7988196E1C40358 /* GCKImage.h */,
+				4630EF11484B97DE1EEFDCCB /* GCKJSONUtils.h */,
+				51D99C35D6AE508E7F790065 /* GCKLaunchOptions.h */,
+				FE0FD7F840EBBB8838BFAD3E /* GCKLogger.h */,
+				ACE7D8F34894743700F8247B /* GCKMediaControlChannel.h */,
+				A16FA08AAC7102FC18F33322 /* GCKMediaInformation.h */,
+				648239E9A2F4BC58088849B9 /* GCKMediaMetadata.h */,
+				DFD0C747F761D3446E6947DF /* GCKMediaStatus.h */,
+				D57DC4BFAA333FED51FE506A /* GCKMediaTextTrackStyle.h */,
+				FFABE596228169BC163402E4 /* GCKMediaTrack.h */,
+				FBDE11F6BF6812DFBF4A3024 /* GCKNSDictionary+TypedValueLookup.h */,
+				99A2DBD49A1F8DCD12177611 /* GCKSenderApplicationInfo.h */,
+				B75945F7E7746EAD99919580 /* GoogleCast.h */,
+				854B576940EE2381A3DE622D /* Support Files */,
+			);
+			path = "google-cast-sdk";
+			sourceTree = "<group>";
+		};
+		5F65C269E5DD099D30F37D3F /* GoogleAnalytics-iOS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				B4EC31C58F21389DC029C222 /* Core */,
+				AB0F6B7FB487EF6AD9814651 /* Support Files */,
+			);
+			path = "GoogleAnalytics-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		840A22F28CC2948141288FFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C39C8D320AE9A46BE45B0740 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		854B576940EE2381A3DE622D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AC47C0DFFB8ECF4C36D45C0 /* Pods-google-cast-sdk.xcconfig */,
+				86BB86AA356886ADF54F9821 /* Pods-google-cast-sdk-Private.xcconfig */,
+				FFE500A7AD072FCA7194ED87 /* Pods-google-cast-sdk-dummy.m */,
+				3E832423ABA1CFAC405C5971 /* Pods-google-cast-sdk-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-google-cast-sdk";
+			sourceTree = "<group>";
+		};
+		8F2259EA3509F84F655598BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F65C269E5DD099D30F37D3F /* GoogleAnalytics-iOS-SDK */,
+				0D1EAA54AD27C2E9F6041DB0 /* google-cast-sdk */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A5024FED20664075451DBC25 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A02C1470C58345EF16CDF28 /* Pods-acknowledgements.markdown */,
+				77BDAE3F075C5CB839A8D955 /* Pods-acknowledgements.plist */,
+				6E03EF634765EC9A6C6CFC03 /* Pods-dummy.m */,
+				5C141A1A3B27099A00C875DB /* Pods-environment.h */,
+				90B8A8A7FDDA22F09D04B4A9 /* Pods-resources.sh */,
+				09B63C5F926A888AFDA63A69 /* Pods.debug.xcconfig */,
+				27084288DFC4267E41C40DB7 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		AB0F6B7FB487EF6AD9814651 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1C207253D9AC13FE6520D67 /* Pods-GoogleAnalytics-iOS-SDK.xcconfig */,
+				EE8EB584E9C58961AC300535 /* Pods-GoogleAnalytics-iOS-SDK-Private.xcconfig */,
+				1047AB269AC7B5D86FB308F6 /* Pods-GoogleAnalytics-iOS-SDK-dummy.m */,
+				A6D02A33BF4B9B2081C1F81B /* Pods-GoogleAnalytics-iOS-SDK-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-GoogleAnalytics-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		B4EC31C58F21389DC029C222 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0204EF8A134517C6AF06C1C8 /* GAI.h */,
+				E7BD859D1CF8D0A4B5A6DF37 /* GAIDictionaryBuilder.h */,
+				1F52455E0F61BE98E4A53D61 /* GAIEcommerceFields.h */,
+				63893C324069AB870B517EA3 /* GAIEcommerceProduct.h */,
+				2C67EBA9A4275B1C723BB835 /* GAIEcommerceProductAction.h */,
+				79604C458FA4A8D954AAD67F /* GAIEcommercePromotion.h */,
+				B5C55306E274942AB177603B /* GAIFields.h */,
+				4F3976B99B2269BA2EA0BE5E /* GAILogger.h */,
+				A027D75BB4E6EEB4EE56748E /* GAITrackedViewController.h */,
+				9C757D3CDFD8DB4EBD83D9C6 /* GAITracker.h */,
+				1628C8EE3FE27BA8473DDB18 /* TAGContainer.h */,
+				BFFBCFE95CB46393716AD40E /* TAGContainerOpener.h */,
+				3C69C9D6DC560AA80665350F /* TAGDataLayer.h */,
+				7F124D4DF11D0B728DD3CD6A /* TAGLogger.h */,
+				1ADF44C0F16EBC2CFA196AAB /* TAGManager.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		C39C8D320AE9A46BE45B0740 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				17CCAF37304CBE3B4F941D78 /* CFNetwork.framework */,
+				C722EADB05DC424E0AD4BC9A /* CoreData.framework */,
+				EF61259DB2FED94B061C56A6 /* Foundation.framework */,
+				8EDD55D07464B2890A7B70B4 /* GoogleCast.framework */,
+				FB5AE20A72F6BC9FEBF30890 /* SystemConfiguration.framework */,
+				9B010F58F796A094942E4845 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DA14AC0E281EB2598EAEF6B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4ABC4DD28873F8372484A662 /* libPods.a */,
+				37BF781B53A3EBEBFFC18541 /* libPods-GoogleAnalytics-iOS-SDK.a */,
+				725F9ACA8785DA7F822458BD /* libPods-google-cast-sdk.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1D39C9427A69B6F3E4B606F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5024FED20664075451DBC25 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		33DAC1B4FD5BA3DF6615ED4F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC95EDF100BDCD0523466E01 /* GAI.h in Headers */,
+				695BCE58AFC6C7204716B534 /* GAIDictionaryBuilder.h in Headers */,
+				A8A8CB49EF17B8EA6CD78802 /* GAIEcommerceFields.h in Headers */,
+				404395110997E8538EB5A08D /* GAIEcommerceProduct.h in Headers */,
+				FC7632C161B7531B239FC262 /* GAIEcommerceProductAction.h in Headers */,
+				5AB39712E8646B59C08F67AE /* GAIEcommercePromotion.h in Headers */,
+				86D116D7F93A2365D70F5DBA /* GAIFields.h in Headers */,
+				F85C1D729D8BEC183C11E906 /* GAILogger.h in Headers */,
+				298E4105E1F5157A68B43F4E /* GAITrackedViewController.h in Headers */,
+				AB69309152509C196DEE51A1 /* GAITracker.h in Headers */,
+				69CE90BD4F1F743A1EA36DCA /* TAGContainer.h in Headers */,
+				B5B39C908792D37FF2266B44 /* TAGContainerOpener.h in Headers */,
+				BDC9745F6251C563DCDE0B68 /* TAGDataLayer.h in Headers */,
+				EFD0F97252DE5B5E420C17E2 /* TAGLogger.h in Headers */,
+				B89F4E5A88959CF6387CBA36 /* TAGManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7ABD4E8E88A8A8086D6EA17 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F3B10C48BFCA03BFC60DFBC /* GCKApplicationMetadata.h in Headers */,
+				0E09F1923764730BA3E34F69 /* GCKCastChannel.h in Headers */,
+				17EDAD83CFFF2142355F1F91 /* GCKColor.h in Headers */,
+				913B538316992029DDF628FF /* GCKCommon.h in Headers */,
+				9EF02A7D9297B8D4DED5D99A /* GCKDefines.h in Headers */,
+				2DD718A82628B3339E993577 /* GCKDevice.h in Headers */,
+				228A7D4387394D356BD0E5DB /* GCKDeviceManager.h in Headers */,
+				E5CD4C8C03C10A462561320C /* GCKDeviceScanner.h in Headers */,
+				DF87DDDD048681DDE8C26139 /* GCKError.h in Headers */,
+				574A47126A1C93A855ADB7B9 /* GCKFilterCriteria.h in Headers */,
+				3652051AA6631AC73690C477 /* GCKImage.h in Headers */,
+				BBDD2E3F78D3E6F46CC8DFAC /* GCKJSONUtils.h in Headers */,
+				761371770888B6F7589FAEDB /* GCKLaunchOptions.h in Headers */,
+				A97ADE7BF70B7BC59BEC4093 /* GCKLogger.h in Headers */,
+				0971BC19C74282EFA1361E10 /* GCKMediaControlChannel.h in Headers */,
+				82DAD1046B1E9B5F1CBE9A7C /* GCKMediaInformation.h in Headers */,
+				A02BF67D04DEDAC9DD0E0C81 /* GCKMediaMetadata.h in Headers */,
+				4DD894855B2C78949E8A1071 /* GCKMediaStatus.h in Headers */,
+				53D2A238AC848B0C32C60096 /* GCKMediaTextTrackStyle.h in Headers */,
+				9CEA9859ECD5624B0AA2B9CA /* GCKMediaTrack.h in Headers */,
+				62E8671EB8E5F9CA6503EADB /* GCKNSDictionary+TypedValueLookup.h in Headers */,
+				702EF94B25EFD511A1997124 /* GCKSenderApplicationInfo.h in Headers */,
+				9C9606FADB60D610754245BF /* GoogleCast.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0098CE3B6080640D98A45F75 /* Pods-GoogleAnalytics-iOS-SDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69D0939B8048FE5F68CCBB30 /* Build configuration list for PBXNativeTarget "Pods-GoogleAnalytics-iOS-SDK" */;
+			buildPhases = (
+				E80DCF2F1563C9BC40E27FD5 /* Sources */,
+				E75C887775C8BF29567E5F6F /* Frameworks */,
+				33DAC1B4FD5BA3DF6615ED4F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-GoogleAnalytics-iOS-SDK";
+			productName = "Pods-GoogleAnalytics-iOS-SDK";
+			productReference = 37BF781B53A3EBEBFFC18541 /* libPods-GoogleAnalytics-iOS-SDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		1AE15D0CF0D804BDB1023A90 /* Pods-google-cast-sdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40DB53DE72397111E210B89F /* Build configuration list for PBXNativeTarget "Pods-google-cast-sdk" */;
+			buildPhases = (
+				528C4E66B8BFB032738FA035 /* Sources */,
+				057BD9FD1B9F5F6462AC9B85 /* Frameworks */,
+				D7ABD4E8E88A8A8086D6EA17 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-google-cast-sdk";
+			productName = "Pods-google-cast-sdk";
+			productReference = 725F9ACA8785DA7F822458BD /* libPods-google-cast-sdk.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B8FB5C0A330D9EBAF34BD0C1 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82EFA9B634EB9AF16AF78375 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				435662497369FC0CCD957387 /* Sources */,
+				F577A98CAD0C2078FE953803 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D37A600118280BF6EF93D287 /* PBXTargetDependency */,
+				200C0348B2BAE1F75B25F2F7 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 4ABC4DD28873F8372484A662 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2132E7D3E7A6B15154B0A76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = EC9C442991920E7D90EB61B4 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0B24D69711DBE795ECEAC143;
+			productRefGroup = DA14AC0E281EB2598EAEF6B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8FB5C0A330D9EBAF34BD0C1 /* Pods */,
+				0098CE3B6080640D98A45F75 /* Pods-GoogleAnalytics-iOS-SDK */,
+				1AE15D0CF0D804BDB1023A90 /* Pods-google-cast-sdk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		435662497369FC0CCD957387 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4A4048359A17E0CBB842A33 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		528C4E66B8BFB032738FA035 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88658AB834C775ADB851E9DE /* Pods-google-cast-sdk-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E80DCF2F1563C9BC40E27FD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37E11F7D427480602C81670 /* Pods-GoogleAnalytics-iOS-SDK-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		200C0348B2BAE1F75B25F2F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-google-cast-sdk";
+			target = 1AE15D0CF0D804BDB1023A90 /* Pods-google-cast-sdk */;
+			targetProxy = 1DC2C5EC9674B829DFDFE212 /* PBXContainerItemProxy */;
+		};
+		D37A600118280BF6EF93D287 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-GoogleAnalytics-iOS-SDK";
+			target = 0098CE3B6080640D98A45F75 /* Pods-GoogleAnalytics-iOS-SDK */;
+			targetProxy = 969BAA323622C53257A7EDC8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0265F61066AB943AA4AA9A9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27084288DFC4267E41C40DB7 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		456CA29E634C4F9668537F9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE8EB584E9C58961AC300535 /* Pods-GoogleAnalytics-iOS-SDK-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-GoogleAnalytics-iOS-SDK/Pods-GoogleAnalytics-iOS-SDK-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7E80AC699B1EBB180BEDB1AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09B63C5F926A888AFDA63A69 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		88D9167A8A2475E8A59F6ADF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86BB86AA356886ADF54F9821 /* Pods-google-cast-sdk-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-google-cast-sdk/Pods-google-cast-sdk-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D67366AF66523D2BEE323286 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F011B8E0FE911FE3C5396585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE8EB584E9C58961AC300535 /* Pods-GoogleAnalytics-iOS-SDK-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-GoogleAnalytics-iOS-SDK/Pods-GoogleAnalytics-iOS-SDK-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F0527D917AFB3D15A73555F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86BB86AA356886ADF54F9821 /* Pods-google-cast-sdk-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-google-cast-sdk/Pods-google-cast-sdk-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F1BFE6901EBC11F8A20B9041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40DB53DE72397111E210B89F /* Build configuration list for PBXNativeTarget "Pods-google-cast-sdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0527D917AFB3D15A73555F6 /* Debug */,
+				88D9167A8A2475E8A59F6ADF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69D0939B8048FE5F68CCBB30 /* Build configuration list for PBXNativeTarget "Pods-GoogleAnalytics-iOS-SDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				456CA29E634C4F9668537F9C /* Debug */,
+				F011B8E0FE911FE3C5396585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82EFA9B634EB9AF16AF78375 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E80AC699B1EBB180BEDB1AB /* Debug */,
+				0265F61066AB943AA4AA9A9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC9C442991920E7D90EB61B4 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D67366AF66523D2BEE323286 /* Debug */,
+				F1BFE6901EBC11F8A20B9041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2132E7D3E7A6B15154B0A76 /* Project object */;
+}
