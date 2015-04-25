@@ -34,24 +34,15 @@
          	var apiConfig = new chrome.cast.ApiConfig(sessionRequest,
          		sessionJoinedListener,
          		receiverListener);
-         	chrome.cast.initialize(apiConfig, onInitSuccess, onInitError);
+         	chrome.cast.initialize(apiConfig, onInitSuccess, onError);
          }
 
 
-        /**
-         * Callback de sucesso em initialization
-         */
          function onInitSuccess() {
          	appendMessage("onInitSuccess");
          }
-
-        /**
-         * Callback de erros em initialization
-         */
-         function onInitError(message) {
-         	appendMessage("onInitError: " + JSON.stringify(message));
-         }
          
+         /**/
          function onError(message) {
          	appendMessage("onError: "+JSON.stringify(message));
          }
@@ -80,7 +71,7 @@
          function sessionUpdateListener(isAlive) {
          	var message = isAlive ? 'Session Updated' : 'Session Removed';
          	message += ': ' + session.sessionId;
-         	appendMessage(message);
+         	appendMessage("sessionUpdateListener: " + message);
          	if (!isAlive) {
          		session = null;
          	}
@@ -91,25 +82,27 @@
          * @param {string} message A mensagem em si
          */
          function receiverMessage(namespace, message) {
-         	appendMessage("receiverMessage: " + namespace + ", " + message);
+         	appendMessage("receiverMessage: " + message);
          }
 
          function sendMessage(message) {
          	if (session!=null) {
-         		session.sendMessage(namespace, message, onSuccess.bind(this, "Message sent: " + message), onError);
+         		session.sendMessage(namespace, message, onSuccess.bind(this, "Message sent (session!=null) : " + JSON.stringify(message)), onError);
          	}
          	else {
          		chrome.cast.requestSession(function(e) {
          			session = e;
-         			session.sendMessage(namespace, message, onSuccess.bind(this, "Message sent: " + message), onError);
+         			session.addUpdateListener(sessionUpdateListener);
+        			session.addMessageListener(namespace, receiverMessage);
+         			session.sendMessage(namespace, message, onSuccess.bind(this, "Message sent: " + JSON.stringify(message)), onError);
          		}, onError);
          	}
          }
 
          function appendMessage(message) {
          	console.log(message);
-         //	var dw = document.getElementById("debugmessage");
-         //	dw.innerHTML += '\n' + JSON.stringify(message);
+         	var dw = document.getElementById("result_card");
+         	dw.innerHTML += '\n' + JSON.stringify(message);
      };
 
      function setNameForPlayerCast() {
@@ -146,7 +139,7 @@
 <body>
 	<nav class="red lighten-1" role="navigation">
 		<div class="container">
-			<div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+			<div class="nav-wrapper"><a id="logo-container" href="#" class="brand-logo"><img src="img/logo.png" width="65"></a>
 				<ul class="right">
 					<li><a href="#">Navbar Link</a></li>
 				</ul>
@@ -222,7 +215,9 @@
 
 				<div class="col s12 m4">
 					<div class="icon-block">
-						&nbsp;
+				        <div class="card-panel red lighten-3">
+				          <span class="black-text" id="result_card"></span>
+				    </div>
 					</div>
 				</div>
 
@@ -264,7 +259,7 @@
 		</div>
 		<div class="footer-copyright">
 			<div class="container">
-				Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+				Made by <a class="orange-text text-lighten-3" href="http://materializecss.com" target="_blank">Materialize</a>
 			</div>
 		</div>
 	</footer>

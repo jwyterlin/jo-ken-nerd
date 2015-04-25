@@ -66,7 +66,7 @@ window.onload = function() {
     }
 
     // initialize the CastReceiverManager with an application status message
-    window.castReceiverManager.start({statusText: "Application is starting"});
+    window.castReceiverManager.start({statusText: "Jo Ken Nerd is ready!"});
     console.log('Receiver Manager started');
 };
 
