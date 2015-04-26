@@ -8,6 +8,8 @@
 
 #import "ChoicesListInterfaceController.h"
 
+// Model
+#import "Choice.h"
 
 @interface ChoicesListInterfaceController()
 
@@ -16,32 +18,30 @@
 
 @implementation ChoicesListInterfaceController
 
-- (void)awakeWithContext:(id)context {
+-(void)awakeWithContext:(id)context {
+    
     [super awakeWithContext:context];
 
-    NSDictionary *obj = (NSDictionary *)context;
+    Choice *choice = (Choice *)context;
     
-    UIImage *image = obj[@"image"];
-    [self.image setImage:image];
-    
-    NSString *name = obj[@"name"];
-    [self.name setText:name];
+    [self.image setImage:choice.image];
+    [self.name setText:choice.name];
     
 }
 
-- (void)willActivate {
+-(void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
 }
 
-- (void)didDeactivate {
+-(void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
 }
 
 -(IBAction)optionSelected:(id)sender {
     
-    NSLog(@"optionSelected");
+    NSLog( @"optionSelected" );
     
 }
 

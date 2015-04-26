@@ -31,6 +31,7 @@
 		7B5B350519686D4600406276 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E419686D4600406276 /* Foundation.framework */; };
 		7B5B350619686D4600406276 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E819686D4600406276 /* UIKit.framework */; };
 		7B5B351019686D4700406276 /* JkplsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B350F19686D4700406276 /* JkplsTests.m */; };
+		7B5EB34A1AEC6AC900326BDB /* Choice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5EB3491AEC6AC900326BDB /* Choice.m */; };
 		7BB92A621AE9EB42004F8190 /* ChoicesListInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB92A611AE9EB42004F8190 /* ChoicesListInterfaceController.m */; };
 		7BB92A651AE9EB42004F8190 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB92A641AE9EB42004F8190 /* NotificationController.m */; };
 		7BB92A681AE9EB42004F8190 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB92A671AE9EB42004F8190 /* GlanceController.m */; };
@@ -121,6 +122,8 @@
 		7B5B350319686D4600406276 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7B5B350B19686D4700406276 /* JkplsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JkplsTests-Info.plist"; sourceTree = "<group>"; };
 		7B5B350F19686D4700406276 /* JkplsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JkplsTests.m; sourceTree = "<group>"; };
+		7B5EB3481AEC6AC900326BDB /* Choice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Choice.h; sourceTree = "<group>"; };
+		7B5EB3491AEC6AC900326BDB /* Choice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Choice.m; sourceTree = "<group>"; };
 		7BB92A5B1AE9EB42004F8190 /* nnn WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "nnn WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB92A5E1AE9EB42004F8190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BB92A5F1AE9EB42004F8190 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -312,9 +315,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7B5EB3471AEC6A9400326BDB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B5EB3481AEC6AC900326BDB /* Choice.h */,
+				7B5EB3491AEC6AC900326BDB /* Choice.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		7BB92A5C1AE9EB42004F8190 /* nnn WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7B5EB3471AEC6A9400326BDB /* Model */,
 				7BB92A851AE9EB77004F8190 /* GlanceController */,
 				7BB92A691AE9EB42004F8190 /* Images.xcassets */,
 				7BB92A831AE9EB58004F8190 /* InterfaceController */,
@@ -618,6 +631,7 @@
 				7BB92A651AE9EB42004F8190 /* NotificationController.m in Sources */,
 				7BB92A621AE9EB42004F8190 /* ChoicesListInterfaceController.m in Sources */,
 				7BB92A881AE9EE78004F8190 /* MainInterfaceController.m in Sources */,
+				7B5EB34A1AEC6AC900326BDB /* Choice.m in Sources */,
 				7BB92A681AE9EB42004F8190 /* GlanceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -938,6 +952,7 @@
 				7BB92A7F1AE9EB42004F8190 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7BB92A811AE9EB42004F8190 /* Build configuration list for PBXNativeTarget "nnn WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -946,6 +961,7 @@
 				7BB92A7D1AE9EB42004F8190 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
