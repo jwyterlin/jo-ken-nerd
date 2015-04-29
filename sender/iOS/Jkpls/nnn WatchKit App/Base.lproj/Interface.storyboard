@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aw5-ED-Z8B">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aw5-ED-Z8B">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
@@ -21,10 +21,12 @@
                                 <action selector="optionSelected:" destination="AgC-eL-Hgc" id="Bq5-sz-8XQ"/>
                             </connections>
                         </button>
+                        <label width="1" alignment="center" text="Result" textAlignment="center" numberOfLines="2" id="3fo-qV-a1x"/>
                     </items>
                     <connections>
                         <outlet property="image" destination="0So-ij-vHS" id="o57-By-pM8"/>
                         <outlet property="name" destination="LpB-Da-PTw" id="YMU-5S-HCH"/>
+                        <outlet property="result" destination="3fo-qV-a1x" id="f07-Ey-jwO"/>
                     </connections>
                 </controller>
             </objects>

@@ -13,5 +13,6 @@
 
 @property(nonatomic,strong) IBOutlet WKInterfaceLabel *name;
 @property(nonatomic,strong) IBOutlet WKInterfaceImage *image;
+@property(nonatomic,strong) IBOutlet WKInterfaceLabel *result;
 
 @end
