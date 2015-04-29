@@ -10,6 +10,7 @@
 
 // Model
 #import "Choice.h"
+#import "Game.h"
 
 @interface MainInterfaceController ()
 
@@ -38,27 +39,32 @@
 
 -(IBAction)playButtonPressed:(id)sender {
     
-    Choice *lizard = [Choice new];
-    lizard.name = @"Lizard";
-    lizard.image = [UIImage imageNamed:@"lizard"];
-    
-    Choice *paper = [Choice new];
-    paper.name = @"Paper";
-    paper.image = [UIImage imageNamed:@"paper"];
-    
     Choice *rock = [Choice new];
+    rock.identifier = [NSNumber numberWithInt:CHOICE_ROCK];
     rock.name = @"Rock";
     rock.image = [UIImage imageNamed:@"rock"];
     
+    Choice *paper = [Choice new];
+    paper.identifier = [NSNumber numberWithInt:CHOICE_PAPER];
+    paper.name = @"Paper";
+    paper.image = [UIImage imageNamed:@"paper"];
+    
     Choice *scissor = [Choice new];
+    scissor.identifier = [NSNumber numberWithInt:CHOICE_SCISSOR];
     scissor.name = @"Scissor";
     scissor.image = [UIImage imageNamed:@"scissor"];
     
+    Choice *lizard = [Choice new];
+    lizard.identifier = [NSNumber numberWithInt:CHOICE_LIZARD];
+    lizard.name = @"Lizard";
+    lizard.image = [UIImage imageNamed:@"lizard"];
+
     Choice *spock = [Choice new];
+    spock.identifier = [NSNumber numberWithInt:CHOICE_SPOCK];
     spock.name = @"Spock";
     spock.image = [UIImage imageNamed:@"spock"];
     
-    NSArray *options = [NSArray arrayWithObjects:lizard,paper,rock,scissor,spock,nil];
+    NSArray *options = [NSArray arrayWithObjects:rock,paper,scissor,lizard,spock,nil];
     
     NSMutableArray *controllerNames = [NSMutableArray new];
     

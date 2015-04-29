@@ -10,8 +10,11 @@
 
 // Model
 #import "Choice.h"
+#import "Game.h"
 
 @interface ChoicesListInterfaceController()
+
+@property(nonatomic,strong) Choice *choice;
 
 @end
 
@@ -24,8 +27,11 @@
 
     Choice *choice = (Choice *)context;
     
+    self.choice = choice;
+    
     [self.image setImage:choice.image];
     [self.name setText:choice.name];
+    [self.result setHidden:YES];
     
 }
 
@@ -41,7 +47,38 @@
 
 -(IBAction)optionSelected:(id)sender {
     
-    NSLog( @"optionSelected" );
+    [self.result setHidden:YES];
+    
+    NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:self.choice.identifier,@"choice", nil];
+    
+    [WKInterfaceController openParentApplication:dictionary reply:^(NSDictionary *replyInfo, NSError *error) {
+        
+        if ( replyInfo ) {
+            
+            if ( replyInfo[@"ResultGame"] ) {
+                
+                NSString *stringResult = replyInfo[@"ResultGame"];
+                
+                [self.result setHidden:NO];
+                [self.result setText:stringResult];
+                
+                return;
+                
+            } else {
+                
+                NSLog(@"No ResultGame");
+                
+            }
+            
+        }
+        
+        if ( error ) {
+            NSLog(@"Error occurred: %@", error);
+        } else {
+            NSLog(@"No error, but no data either");
+        }
+        
+    }];
     
 }
 
