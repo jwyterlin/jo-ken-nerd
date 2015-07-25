@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aw5-ED-Z8B">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aw5-ED-Z8B">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
@@ -38,7 +38,7 @@
                 <controller identifier="main" id="aw5-ED-Z8B" customClass="MainInterfaceController">
                     <items>
                         <label width="1" alignment="center" text="Make your choice" id="OcC-fq-gJd"/>
-                        <button width="1" alignment="left" verticalAlignment="center" title="Play" id="4GX-UN-9p0">
+                        <button width="1" alignment="left" verticalAlignment="center" title="Single player" id="4GX-UN-9p0">
                             <connections>
                                 <action selector="playButtonPressed:" destination="aw5-ED-Z8B" id="JGC-nQ-Vu9"/>
                             </connections>
