@@ -1,4 +1,4 @@
-FRAMEWORK_SEARCH_PATHS = $(PODS_ROOT)/google-cast-sdk/GoogleCastSDK-2.5.1-Release
+FRAMEWORK_SEARCH_PATHS = $(PODS_ROOT)/google-cast-sdk/GoogleCastSDK-2.7.1-Release
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(SDKROOT)/usr/include/libz $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/GoogleAnalytics-iOS-SDK" "${PODS_ROOT}/Headers/Public/google-cast-sdk"
 LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/GoogleAnalytics-iOS-SDK" "$(PODS_ROOT)/GoogleAnalytics-iOS-SDK"

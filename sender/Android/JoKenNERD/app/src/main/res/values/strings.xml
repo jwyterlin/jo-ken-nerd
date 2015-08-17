@@ -22,7 +22,7 @@
     <string name="msg_room_full">Sala cheia.</string>
     <string name="msg_already_connected">Voccê já está conectado.</string>
     <string name="msg_wait_oponent">Aguardando o oponente.</string>
-    <string name="msg_need_chromecast_connection">Necessário estar conectado a um Chromecast</string>
+    <string name="msg_need_chromecast_connection">Nenhum dispositivo Google Cast foi encontrado.</string>
 
     <string name="title_cast">Cast</string>
     <string name="title_rules">Regras</string>

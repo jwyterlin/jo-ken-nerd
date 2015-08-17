@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import <GoogleAnalytics-iOS-SDK/GAI.h>
 
+#import "SinglePlayerGame.h"
+
 @interface AppDelegate ()
 
 - (void)_setupAnalytics;
@@ -33,6 +35,31 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {}
 
 - (void)applicationWillTerminate:(UIApplication *)application {}
+
+- (void)application:(UIApplication *)application
+handleWatchKitExtensionRequest:(NSDictionary *)userInfo
+              reply:(void(^)(NSDictionary *replyInfo))reply {
+    
+    if ( userInfo ) {
+        
+        if ( userInfo[@"choice"] ) {
+            
+            NSNumber *choice = userInfo[@"choice"];
+            
+            SinglePlayerGame *singlePlayerGame = [[SinglePlayerGame alloc] init];
+            
+            [singlePlayerGame startGameWithChoice:[choice stringValue]];
+
+            NSDictionary *dictionaryToReturn = [[NSDictionary alloc] initWithObjectsAndKeys:[singlePlayerGame messageResultGame],@"ResultGame", nil];
+            
+            if (reply)
+                reply(dictionaryToReturn);
+            
+        }
+        
+    }
+    
+}
 
 #pragma mark - Private Methods - 
 
