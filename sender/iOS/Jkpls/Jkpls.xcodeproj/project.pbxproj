@@ -18,6 +18,9 @@
 		71BE284D19E8D0E000C049C6 /* BattleResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BE284C19E8D0E000C049C6 /* BattleResultView.m */; };
 		71BE285219E8DB7F00C049C6 /* BattleResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71BE285119E8DB7F00C049C6 /* BattleResultView.xib */; };
 		71D79C6F196876AB00F18801 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D79C6E196876AB00F18801 /* GameViewController.m */; };
+		7B0BCE6E1B81802F00E9402F /* GameLogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0BCE6D1B81802F00E9402F /* GameLogicTests.m */; };
+		7B0BCE6F1B81803A00E9402F /* GameLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 71144F7319E0B54900B1C692 /* GameLogic.m */; };
+		7B0BCE701B8180B000E9402F /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 71432CE819DF8D5D00A9ED65 /* Game.m */; };
 		7B36EBD4196894CD00B88FF3 /* ChromeCastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B36EBD3196894CD00B88FF3 /* ChromeCastViewController.xib */; };
 		7B36EBD819689A5400B88FF3 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B36EBD719689A5400B88FF3 /* Constants.m */; };
 		7B5B34E519686D4600406276 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5B34E419686D4600406276 /* Foundation.framework */; };
@@ -66,6 +69,7 @@
 		71BE285119E8DB7F00C049C6 /* BattleResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BattleResultView.xib; sourceTree = "<group>"; };
 		71D79C6E196876AB00F18801 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		71D79C70196876B000F18801 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		7B0BCE6D1B81802F00E9402F /* GameLogicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameLogicTests.m; sourceTree = "<group>"; };
 		7B36EBD3196894CD00B88FF3 /* ChromeCastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChromeCastViewController.xib; sourceTree = "<group>"; };
 		7B36EBD619689A5400B88FF3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Helpers/Constants.h; sourceTree = "<group>"; };
 		7B36EBD719689A5400B88FF3 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Helpers/Constants.m; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 			children = (
 				7B5B350F19686D4700406276 /* JkplsTests.m */,
 				7B5B350A19686D4700406276 /* Supporting Files */,
+				7B0BCE6D1B81802F00E9402F /* GameLogicTests.m */,
 			);
 			path = JkplsTests;
 			sourceTree = "<group>";
@@ -413,7 +418,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B0BCE6E1B81802F00E9402F /* GameLogicTests.m in Sources */,
+				7B0BCE6F1B81803A00E9402F /* GameLogic.m in Sources */,
 				7B5B351019686D4700406276 /* JkplsTests.m in Sources */,
+				7B0BCE701B8180B000E9402F /* Game.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

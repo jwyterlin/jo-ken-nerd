@@ -1,2 +1,0 @@
-PODS_GOOGLE_CAST_SDK_FRAMEWORK_SEARCH_PATHS = $(PODS_ROOT)/google-cast-sdk/GoogleCastSDK-2.5.1-Release
-PODS_GOOGLE_CAST_SDK_OTHER_LDFLAGS = -framework "GoogleCast" -framework "SystemConfiguration"
