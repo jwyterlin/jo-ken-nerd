@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "GoogleCast.h"
+#import <GoogleCast/GoogleCast.h>
 #import "TextChannel.h"
 
 @protocol ChromeCastDelegate;

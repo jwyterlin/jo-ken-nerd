@@ -5,13 +5,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
-	<string>Jo Ken Nerd</string>
+	<string>Jo Ken Nerd Watch</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.jokennerd.Jkpls.watchkitapp</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Jo Ken Nerd</string>
+	<string>Jo Ken Nerd Watch</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>

@@ -47,7 +47,7 @@
 -(GCKDeviceScanner *)deviceScanner {
     
     if ( ! _deviceScanner ) {
-        _deviceScanner = [[GCKDeviceScanner alloc] init];
+        _deviceScanner = [[GCKDeviceScanner alloc] initWithFilterCriteria:[GCKFilterCriteria new]];
     }
     
     return _deviceScanner;
@@ -153,11 +153,11 @@
     
     NSLog( @"self.deviceManager: %@", _deviceManager );
     
-    if ( _deviceManager == nil ) {
+    if ( _deviceManager == nil )
         return NO;
-    }
     
-    return [self.deviceManager isConnected];
+    return ( [self.deviceManager connectionState] == GCKConnectionStateConnected );
+    
 }
 
 - (void)disconnectDevice {

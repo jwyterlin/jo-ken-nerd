@@ -39,11 +39,12 @@
 		7BB92A651AE9EB42004F8190 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB92A641AE9EB42004F8190 /* NotificationController.m */; };
 		7BB92A681AE9EB42004F8190 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB92A671AE9EB42004F8190 /* GlanceController.m */; };
 		7BB92A6A1AE9EB42004F8190 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BB92A691AE9EB42004F8190 /* Images.xcassets */; };
-		7BB92A6E1AE9EB42004F8190 /* nnn WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 7BB92A6D1AE9EB42004F8190 /* nnn WatchKit App.app */; };
 		7BB92A761AE9EB42004F8190 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BB92A741AE9EB42004F8190 /* Interface.storyboard */; };
 		7BB92A781AE9EB42004F8190 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BB92A771AE9EB42004F8190 /* Images.xcassets */; };
-		7BB92A7B1AE9EB42004F8190 /* nnn WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7BB92A5B1AE9EB42004F8190 /* nnn WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7BB92A881AE9EE78004F8190 /* MainInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB92A871AE9EE78004F8190 /* MainInterfaceController.m */; };
+		7BD51B9E1B818EBB008A6B83 /* Jo Ken Nerd WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 7BB92A6D1AE9EB42004F8190 /* Jo Ken Nerd WatchKit App.app */; };
+		7BD51BA11B81910D008A6B83 /* Jo Ken Nerd Ext.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7BB92A5B1AE9EB42004F8190 /* Jo Ken Nerd Ext.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7BD51BA21B819125008A6B83 /* Jo Ken Nerd WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 7BB92A6D1AE9EB42004F8190 /* Jo Ken Nerd WatchKit App.app */; };
 		D993F8E917D842779F63F7B9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFABEDCE520B44C2A77AC1D4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,13 @@
 			remoteGlobalIDString = 7BB92A5A1AE9EB42004F8190;
 			remoteInfo = "nnn WatchKit Extension";
 		};
+		7BD51B9F1B818EBB008A6B83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B5B34D919686D4600406276 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BB92A6C1AE9EB42004F8190;
+			remoteInfo = "nnn WatchKit App";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -78,7 +86,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				7BB92A7B1AE9EB42004F8190 /* nnn WatchKit Extension.appex in Embed App Extensions */,
+				7BD51BA11B81910D008A6B83 /* Jo Ken Nerd Ext.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,7 +136,7 @@
 		7B5B350F19686D4700406276 /* JkplsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JkplsTests.m; sourceTree = "<group>"; };
 		7B5EB3481AEC6AC900326BDB /* Choice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Choice.h; sourceTree = "<group>"; };
 		7B5EB3491AEC6AC900326BDB /* Choice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Choice.m; sourceTree = "<group>"; };
-		7BB92A5B1AE9EB42004F8190 /* nnn WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "nnn WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BB92A5B1AE9EB42004F8190 /* Jo Ken Nerd Ext.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Jo Ken Nerd Ext.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB92A5E1AE9EB42004F8190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BB92A5F1AE9EB42004F8190 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		7BB92A601AE9EB42004F8190 /* ChoicesListInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChoicesListInterfaceController.h; sourceTree = "<group>"; };
@@ -138,7 +146,7 @@
 		7BB92A661AE9EB42004F8190 /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
 		7BB92A671AE9EB42004F8190 /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
 		7BB92A691AE9EB42004F8190 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		7BB92A6D1AE9EB42004F8190 /* nnn WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nnn WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BB92A6D1AE9EB42004F8190 /* Jo Ken Nerd WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jo Ken Nerd WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB92A731AE9EB42004F8190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BB92A751AE9EB42004F8190 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		7BB92A771AE9EB42004F8190 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -257,8 +265,8 @@
 			children = (
 				7B5B34E119686D4600406276 /* Jkpls.app */,
 				7B5B350219686D4600406276 /* JkplsTests.xctest */,
-				7BB92A5B1AE9EB42004F8190 /* nnn WatchKit Extension.appex */,
-				7BB92A6D1AE9EB42004F8190 /* nnn WatchKit App.app */,
+				7BB92A5B1AE9EB42004F8190 /* Jo Ken Nerd Ext.appex */,
+				7BB92A6D1AE9EB42004F8190 /* Jo Ken Nerd WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -425,6 +433,7 @@
 			);
 			dependencies = (
 				7BB92A7A1AE9EB42004F8190 /* PBXTargetDependency */,
+				7BD51BA01B818EBB008A6B83 /* PBXTargetDependency */,
 			);
 			name = Jkpls;
 			productName = Jkpls;
@@ -449,9 +458,9 @@
 			productReference = 7B5B350219686D4600406276 /* JkplsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7BB92A5A1AE9EB42004F8190 /* nnn WatchKit Extension */ = {
+		7BB92A5A1AE9EB42004F8190 /* Jo Ken Nerd WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7BB92A811AE9EB42004F8190 /* Build configuration list for PBXNativeTarget "nnn WatchKit Extension" */;
+			buildConfigurationList = 7BB92A811AE9EB42004F8190 /* Build configuration list for PBXNativeTarget "Jo Ken Nerd WatchKit Extension" */;
 			buildPhases = (
 				7BB92A571AE9EB42004F8190 /* Sources */,
 				7BB92A581AE9EB42004F8190 /* Frameworks */,
@@ -462,14 +471,14 @@
 			dependencies = (
 				7BB92A701AE9EB42004F8190 /* PBXTargetDependency */,
 			);
-			name = "nnn WatchKit Extension";
+			name = "Jo Ken Nerd WatchKit Extension";
 			productName = "nnn WatchKit Extension";
-			productReference = 7BB92A5B1AE9EB42004F8190 /* nnn WatchKit Extension.appex */;
+			productReference = 7BB92A5B1AE9EB42004F8190 /* Jo Ken Nerd Ext.appex */;
 			productType = "com.apple.product-type.watchkit-extension";
 		};
-		7BB92A6C1AE9EB42004F8190 /* nnn WatchKit App */ = {
+		7BB92A6C1AE9EB42004F8190 /* Jo Ken Nerd WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7BB92A801AE9EB42004F8190 /* Build configuration list for PBXNativeTarget "nnn WatchKit App" */;
+			buildConfigurationList = 7BB92A801AE9EB42004F8190 /* Build configuration list for PBXNativeTarget "Jo Ken Nerd WatchKit App" */;
 			buildPhases = (
 				7BB92A6B1AE9EB42004F8190 /* Resources */,
 			);
@@ -477,9 +486,9 @@
 			);
 			dependencies = (
 			);
-			name = "nnn WatchKit App";
+			name = "Jo Ken Nerd WatchKit App";
 			productName = "nnn WatchKit App";
-			productReference = 7BB92A6D1AE9EB42004F8190 /* nnn WatchKit App.app */;
+			productReference = 7BB92A6D1AE9EB42004F8190 /* Jo Ken Nerd WatchKit App.app */;
 			productType = "com.apple.product-type.application.watchapp";
 		};
 /* End PBXNativeTarget section */
@@ -492,17 +501,18 @@
 				ORGANIZATIONNAME = "Little Red Club";
 				TargetAttributes = {
 					7B5B34E019686D4600406276 = {
-						DevelopmentTeam = C7Q44C43S9;
+						DevelopmentTeam = 4SYCR8M2FN;
 					};
 					7B5B350119686D4600406276 = {
 						TestTargetID = 7B5B34E019686D4600406276;
 					};
 					7BB92A5A1AE9EB42004F8190 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = C7Q44C43S9;
+						DevelopmentTeam = 4SYCR8M2FN;
 					};
 					7BB92A6C1AE9EB42004F8190 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 4SYCR8M2FN;
 					};
 				};
 			};
@@ -522,8 +532,8 @@
 			targets = (
 				7B5B34E019686D4600406276 /* Jkpls */,
 				7B5B350119686D4600406276 /* JkplsTests */,
-				7BB92A5A1AE9EB42004F8190 /* nnn WatchKit Extension */,
-				7BB92A6C1AE9EB42004F8190 /* nnn WatchKit App */,
+				7BB92A5A1AE9EB42004F8190 /* Jo Ken Nerd WatchKit Extension */,
+				7BB92A6C1AE9EB42004F8190 /* Jo Ken Nerd WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -534,6 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				712F174F1A7EB58D00AE528F /* Localizable.strings in Resources */,
+				7BD51B9E1B818EBB008A6B83 /* Jo Ken Nerd WatchKit App.app in Resources */,
 				7B36EBD4196894CD00B88FF3 /* ChromeCastViewController.xib in Resources */,
 				7B5B34FD19686D4600406276 /* Images.xcassets in Resources */,
 				71BE285219E8DB7F00C049C6 /* BattleResultView.xib in Resources */,
@@ -552,8 +563,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD51BA21B819125008A6B83 /* Jo Ken Nerd WatchKit App.app in Resources */,
 				7BB92A6A1AE9EB42004F8190 /* Images.xcassets in Resources */,
-				7BB92A6E1AE9EB42004F8190 /* nnn WatchKit App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,13 +665,18 @@
 		};
 		7BB92A701AE9EB42004F8190 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7BB92A6C1AE9EB42004F8190 /* nnn WatchKit App */;
+			target = 7BB92A6C1AE9EB42004F8190 /* Jo Ken Nerd WatchKit App */;
 			targetProxy = 7BB92A6F1AE9EB42004F8190 /* PBXContainerItemProxy */;
 		};
 		7BB92A7A1AE9EB42004F8190 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7BB92A5A1AE9EB42004F8190 /* nnn WatchKit Extension */;
+			target = 7BB92A5A1AE9EB42004F8190 /* Jo Ken Nerd WatchKit Extension */;
 			targetProxy = 7BB92A791AE9EB42004F8190 /* PBXContainerItemProxy */;
+		};
+		7BD51BA01B818EBB008A6B83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BB92A6C1AE9EB42004F8190 /* Jo Ken Nerd WatchKit App */;
+			targetProxy = 7BD51B9F1B818EBB008A6B83 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -856,7 +872,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = "Jo Ken Nerd Ext";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -875,7 +891,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "${TARGET_NAME}";
+				PRODUCT_NAME = "Jo Ken Nerd Ext";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -885,6 +901,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -908,6 +926,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -953,7 +973,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BB92A801AE9EB42004F8190 /* Build configuration list for PBXNativeTarget "nnn WatchKit App" */ = {
+		7BB92A801AE9EB42004F8190 /* Build configuration list for PBXNativeTarget "Jo Ken Nerd WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7BB92A7E1AE9EB42004F8190 /* Debug */,
@@ -962,7 +982,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BB92A811AE9EB42004F8190 /* Build configuration list for PBXNativeTarget "nnn WatchKit Extension" */ = {
+		7BB92A811AE9EB42004F8190 /* Build configuration list for PBXNativeTarget "Jo Ken Nerd WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7BB92A7C1AE9EB42004F8190 /* Debug */,

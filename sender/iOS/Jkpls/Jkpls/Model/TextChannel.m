@@ -7,7 +7,7 @@
 //
 
 #import "TextChannel.h"
-#import "GCKJSONUtils.h"
+#import <GoogleCast/GCKJSONUtils.h>
 
 @implementation TextChannel
 

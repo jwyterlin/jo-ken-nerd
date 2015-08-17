@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Jhonathan Wyterlin. All rights reserved.
 //
 
-#import "GoogleCast.h"
+#import <GoogleCast/GoogleCast.h>
 
 @interface TextChannel : GCKCastChannel
 
