@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B140D235884B2E30C69B33C /* libPods-Jkpls.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB4E76DABF5EE27AC7AC398 /* libPods-Jkpls.a */; };
 		5BB2EB3319B77C8B00C27AD3 /* ChooseMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB2EB3119B77C8B00C27AD3 /* ChooseMainViewController.m */; };
 		71144F7419E0B54900B1C692 /* GameLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 71144F7319E0B54900B1C692 /* GameLogic.m */; };
 		712F174F1A7EB58D00AE528F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 712F17511A7EB58D00AE528F /* Localizable.strings */; };
@@ -45,7 +46,6 @@
 		7BD51B9E1B818EBB008A6B83 /* Jo Ken Nerd WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 7BB92A6D1AE9EB42004F8190 /* Jo Ken Nerd WatchKit App.app */; };
 		7BD51BA11B81910D008A6B83 /* Jo Ken Nerd Ext.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7BB92A5B1AE9EB42004F8190 /* Jo Ken Nerd Ext.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7BD51BA21B819125008A6B83 /* Jo Ken Nerd WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 7BB92A6D1AE9EB42004F8190 /* Jo Ken Nerd WatchKit App.app */; };
-		D993F8E917D842779F63F7B9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFABEDCE520B44C2A77AC1D4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,9 +152,9 @@
 		7BB92A771AE9EB42004F8190 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7BB92A861AE9EE78004F8190 /* MainInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainInterfaceController.h; sourceTree = "<group>"; };
 		7BB92A871AE9EE78004F8190 /* MainInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainInterfaceController.m; sourceTree = "<group>"; };
-		8DBA42B130CB9956B5EC4DBA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		BFABEDCE520B44C2A77AC1D4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB11684CE601E2B458B19749 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9BB4E76DABF5EE27AC7AC398 /* libPods-Jkpls.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Jkpls.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B16DED2C8ED29E4450C9963A /* Pods-Jkpls.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jkpls.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jkpls/Pods-Jkpls.debug.xcconfig"; sourceTree = "<group>"; };
+		C9142F47FE9EE97C36C05CA3 /* Pods-Jkpls.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jkpls.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jkpls/Pods-Jkpls.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +165,7 @@
 				7B5B34E719686D4600406276 /* CoreGraphics.framework in Frameworks */,
 				7B5B34E919686D4600406276 /* UIKit.framework in Frameworks */,
 				7B5B34E519686D4600406276 /* Foundation.framework in Frameworks */,
-				D993F8E917D842779F63F7B9 /* libPods.a in Frameworks */,
+				2B140D235884B2E30C69B33C /* libPods-Jkpls.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +180,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7BB92A581AE9EB42004F8190 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9A35B7DF0D85676B1045B30 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -256,7 +263,7 @@
 				7BB92A711AE9EB42004F8190 /* nnn WatchKit App */,
 				7B5B34E319686D4600406276 /* Frameworks */,
 				7B5B34E219686D4600406276 /* Products */,
-				A01B58446C0D1EC27956077E /* Pods */,
+				9984A27E481EEDE0DEFBA5D5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -278,7 +285,7 @@
 				7B5B34E619686D4600406276 /* CoreGraphics.framework */,
 				7B5B34E819686D4600406276 /* UIKit.framework */,
 				7B5B350319686D4600406276 /* XCTest.framework */,
-				BFABEDCE520B44C2A77AC1D4 /* libPods.a */,
+				9BB4E76DABF5EE27AC7AC398 /* libPods-Jkpls.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -406,11 +413,11 @@
 			name = GlanceController;
 			sourceTree = "<group>";
 		};
-		A01B58446C0D1EC27956077E /* Pods */ = {
+		9984A27E481EEDE0DEFBA5D5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FB11684CE601E2B458B19749 /* Pods.debug.xcconfig */,
-				8DBA42B130CB9956B5EC4DBA /* Pods.release.xcconfig */,
+				B16DED2C8ED29E4450C9963A /* Pods-Jkpls.debug.xcconfig */,
+				C9142F47FE9EE97C36C05CA3 /* Pods-Jkpls.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -422,12 +429,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B5B351319686D4700406276 /* Build configuration list for PBXNativeTarget "Jkpls" */;
 			buildPhases = (
-				1F0470F8DCBE45CE801C8A4F /* Check Pods Manifest.lock */,
+				AA8863C203024CBA92121DFC /* [CP] Check Pods Manifest.lock */,
 				7B5B34DD19686D4600406276 /* Sources */,
 				7B5B34DE19686D4600406276 /* Frameworks */,
 				7B5B34DF19686D4600406276 /* Resources */,
-				419635D5F2C14491AE8D6CA4 /* Copy Pods Resources */,
 				7BB92A821AE9EB42004F8190 /* Embed App Extensions */,
+				CD75CE4827FA893D8E86C065 /* [CP] Embed Pods Frameworks */,
+				3BEC65E275C040D3FFB0DE13 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -481,6 +489,7 @@
 			buildConfigurationList = 7BB92A801AE9EB42004F8190 /* Build configuration list for PBXNativeTarget "Jo Ken Nerd WatchKit App" */;
 			buildPhases = (
 				7BB92A6B1AE9EB42004F8190 /* Resources */,
+				C9A35B7DF0D85676B1045B30 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -500,9 +509,6 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Little Red Club";
 				TargetAttributes = {
-					7B5B34E019686D4600406276 = {
-						DevelopmentTeam = 4SYCR8M2FN;
-					};
 					7B5B350119686D4600406276 = {
 						TestTargetID = 7B5B34E019686D4600406276;
 					};
@@ -580,34 +586,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1F0470F8DCBE45CE801C8A4F /* Check Pods Manifest.lock */ = {
+		3BEC65E275C040D3FFB0DE13 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jkpls/Pods-Jkpls-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		419635D5F2C14491AE8D6CA4 /* Copy Pods Resources */ = {
+		AA8863C203024CBA92121DFC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CD75CE4827FA893D8E86C065 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jkpls/Pods-Jkpls-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -783,12 +804,13 @@
 		};
 		7B5B351419686D4700406276 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB11684CE601E2B458B19749 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = B16DED2C8ED29E4450C9963A /* Pods-Jkpls.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Jkpls/Jkpls-Prefix.pch";
 				INFOPLIST_FILE = "Jkpls/Jkpls-Info.plist";
@@ -800,12 +822,13 @@
 		};
 		7B5B351519686D4700406276 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DBA42B130CB9956B5EC4DBA /* Pods.release.xcconfig */;
+			baseConfigurationReference = C9142F47FE9EE97C36C05CA3 /* Pods-Jkpls.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Jkpls/Jkpls-Prefix.pch";
 				INFOPLIST_FILE = "Jkpls/Jkpls-Info.plist";

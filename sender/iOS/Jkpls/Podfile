@@ -1,4 +1,7 @@
+source 'https://github.com/CocoaPods/Specs.git'
 platform:ios, '7.0'
 
-pod 'google-cast-sdk'
-pod 'GoogleAnalytics-iOS-SDK'
+target 'Jkpls' do
+    pod 'google-cast-sdk'
+    pod 'GoogleAnalytics-iOS-SDK'
+end
