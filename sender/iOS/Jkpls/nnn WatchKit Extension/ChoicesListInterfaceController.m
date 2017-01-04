@@ -49,36 +49,40 @@
     
     [self.result setHidden:YES];
     
-    NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:self.choice.identifier,@"choice", nil];
+//    NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:self.choice.identifier,@"choice", nil];
     
-    [WKInterfaceController openParentApplication:dictionary reply:^(NSDictionary *replyInfo, NSError *error) {
-        
-        if ( replyInfo ) {
-            
-            if ( replyInfo[@"ResultGame"] ) {
-                
-                NSString *stringResult = replyInfo[@"ResultGame"];
-                
-                [self.result setHidden:NO];
-                [self.result setText:stringResult];
-                
-                return;
-                
-            } else {
-                
-                NSLog(@"No ResultGame");
-                
-            }
-            
-        }
-        
-        if ( error ) {
-            NSLog(@"Error occurred: %@", error);
-        } else {
-            NSLog(@"No error, but no data either");
-        }
-        
-    }];
+#warning TODO: Remove openParentApplication: reply: and use WatchConnectivity framework
+    
+//    For your watchOS 2 extension, you can use the new WatchConnectivity framework to communicate between your parent app and WatchKit extension.
+    
+//    [WKInterfaceController openParentApplication:dictionary reply:^(NSDictionary *replyInfo, NSError *error) {
+//        
+//        if ( replyInfo ) {
+//            
+//            if ( replyInfo[@"ResultGame"] ) {
+//                
+//                NSString *stringResult = replyInfo[@"ResultGame"];
+//                
+//                [self.result setHidden:NO];
+//                [self.result setText:stringResult];
+//                
+//                return;
+//                
+//            } else {
+//                
+//                NSLog(@"No ResultGame");
+//                
+//            }
+//            
+//        }
+//        
+//        if ( error ) {
+//            NSLog(@"Error occurred: %@", error);
+//        } else {
+//            NSLog(@"No error, but no data either");
+//        }
+//        
+//    }];
     
 }
 
