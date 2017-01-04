@@ -1,3 +1,8 @@
 .DS_Store
 .metadata
 /receiver/JoKenPo/target/
+fastlane/screenshots
+fastlane/test_output
+fastlane/xcov_report
+fastlane/slather_report
+fastlane/report.xml
