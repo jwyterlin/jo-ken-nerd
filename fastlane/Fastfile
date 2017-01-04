@@ -43,7 +43,8 @@ platform :ios do
      output_directory: "./fastlane/slather_report",
      scheme: "Jkpls",
      workspace: workspace_file,
-     proj: project_file
+     proj: project_file,
+     show: true
     )
 
   end
