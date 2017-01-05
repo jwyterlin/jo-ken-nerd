@@ -1,8 +1,0 @@
-workspace: ./sender/iOS/Jkpls/Jkpls.xcworkspace
-xcodeproj: ./sender/iOS/Jkpls/Jkpls.xcodeproj
-scheme: Jkpls
-html: true
-output_directory: ./fastlane/slather_report
-decimals: 2
-ignore:
-          - "ThirdParty/*"

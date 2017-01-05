@@ -1,45 +1,31 @@
-# Customise this file, documentation can be found here:
-# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
-# All available actions: https://docs.fastlane.tools/actions
-# can also be listed using the `fastlane actions` command
-
-# Change the syntax highlighting to Ruby
-# All lines starting with a # are ignored when running `fastlane`
-
-# If you want to automatically update fastlane if a new version is available:
-# update_fastlane
-
-# This is the minimum version number required.
-# Update this, if you use features of a newer version
-fastlane_version "2.5.0"
+fastlane_version "2.2.0"
 
 default_platform :ios
 
-project_file = "./sender/iOS/Jkpls/Jkpls.xcodeproj"
-workspace_file = "./sender/iOS/Jkpls/Jkpls.xcworkspace"
-
 platform :ios do
- 
   before_all do
-
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    update_fastlane   
+    # update_fastlane
     
   end
 
   desc "Runs all the tests"
   lane :test do
-
     scan
-
-    danger(
-      danger_id: "github",
-      dangerfile: "./Dangerfile",
-      github_api_token: "2d6bad10ca08823a431e659db855b2bc6ce02a2d",
-      verbose: true
-    )
-
+    danger
   end
+
+  lane :fabric do |values|
+
+    match( type: "adhoc", readonly: true)
+    gym(scheme: 'Jkpls', export_method: 'ad-hoc')
+
+    crashlytics(api_token: 'b242a59cce52fc9fbdd371946e844c0309b98098',
+             build_secret: 'e045cfab8eee6cbc4d85a30ca36d45e9564857562cf69750c92f63bd0c12f3c5',
+             notes: changelog_from_git_commits(include_merges: false),
+             notifications: true)
+  end
+
 
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
@@ -78,10 +64,3 @@ platform :ios do
     # )
   end
 end
-
-
-# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
-# All available actions: https://docs.fastlane.tools/actions
-
-# fastlane reports which actions are used
-# No personal data is recorded. Learn more at https://github.com/fastlane/enhancer
