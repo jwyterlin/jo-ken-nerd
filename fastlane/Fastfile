@@ -32,19 +32,11 @@ platform :ios do
 
     scan
 
-    xcov(
-     html_report: true,
-     scheme: "Jkpls",
-     workspace: workspace_file
-    )
-
-    slather(
-     html: true,
-     output_directory: "./fastlane/slather_report",
-     scheme: "Jkpls",
-     workspace: workspace_file,
-     proj: project_file,
-     show: true
+    danger(
+      danger_id: "github",
+      dangerfile: "./Dangerfile",
+      github_api_token: "2d6bad10ca08823a431e659db855b2bc6ce02a2d",
+      verbose: true
     )
 
   end

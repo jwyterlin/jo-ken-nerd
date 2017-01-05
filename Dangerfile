@@ -11,3 +11,16 @@ warn("Big PR") if git.lines_of_code > 500
 # Don't let testing shortcuts get into master by accident
 fail("fdescribe left in tests") if `grep -r fdescribe specs/ `.length > 1
 fail("fit left in tests") if `grep -r fit specs/ `.length > 1
+
+slather.configure("./sender/iOS/Jkpls/Jkpls.xcodeproj", "Jkpls", options: {
+  source_directory: './.slather.yml'
+  })
+slather.notify_if_coverage_is_less_than(minimum_coverage: 80)
+slather.notify_if_modified_file_is_less_than(minimum_coverage: 60)
+slather.show_coverage
+
+xcov.report(
+   scheme: 'Jkpls',
+   workspace: './sender/iOS/Jkpls/Jkpls.xcworkspace',
+   minimum_coverage_percentage: 90
+)
