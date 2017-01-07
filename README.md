@@ -7,3 +7,6 @@ Using tools for iOS platform:
 
 - Danger
 - Bitrise ( Continuous Integration )
+- Fastlane
+- XCov
+- Slather
