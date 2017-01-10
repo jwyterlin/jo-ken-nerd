@@ -17,5 +17,5 @@ For the iOS platform, we're using the follow tools:
 - Danger
 - Bitrise ( Continuous Integration )
 - Fastlane
-- XCov
-- Slather
+- XCov ( Code Coverage Report )
+- Slather ( Code Coverage Report )
