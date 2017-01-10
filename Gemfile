@@ -7,3 +7,4 @@ gem "slather"
 gem "xcov"
 gem "danger"
 gem 'danger-slather'
+gem 'danger-xcov'
