@@ -14,7 +14,7 @@ The game has two modes to play:
 
 For the iOS platform, we're using the follow tools:
 
-- Danger
+- Danger ( Code Review )
 - Bitrise ( Continuous Integration )
 - Fastlane
 - XCov ( Code Coverage Report )
